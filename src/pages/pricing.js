@@ -1,7 +1,15 @@
 import React from 'react';
 import Layout from '../components/layouts/Layout';
 import styled from '@emotion/styled';
-import { FaBolt, FaCrown, FaHome, FaCode, FaLeaf } from 'react-icons/fa';
+import {
+  FaBolt,
+  FaCrown,
+  FaHome,
+  FaCode,
+  FaLeaf,
+  FaLock,
+  FaHandHoldingHeart,
+} from 'react-icons/fa';
 
 import Pricing from '../components/pricing/Pricing';
 import { H2 } from '../components/reusableStyles/typography/Typography';
@@ -12,7 +20,10 @@ import {
   Container1200,
 } from '../components/reusableStyles/sections/Sections';
 
-import { MarginBottom6 } from '../components/reusableStyles/modular/modularStyles';
+import {
+  MarginBottom6,
+  Margin1V,
+} from '../components/reusableStyles/modular/modularStyles';
 import { SimpleNetlifyForm } from '../components/forms/SimpleNetlifyForm';
 import Hero from '../components/heros/Hero';
 import { DefaultPageContainer } from '../components/layouts/PageContainers';
@@ -67,8 +78,8 @@ const textHosting = () => (
   <p>
     Unlike many agencies, we offer affordable hostings with all of our sites.
     Starting at <Bold> $10/month </Bold>we will make sure you site is always up
-    and running smoothly with no issues. Offering premium support for your site
-    after it is built.
+    and running smoothly with no issues. Offering basic support for your site
+    after it is built for up to six months too.
   </p>
 );
 
@@ -76,7 +87,7 @@ const textCustomization = () => (
   <p>
     100% customizable, custom coded with no bloated unnecessary code or plugins
     that slow your site down. Designed in mind to suit <Italic> your </Italic>
-    brand.
+    brand. I will work with you to create the site you want.
   </p>
 );
 
@@ -87,6 +98,31 @@ const textGrowth = () => (
     analysis must be done to ensure continual growth of your brand. We offer
     online advertising, data analysis and consulting.
   </p>
+);
+
+const textSSL = () => (
+  <p>
+    All of our sites are SSL certified by default. SSL creates a secure
+    connection and builds a foundation of trust for your users. SSL stands for
+    "Secure Sockets Layer" and creates an encrypted connection to ensure your
+    user data is kept safe.
+  </p>
+);
+
+const textSupport = () => (
+  <>
+    <h4>Standard Support</h4>
+    <p>
+      Support for all of our websites including minor website changes and up to
+      2 standard pages free for any additional content you want to add afterward
+    </p>
+    <Margin1V />
+    <h4>Premium Support</h4>
+    <p>
+      Priority response times to changes on websites and three additional pages
+      or templates. Premium support for $60.
+    </p>
+  </>
 );
 
 const pricing = () => {
@@ -154,6 +190,30 @@ const pricing = () => {
             subheading="Completely customized"
             text={textGrowth()}
             icon={FaLeaf()}
+            rotate="rotate(0deg)"
+          />
+        </Container1200>
+      </SectionGrey>
+
+      <Section>
+        <Container1200>
+          <FeatureSection
+            heading="SSL Certificate"
+            subheading="Make your site trusted"
+            text={textSSL()}
+            icon={FaLock()}
+            rotate="rotate(0deg)"
+          />
+        </Container1200>
+      </Section>
+
+      <SectionGrey>
+        <Container1200>
+          <FeatureSection
+            heading="6 months support free"
+            subheading="Never feel abandoned after a project"
+            text={textSupport()}
+            icon={FaHandHoldingHeart()}
             rotate="rotate(0deg)"
           />
         </Container1200>

@@ -29,7 +29,7 @@ const customFeatures = [
   'Ecommerce (large inventory)',
   'Custom backend',
   'Custom requirements',
-  '1 year support',
+  '1 year premium support',
 ];
 
 const Pricing = () => {
