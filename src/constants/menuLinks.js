@@ -5,12 +5,12 @@ const menuLinks1 = [
     text: 'Articles',
   },
   {
-    path: '/pricing',
-    text: 'Pricing',
+    path: '/portfolio',
+    text: 'Portfolio',
   },
   {
-    path: '/stripe-products',
-    text: 'Products',
+    path: '/pricing',
+    text: 'Pricing',
   },
 
   {

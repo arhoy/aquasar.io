@@ -226,7 +226,7 @@ const about = ({ data }) => {
       <SectionGrey>
         <Container1200>
           <FeatureSectionWithFixedImage
-            heading="Porflio"
+            heading="Portfolio"
             subheading="Select Samples"
             text={textPorfolio()}
             fixed={data.aboutImage3.childImageSharp.fixed}

@@ -15,8 +15,24 @@ const SectionGrey = styled(Section)`
   background: ${props => props.theme.colors.lightgrey};
 `;
 
+const SectionPrimaryTransparent = styled(Section)`
+  background: ${props => props.theme.colors.primaryTransparent};
+`;
+
 const TopSection = styled(Section)`
   padding-top: 2rem;
+`;
+
+const ProductPageTopSection = styled(Section)`
+  background: ${props => props.theme.colors.primaryTransparent};
+  padding: 2rem 6rem;
+  @media (max-width: ${props => props.theme.screenSize.mobileVS}) {
+    padding: 2rem 2rem;
+  }
+
+  & p {
+    font-weight: bold;
+  }
 `;
 
 const Container1200 = styled.div`
@@ -29,4 +45,20 @@ const Container800 = styled.div`
   margin: 0 auto;
 `;
 
-export { Section, SectionGrey, TopSection, Container1200, Container800 };
+const ContainerCenterFlex = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+`;
+
+export {
+  Section,
+  SectionGrey,
+  SectionPrimaryTransparent,
+  TopSection,
+  ProductPageTopSection,
+  Container1200,
+  Container800,
+  ContainerCenterFlex,
+};
