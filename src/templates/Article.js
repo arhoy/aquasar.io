@@ -78,8 +78,18 @@ const ArticleContainer = styled.article`
   }
 `;
 
-const P = styled.p`
+const ArticleP = styled.p`
   padding: 1rem 0rem;
+  font-size: 1.6rem;
+`;
+
+const ArticleHighlight = styled.span`
+  display: inline-block;
+  padding: 1px 2px;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  background: ${props => props.theme.colors.primaryTransparent};
+  color: ${props => props.theme.colors.black};
 `;
 
 const BoldStyle = styled.span`
@@ -91,10 +101,22 @@ display:block;
   overflow-auto;
 `;
 
+const ArticleH6 = styled.div`
+  display: inline-block;
+  color: ${props => props.theme.colors.red};
+  background: ${props => props.theme.colors.lightRed};
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+`;
+
 const Bold = ({ children }) => <BoldStyle>{children}</BoldStyle>;
-const Text = ({ children }) => <P>{children}</P>;
+const Text = ({ children }) => <ArticleP>{children}</ArticleP>;
 
 const Code = ({ children }) => <CodeStyle>{children}</CodeStyle>;
+const Heading6 = ({ children }) => <ArticleH6>{children}</ArticleH6>;
+const Italic = ({ children }) => (
+  <ArticleHighlight>{children}</ArticleHighlight>
+);
 
 const AricleTemplate = ({ data: { article } }) => {
   const {
@@ -120,6 +142,7 @@ const AricleTemplate = ({ data: { article } }) => {
   const options = {
     renderMark: {
       [MARKS.BOLD]: text => <Bold>{text}</Bold>,
+      [MARKS.ITALIC]: text => <Italic>{text}</Italic>,
       [MARKS.CODE]: text => (
         <Code>
           <ArticleCode language={language} code={text} />
@@ -129,8 +152,37 @@ const AricleTemplate = ({ data: { article } }) => {
 
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+      [BLOCKS.HEADING_6]: (node, children) => <Heading6>{children}</Heading6>,
+
+      'embedded-asset-block': node => {
+        const { file, title } = node.data.target.fields;
+        return (
+          <div>
+            <img width="400" src={file['en-US'].url} alt={title} />
+          </div>
+        );
+      },
+      'embedded-entry-block': node => {
+        const { name, images, description } = node.data.target.fields;
+        return (
+          <div>
+            <h3>{name['en-US']}</h3>
+            <img
+              width="400"
+              src={
+                images['en-US'][0].fields.file['en-US'].url ||
+                images['en-US'].fields.file['en-US'].url
+              }
+              alt={description['en-US']}
+            />
+            <p> {description['en-US']}</p>
+          </div>
+        );
+      },
     },
   };
+
+  console.log('json is', json);
 
   return (
     <Layout full={true}>

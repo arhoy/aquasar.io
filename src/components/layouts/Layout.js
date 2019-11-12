@@ -12,14 +12,22 @@ import Footer from './Footer';
 const theme = {
   colors: {
     primary: 'rgb(92, 52, 145)',
-    primaryDark: 'rgb(73, 35, 122)',
+    primaryDark: 'rgb(63, 3, 122)',
     primaryLight: 'rgb(148, 103, 206)',
+    primaryVeryLight: 'rgb(232, 213, 250)',
     primaryTransparent: 'rgba(92, 52, 145,0.2)',
     secondary: 'rgb(24, 163, 201)',
     lightgrey: 'rgb(240,240,240)',
+    lightgrey2: 'rgb(224, 217, 217)',
     white: '#fff',
     black: '#1a1a1a',
+    blackTransparent: 'rgba(41, 43, 46, 0.4)',
     darkgrey: 'rgb(109, 109, 109)',
+    red: 'rgb(218, 18, 31)',
+    lightRed: 'rgb(232, 180, 182)',
+    blue: 'rgb(19, 73, 178)',
+    lightGreen: '#D4EDDA',
+    green: 'rgb(31, 90, 46)',
   },
   pageWidth: {
     fixed: '800px',
@@ -29,6 +37,8 @@ const theme = {
     mobileL: '600px',
     mobileVS: '300px',
     eightHundred: '800px',
+    nineHundred: '900px',
+    oneThousand: '1000px',
   },
 };
 
