@@ -1,9 +1,9 @@
 export default [
   {
-    url: 'https://fashionone.netlify.com',
-    displayUrl: 'fashionone.com',
-    title: 'Fashion One',
-    description: 'Premier Fashion Store',
+    url: 'https://ripplejs.com',
+    displayUrl: 'ripplejs.com',
+    title: 'RippleJS Themes',
+    description: 'Lightning Fast Ecommerce Themes',
   },
 
   {
@@ -34,11 +34,5 @@ export default [
     title: 'Butch Barber',
     displayUrl: 'butchbarber.netlify.com',
     description: 'Barber Shop',
-  },
-  {
-    url: 'https://fashiontwo.netlify.com',
-    displayUrl: 'fashiontwo.com',
-    title: 'FashionTwo',
-    description: 'Fashion Ecommerce Site',
   },
 ];

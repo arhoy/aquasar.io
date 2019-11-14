@@ -151,16 +151,18 @@ const AricleTemplate = ({ data: { article } }) => {
     },
 
     renderNode: {
-      [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
-      [BLOCKS.HEADING_6]: (node, children) => <Heading6>{children}</Heading6>,
-
       'embedded-asset-block': node => {
-        const { file, title } = node.data.target.fields;
-        return (
-          <div>
-            <img width="400" src={file['en-US'].url} alt={title} />
-          </div>
-        );
+        try {
+          const { file, title } = node.data.target.fields;
+
+          return (
+            <div>
+              <img width="400" src={file['en-US'].url} alt={title} />
+            </div>
+          );
+        } catch (error) {
+          console.error('There as an error', error);
+        }
       },
       'embedded-entry-block': node => {
         const { name, images, description } = node.data.target.fields;
@@ -179,10 +181,10 @@ const AricleTemplate = ({ data: { article } }) => {
           </div>
         );
       },
+      [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+      [BLOCKS.HEADING_6]: (node, children) => <Heading6>{children}</Heading6>,
     },
   };
-
-  console.log('json is', json);
 
   return (
     <Layout full={true}>
