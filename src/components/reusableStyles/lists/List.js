@@ -7,10 +7,6 @@ const StyledInlineLi = styled(Li)`
   display: inline-block;
   margin: 1rem;
   @media (max-width: ${props => props.theme.screenSize.mobileL}) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 `;
 

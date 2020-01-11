@@ -11,7 +11,7 @@ const H1 = styled.h1`
 
 const H2 = styled.h2`
   font-size: 3rem;
-  color: ${props => props.theme.colors.black};
+  color: ${props => props.theme.colors.primaryDark};
 `;
 
 const A = styled.a`
