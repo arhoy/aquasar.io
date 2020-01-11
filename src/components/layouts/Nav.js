@@ -95,7 +95,7 @@ const Nav = () => {
         <DropDownMenu1 />
 
         <a
-          href="https://ko-fi.com/alexquasar"
+          href="https://ko-fi.com/aquasar"
           target="_blank"
           rel="noopener noreferrer"
           title="Buy me a Kofi-Beer!"
