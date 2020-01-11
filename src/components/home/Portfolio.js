@@ -10,7 +10,7 @@ import { Margin2V } from '../reusableStyles/modular/modularStyles';
 export const Portfolio = () => {
   return (
     <CustomSectionPortfolio>
-      <H2>Porfolio</H2>
+      <H2>Web Porfolio</H2>
       <p>Select Samples</p>
       <ListInline urls={currentWebsites} />
       <Margin2V>
