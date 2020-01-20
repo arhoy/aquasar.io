@@ -12,6 +12,12 @@ export default [
     title: 'Crave JS',
   },
   {
+    url: 'https://aquasarcafe.netlify.com/',
+    displayUrl: 'aquasarcafe.com',
+    title: 'Aquasar Cafe',
+    description: 'Sample Simple Coffee Site',
+  },
+  {
     url: 'https://diamondsconsultingltd.com/',
     displayUrl: 'DiamondsConsultingLtd.com',
     title: 'Diamonds Consulting',
@@ -34,5 +40,11 @@ export default [
     title: 'Butch Barber',
     displayUrl: 'butchbarber.netlify.com',
     description: 'Barber Shop',
+  },
+  {
+    url: 'https://www.foodinvitecameroon.com/',
+    title: 'Food Invite',
+    displayUrl: 'foodinvitecameroon.com',
+    description: 'Catering Business',
   },
 ];

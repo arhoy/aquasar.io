@@ -32,8 +32,8 @@ export const Companies = () => {
       <CustomSection>
         <H2>Worked with</H2>
         <p>
-          Companies I have worked or work with on web development and online
-          advertising
+          Companies I have done online digital adversting, web development or
+          consulting for:
         </p>
         <Container>
           <TagContainer>
@@ -41,12 +41,20 @@ export const Companies = () => {
             <CustomTag>Crystal Glass</CustomTag>
             <CustomTag>New Image Cosmetic</CustomTag>
             <CustomTag>Devebyte Marketing</CustomTag>
+            <CustomTag>Royal Dragon Vodka</CustomTag>
+            <CustomTag>Food Invite</CustomTag>
+            <CustomTag>Diamonds Consulting</CustomTag>
+            <CustomTag>A & J Driving School</CustomTag>
+            <CustomTag>Neverland Tea</CustomTag>
+            <CustomTag>Porch Pirate Chest</CustomTag>
+            <CustomTag>Sumo Sumo</CustomTag>
+            <CustomTag>Point Green Gardening</CustomTag>
           </TagContainer>
         </Container>
       </CustomSection>
       <CustomSection2>
         <H2>Worked For</H2>
-        <p>Companies I have worked for in various departments</p>
+        <p>Companies I have worked for in full-time salaried positions:</p>
         <Container>
           <TagContainer>
             <CustomTag>Finning Canada</CustomTag>

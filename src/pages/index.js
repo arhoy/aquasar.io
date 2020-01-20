@@ -14,6 +14,7 @@ import { LatestArticles } from '../components/home/LatestArticles';
 import { LatestBlogs } from '../components/home/LatestBlogs';
 import { H2 } from '../components/reusableStyles/typography/Typography';
 import { Companies } from '../components/home/Companies';
+import Services from '../components/home/Services';
 
 export default () => {
   return (
@@ -26,6 +27,8 @@ export default () => {
       <AboutMe />
 
       <Companies />
+
+      <Services />
 
       <Portfolio />
 
