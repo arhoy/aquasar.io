@@ -15,6 +15,7 @@ import { LatestBlogs } from '../components/home/LatestBlogs';
 import { H2 } from '../components/reusableStyles/typography/Typography';
 import { Companies } from '../components/home/Companies';
 import Services from '../components/home/Services';
+import Platforms from '../components/home/Platforms';
 
 export default () => {
   return (
@@ -29,6 +30,8 @@ export default () => {
       <Companies />
 
       <Services />
+
+      <Platforms />
 
       <Portfolio />
 

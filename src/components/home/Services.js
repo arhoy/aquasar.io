@@ -17,7 +17,6 @@ const CustomSection = styled(SectionGrey)`
   margin-bottom: 2rem;
   border-bottom-left-radius: 25px;
   border-top-right-radius: 25px;
-  border: 1rem solid ${props => props.theme.colors.primaryDark};
 `;
 
 const CustomTag = styled(Tag)``;
@@ -27,7 +26,7 @@ const Services = () => {
     <>
       <CustomSection>
         <H2>Services</H2>
-        <p>We provide the following services:</p>
+        <p>Services Provided: </p>
         <Container>
           <TagContainer>
             <CustomTag>Web Development</CustomTag>
