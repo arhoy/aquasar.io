@@ -204,6 +204,13 @@ export const query = graphql`
         }
       }
     }
+    background: file(relativePath: { eq: "svg/mountainbcg" }) {
+      childImageSharp {
+        fluid {
+          src
+        }
+      }
+    }
   }
 `;
 

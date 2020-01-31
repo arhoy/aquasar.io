@@ -77,9 +77,9 @@ const textFast = () => (
 const textHosting = () => (
   <p>
     Unlike many agencies, we offer affordable hostings with all of our sites.
-    Starting at <Bold> $10/month </Bold>we will make sure you site is always up
-    and running smoothly with no issues. Offering basic support for your site
-    after it is built for up to six months too.
+    Starting at <Bold> $10/month </Bold> for non-ecommerce sites and
+    <Bold> $20/month </Bold>
+    for Shopify ecommerce sites.
   </p>
 );
 
@@ -93,10 +93,11 @@ const textCustomization = () => (
 
 const textGrowth = () => (
   <p>
-    After your beautiful new website is done, the journey is not over. Continous
-    SEO through fresh updated content, advertising on Google and Facebook, data
-    analysis must be done to ensure continual growth of your brand. We offer
-    online advertising, data analysis and consulting.
+    After your beautiful new website is done, the journey for your online
+    business has just started. I want to be there every step of the way to help
+    your business grow and succeed in the competitive landscape. We can provide
+    short term marketing and sustained long term growth through SEO, Facebook
+    Ads, Google Search Ads and consulting.
   </p>
 );
 
@@ -187,7 +188,7 @@ const pricing = () => {
         <Container1200>
           <FeatureSection
             heading="Grow Your Online Presence"
-            subheading="Completely customized"
+            subheading="We want to help you businesss grow"
             text={textGrowth()}
             icon={FaLeaf()}
             rotate="rotate(0deg)"

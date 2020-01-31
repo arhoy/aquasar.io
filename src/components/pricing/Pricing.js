@@ -19,17 +19,17 @@ const starterFeatures = [
 const advancedFeatures = [
   'Basic Ecommerce',
   'Constantly updating content',
-  'Authentication',
+  'Starter SEO',
   'Contact Form',
   'Content Management System',
 ];
 
 const customFeatures = [
-  'Advanced features',
   'Ecommerce (large inventory)',
-  'Custom backend',
+  'Shopify CMS Integration',
+  'Intermediate SEO',
   'Custom requirements',
-  '1 year premium support',
+  '1 Year Premium Support',
 ];
 
 const Pricing = () => {
@@ -43,7 +43,7 @@ const Pricing = () => {
       />
       <PriceCard
         title="Advanced"
-        price={900}
+        price={500}
         features={advancedFeatures}
         backgroundColor="rgba(92, 52, 145,0.2)"
         topBarBackgroundColor="rgb(73, 35, 122)"
@@ -52,7 +52,7 @@ const Pricing = () => {
       />
       <PriceCard
         title="Custom Quote"
-        price={2500}
+        price={1000}
         features={customFeatures}
         priceText={`+`}
       />

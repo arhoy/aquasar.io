@@ -42,6 +42,13 @@ const P = styled.p`
   }
 `;
 
+const CustomLayout = styled(Layout)`
+  background-color: #ff7700;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23b58080' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23876a6a' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23e04765' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23e3c6cc' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%238b6a75' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%237a5b66' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%2394245d' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23a10554' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23963d7d' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%239d1176' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23692069' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%239b4a9b' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+`;
+
 const textAbout = () => (
   <>
     <P>
@@ -122,7 +129,7 @@ export const query = graphql`
 
 const portfolio = ({ data }) => {
   return (
-    <Layout full={true}>
+    <CustomLayout full={true}>
       <SEO
         title="My Portfolio"
         description="My Online Portfolio Gatsby and Aquasar lives websites and demos"
@@ -188,7 +195,7 @@ const portfolio = ({ data }) => {
       </Section>
 
       <Hero />
-    </Layout>
+    </CustomLayout>
   );
 };
 

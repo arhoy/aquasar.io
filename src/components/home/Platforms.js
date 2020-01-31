@@ -107,6 +107,15 @@ const Platforms = () => {
             </CustomTag>
             <CustomTag>
               <a
+                href={`https://shopify.com/`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Shopify
+              </a>
+            </CustomTag>
+            <CustomTag>
+              <a
                 href={`https://www.mongodb.com/cloud/atlas`}
                 target="_blank"
                 rel="noopener noreferrer"
