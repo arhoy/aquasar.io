@@ -10,7 +10,7 @@ module.exports = {
     description: 'Web Developer and Website maker in Edmonton',
     author: 'Alex Quasar',
     twitterUsername: '@_aquasar',
-    image: '/default.png',
+    siteImage: '/default.png',
     siteUrl: URL,
   },
   plugins: [
