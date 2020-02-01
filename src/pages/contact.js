@@ -24,13 +24,16 @@ const contact = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="Aquasar Articles"
-        description="Articles on Gatsby and Web Development for the freelance web developer"
+        title="Contact Us"
+        description="Contact your Edmonton Professional Gatsby Web Developer"
         image={data.seo.childImageSharp.fluid.src}
       />
       <Section>
         <H1>Contact Page</H1>
-
+        <p>
+          We want to help grow your online business. Web Developer specializing
+          in Gastby, Ecommerce, SEO and Online Advertising
+        </p>
         <SimpleNetlifyForm />
         <Hero />
       </Section>
