@@ -17,6 +17,7 @@ import {
   CustomDivTopOne,
   CustomDivTopTwo,
 } from './HomeStyles';
+import { TagContainer, Tag } from '../reusableStyles/tags/Tag';
 
 const IconLink = styled.a`
   cursor: pointer;
@@ -96,6 +97,10 @@ export const AboutMe = () => {
               <FaLinkedinStyled title="Like Page" />
             </IconLink>
           </Social>
+          <TagContainer>
+            <Tag>Google Partner</Tag>
+            <Tag>Shopify Parnter</Tag>
+          </TagContainer>
         </CustomDivTopOne>
         <CustomDivTopTwo>
           <img alt="" src={profileImage} />

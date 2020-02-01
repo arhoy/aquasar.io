@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Layout from '../components/layouts/Layout';
 import styled from '@emotion/styled';
 import {
@@ -10,6 +11,8 @@ import {
   FaLock,
   FaHandHoldingHeart,
 } from 'react-icons/fa';
+
+import SEO from '../hooks/SEO';
 
 import Pricing from '../components/pricing/Pricing';
 import { H2 } from '../components/reusableStyles/typography/Typography';
@@ -27,6 +30,18 @@ import {
 import { SimpleNetlifyForm } from '../components/forms/SimpleNetlifyForm';
 import Hero from '../components/heros/Hero';
 import { DefaultPageContainer } from '../components/layouts/PageContainers';
+
+export const query = graphql`
+  {
+    seo: file(relativePath: { eq: "seo/pricing1.JPG" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 60) {
+          src
+        }
+      }
+    }
+  }
+`;
 
 const StyledH2 = styled(H2)`
   text-align: center;
@@ -126,9 +141,15 @@ const textSupport = () => (
   </>
 );
 
-const pricing = () => {
+const pricing = ({ data }) => {
   return (
     <Layout full={true}>
+      <SEO
+        title="Pricing Page"
+        description="Here is my web development pricing page websites"
+        image={data.seo.childImageSharp.fluid.src}
+      />
+
       <StyledH2>My Pricing</StyledH2>
 
       <Pricing />

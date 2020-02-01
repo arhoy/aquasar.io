@@ -35,6 +35,13 @@ export const query = graphql`
       }
       tags
     }
+    seo: file(relativePath: { eq: "seo/articles.png" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 60) {
+          src
+        }
+      }
+    }
   }
 `;
 
@@ -118,7 +125,7 @@ const Italic = ({ children }) => (
   <ArticleHighlight>{children}</ArticleHighlight>
 );
 
-const AricleTemplate = ({ data: { article } }) => {
+const AricleTemplate = ({ data: { article, seo } }) => {
   const {
     title,
     description: { description },
@@ -188,7 +195,11 @@ const AricleTemplate = ({ data: { article } }) => {
 
   return (
     <Layout full={true}>
-      <SEO title={title} description={description} />
+      <SEO
+        title={title}
+        description={description}
+        image={seo.childImageSharp.fluid.src}
+      />
       <Section>
         <ArticleContainer>
           <AritlceHeader>

@@ -47,7 +47,7 @@ const P = styled.p`
 const Article = ({ article }) => {
   return (
     <Div>
-      <StyledLink to={`articles/${article.slug}`}>
+      <StyledLink to={`/articles/${article.slug}`}>
         <ImageContainer fluid={article.heroImage.fluid} alt={article.title} />
         <ContentContainer>
           <Title>{article.title}</Title>

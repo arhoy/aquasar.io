@@ -116,7 +116,16 @@ const helpWithExistingSite = () => (
   </>
 );
 export const query = graphql`
-  query {
+  {
+    seo: file(
+      relativePath: { eq: "seo/aquasar-web-development-portfolio.PNG" }
+    ) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 60) {
+          src
+        }
+      }
+    }
     aboutImage1: file(relativePath: { eq: "astronaut.png" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 60) {
@@ -133,6 +142,7 @@ const portfolio = ({ data }) => {
       <SEO
         title="My Portfolio"
         description="My Online Portfolio Gatsby and Aquasar lives websites and demos"
+        image={data.seo.childImageSharp.fluid.src}
       />
       <StyledHero2 img={data.aboutImage1.childImageSharp.fluid}>
         <Section>
@@ -152,7 +162,12 @@ const portfolio = ({ data }) => {
       <Section>
         <ContainerCenterFlex>
           {currentWebsites.map(site => (
-            <Porfolio key={site.title} site={site} />
+            <Porfolio
+              key={site.title}
+              site={site}
+              rel="noreferrer noopener"
+              target="_blank"
+            />
           ))}
         </ContainerCenterFlex>
       </Section>

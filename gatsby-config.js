@@ -6,11 +6,11 @@ const URL = 'https://aquasar.io';
 
 module.exports = {
   siteMetadata: {
-    title: 'Aquasar - Web development, Gatsby and React Articles',
-    description: 'Documenting my web development journey with Gatsby and React',
+    title: 'Aquasar Web Development - Helping Online Businesses Grow',
+    description: 'Web Developer and Website maker in Edmonton',
     author: 'Alex Quasar',
     twitterUsername: '@_aquasar',
-    image: '/default.jpg',
+    image: '/default.png',
     siteUrl: URL,
   },
   plugins: [

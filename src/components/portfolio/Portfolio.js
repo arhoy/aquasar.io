@@ -75,7 +75,13 @@ const Porfolio = ({ site }) => {
             <h2>{site.title}</h2>
             <HoverDiv>
               <p>{site.description}</p>
-              <StyledA href={site.url}>{site.displayUrl}</StyledA>
+              <StyledA
+                rel="noreferrer noopener"
+                target="_blank"
+                href={site.url}
+              >
+                {site.displayUrl}
+              </StyledA>
             </HoverDiv>
           </>
         ) : (

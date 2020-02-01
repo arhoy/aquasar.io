@@ -21,7 +21,14 @@ const CustomTopSection = styled(Section)`
 `;
 
 export const getArticles = graphql`
-  query {
+  {
+    seo: file(relativePath: { eq: "seo/articles.png" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 60) {
+          src
+        }
+      }
+    }
     allArticles: allContentfulAlexQuasarArticles(
       sort: { fields: publishDate, order: DESC }
     ) {
@@ -44,11 +51,13 @@ export const getArticles = graphql`
 `;
 
 const articles = ({ data }) => {
+  console.log(data);
   return (
     <Layout full={true}>
       <SEO
-        title="Alex Quasar Articles on Gatsby and Full Stack React"
-        description="Please see all the articles below, articles on Full Stack React and Gatsby and more"
+        title="Aquasar Articles"
+        description="Articles on Gatsby and Web Development for the freelance web developer"
+        image={data.seo.childImageSharp.fluid.src}
       />
       <CustomTopSection>
         <Container800>

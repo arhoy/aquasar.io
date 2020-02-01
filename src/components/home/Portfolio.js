@@ -12,7 +12,11 @@ export const Portfolio = () => {
     <CustomSectionPortfolio>
       <H2>Web Porfolio</H2>
       <p>Select Samples</p>
-      <ListInline urls={currentWebsites} />
+      <ListInline
+        target="_blank"
+        rel="no opener no referrer"
+        urls={currentWebsites}
+      />
       <Margin2V>
         <Tag>Blazingly Fast</Tag>
         <Tag>Modern</Tag>
