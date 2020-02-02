@@ -18,6 +18,7 @@ module.exports = {
     `gatsby-plugin-theme-ui`,
     `gatsby-plugin-playground`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-emotion`,
     },

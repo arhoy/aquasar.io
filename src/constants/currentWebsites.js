@@ -47,4 +47,10 @@ export default [
     displayUrl: 'foodinvitecameroon.com',
     description: 'Catering Business',
   },
+  {
+    url: 'https://www.dresscodeafrica.netlify.com/',
+    title: 'Dress Code',
+    displayUrl: 'dresscodeafrica.com',
+    description: 'Ecommerce Store',
+  },
 ];

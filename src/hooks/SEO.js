@@ -17,7 +17,7 @@ const getData = graphql`
   }
 `;
 
-const SEO = ({ title, description, image }) => {
+const SEO = ({ title, description, image, article }) => {
   const { site } = useStaticQuery(getData);
   const {
     siteTitle,
@@ -29,7 +29,37 @@ const SEO = ({ title, description, image }) => {
   } = site.siteMetadata;
 
   const seoImage = image || siteImage;
-  console.log('SEO', seoImage);
+
+  const schemaOrgWebPage = {
+    '@context': 'http://schema.org',
+    '@type': 'WebPage',
+    url: siteUrl,
+    headline: title,
+    mainEntityOfPage: siteUrl,
+    description,
+    name: siteTitle,
+  };
+
+  // Initial breadcrumb list
+
+  const itemListElement = [
+    {
+      '@type': 'ListItem',
+      item: {
+        '@id': siteUrl,
+        name: 'Homepage',
+      },
+      position: 1,
+    },
+  ];
+
+  const breadcrumb = {
+    '@context': 'http://schema.org',
+    '@type': 'BreadcrumbList',
+    description: 'Breadcrumbs list',
+    name: 'Breadcrumbs',
+    itemListElement,
+  };
 
   return (
     <Helmet title={`${title} | ${siteTitle}`} htmlAttributes={{ lang: 'en' }}>
@@ -52,6 +82,15 @@ const SEO = ({ title, description, image }) => {
       <meta name="twitter:title" content={siteTitle} />
       <meta name="twitter:description" content={siteDescription} />
       <meta name="twitter:image" content={`${siteUrl}${seoImage}`} />
+
+      {/* Insert schema.org data conditionally (webpage/article) + everytime (breadcrumbs) */}
+      {!article && (
+        <script type="application/ld+json">
+          {JSON.stringify(schemaOrgWebPage)}
+        </script>
+      )}
+
+      <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
     </Helmet>
   );
 };
