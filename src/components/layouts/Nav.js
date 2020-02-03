@@ -112,7 +112,7 @@ const Nav = () => {
           <BurgerIcon onClick={mobileMenuHandler} />
 
           <MobileMenu1
-            display={mobileMenuOpen}
+            display={mobileMenuOpen.toString()}
             mobileMenuHandler={mobileMenuHandler}
           />
         </HeaderTop>

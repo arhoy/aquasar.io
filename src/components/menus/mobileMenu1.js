@@ -6,14 +6,14 @@ import NoStyleLink from '../Links/NoStyleLink';
 
 const ModalBackground = styled.div`
   transition: all 0.6s ease-in;
-  visibility: ${props => (props.display ? 'block' : 'hidden')};
+  visibility: ${props => (props.display !== 'false' ? 'block' : 'hidden')};
   z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background: ${props => (props.display ? 'black' : 'transparent')};
+  background: ${props => (props.display !== 'false' ? 'black' : 'transparent')};
   opacity: 0.7;
 `;
 
@@ -22,7 +22,7 @@ const MobileMenuContainer = styled.div`
   z-index: 11;
   background: ${props => props.theme.colors.white};
 
-  visibility: ${props => (props.display ? 'block' : 'hidden')};
+  visibility: ${props => (props.display !== 'false' ? 'block' : 'hidden')};
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
@@ -30,7 +30,7 @@ const MobileMenuContainer = styled.div`
   position: absolute;
   font-size: 2.2rem;
   top: 0;
-  right: ${props => (props.display ? '0' : '-100%')};
+  right: ${props => (props.display !== 'false' ? '0' : '-100%')};
   width: 80%;
 `;
 
