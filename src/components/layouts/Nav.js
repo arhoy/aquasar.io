@@ -1,109 +1,144 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
+
+import { Link } from 'gatsby';
+
+import { FaAlignRight } from 'react-icons/fa';
 
 import styled from '@emotion/styled';
-import netlifyIdentity from 'netlify-identity-widget';
-import { FaBeer } from 'react-icons/fa';
+
+import Search from '../algolia/Search';
+import { MobileMenu1 } from '../menus/mobileMenu1';
+
+import Navlink from '../Links/Navlink';
 import links from '../../constants/navLinks';
 import DropDownMenu1 from '../Links/DropDownMenu1';
-import Navlink from '../Links/Navlink';
 
 const Header = styled.header`
+  position: relative;
+
   background: ${props => props.theme.colors.lightgrey};
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  padding: 1rem 0;
+`;
+
+const HeaderTop = styled.div`
+  grid-column: 1/-1;
+
   display: flex;
-  margin: 0 auto;
   justify-content: space-around;
   align-items: center;
-  padding: 2rem 2.5rem;
-  border-bottom-left-radius: 25px;
-  border-top-right-radius: 25px;
+`;
 
-  a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+const HeaderMid = styled.div`
+  padding: 3px 0;
+  grid-column: 1/-1;
+  margin: 0 auto;
+  width: 80%;
   @media (max-width: ${props => props.theme.screenSize.mobileL}) {
-    height: 10rem;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 0;
+    width: 90%;
   }
 `;
 
+const HeaderBottom = styled.div`
+  grid-column: 1/-1;
+`;
+const LogoLink = styled(Link)`
+  padding: 0;
+  margin: 0;
+`;
 const Logo = styled.span`
-  color: ${props => props.theme.colors.primary};
-  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
-    margin-top: 1.2rem;
-  }
-
   & i {
     font-weight: bold;
-    color: ${props => props.theme.colors.primaryDark};
+    color: ${props => props.theme.colors.primary};
   }
-  & ${Navlink} {
+  & ${LogoLink} {
     text-decoration: none !important;
     font-size: 3rem;
+    line-height: 2.4rem;
   }
 `;
+
+const LogoSpan2 = styled.span``;
 
 const NavContainer = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
 
-  &.hideNav {
-    display: none;
-  }
   @media (max-width: ${props => props.theme.screenSize.mobileL}) {
-    flex-direction: row;
-    margin-top: 5rem;
-    position: absolute;
-  }
-  &.hideMe {
     display: none;
   }
 `;
 
-const BurgerIcon = styled(FaBeer)`
+const BurgerIcon = styled(FaAlignRight)`
   cursor: pointer;
-  font-size: 20px;
-  color: ${props => props.theme.colors.primaryDark};
   @media (min-width: ${props => props.theme.screenSize.mobileL}) {
-    margin: 0;
+    display: none;
+  }
+`;
+
+const Tagline = styled.div`
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  align-items: center;
+  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
+    margin-top: 1rem;
   }
 `;
 
 const Nav = () => {
-  useEffect(() => {
-    netlifyIdentity.init();
-  }, []);
+  const [mobileMenuOpen, setMobileMenu] = useState(false);
+
+  const mobileMenuHandler = () => {
+    setMobileMenu(prevState => !prevState);
+  };
 
   return (
-    <Header>
-      <Logo>
-        <Navlink to="/">
-          <i>A</i>quasar.io
-        </Navlink>
-      </Logo>
+    <>
+      <Header>
+        <HeaderTop>
+          <Logo>
+            <LogoLink to="/">
+              <i>
+                <LogoSpan2>Aquasar</LogoSpan2>
+              </i>
+            </LogoLink>
+          </Logo>
 
-      <NavContainer>
-        {links.map(link => (
-          <Navlink key={link.path} activeClassName="currentPage" to={link.path}>
-            {link.text}
-          </Navlink>
-        ))}
-        <DropDownMenu1 />
+          <BurgerIcon onClick={mobileMenuHandler} />
 
-        <a
-          href="https://ko-fi.com/aquasar"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Buy me a Kofi-Beer!"
-        >
-          <BurgerIcon />
-        </a>
-      </NavContainer>
-    </Header>
+          <MobileMenu1
+            display={mobileMenuOpen}
+            mobileMenuHandler={mobileMenuHandler}
+          />
+        </HeaderTop>
+
+        <HeaderMid>
+          <Search />
+        </HeaderMid>
+
+        <HeaderBottom>
+          <Tagline> WEB DEVELOPMENT | SEO | DIGITAL ADS</Tagline>
+
+          <NavContainer>
+            {links.map(link => (
+              <Navlink
+                key={link.path}
+                activeClassName="currentPage"
+                to={link.path}
+              >
+                {link.text}
+              </Navlink>
+            ))}
+            <DropDownMenu1 />
+          </NavContainer>
+        </HeaderBottom>
+      </Header>
+    </>
   );
 };
 

@@ -106,6 +106,7 @@ const Layout = ({ children, full }) => {
 
           body {
             background: ${white};
+            overflow-x: hidden;
             margin: 0;
             font-family: Poppins, Roboto, Helvetica, Arial, sans-serif;
           }

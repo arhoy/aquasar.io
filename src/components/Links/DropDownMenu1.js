@@ -40,7 +40,10 @@ const Button = styled.button`
 `;
 
 const DropDownContent = styled.div`
-  background: ${props => props.theme.colors.lightgrey};
+  background: ${props => props.theme.colors.white};
+  -webkit-box-shadow: 10px 10px 18px -8px rgba(158, 150, 158, 1);
+  -moz-box-shadow: 10px 10px 18px -8px rgba(158, 150, 158, 1);
+  box-shadow: 10px 10px 18px -8px rgba(158, 150, 158, 1);
 `;
 const DropDownMenu1 = () => {
   return (
