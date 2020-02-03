@@ -53,4 +53,10 @@ export default [
     displayUrl: 'dresscodeafrica.com',
     description: 'Ecommerce Store',
   },
+  {
+    url: 'https://www.rentalyeg.com',
+    title: 'Rental YEG',
+    displayUrl: 'rentalyeg.com',
+    description: 'Rental Property Company',
+  },
 ];
