@@ -20,12 +20,11 @@ const CustomLink = styled(NoStyleLink)`
 `;
 
 const ProductSearchPreview = ({ hit }) => {
-  console.log('HIT is', hit);
   if (hit) {
     return (
       <Container>
-        <CustomLink to={`/articles/${hit.productSlug}`}>
-          <h4>{hit.productName}</h4>
+        <CustomLink to={`/articles/${hit.slug}`}>
+          <h4>{hit.title}</h4>
         </CustomLink>
       </Container>
     );

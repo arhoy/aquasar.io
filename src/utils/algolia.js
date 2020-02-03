@@ -9,14 +9,6 @@ const algoliaQuery = `
        tags
       }
     }
-    allContentfulBlogPost {
-      nodes {
-        slug
-        title
-        description
-        tags
-      }
-    }
   }
   
 `;
@@ -24,10 +16,7 @@ const algoliaQuery = `
 const queries = [
   {
     query: algoliaQuery,
-    transformer: ({ data }) =>
-      data.allContentfulAlexQuasarArticles.nodes.concat(
-        data.allContentfulBlogPost.nodes,
-      ),
+    transformer: ({ data }) => data.allContentfulAlexQuasarArticles.nodes,
   },
 ];
 console.log('queries', queries);

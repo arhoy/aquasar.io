@@ -50,19 +50,20 @@ const StyledSearchBox = styled(SearchBox)`
 
 const StyledHits = styled(Hits)`
   position: relative;
+  z-index: 10;
   & ul {
-    min-width: 40rem;
     list-style: none;
     background: ${props => props.theme.colors.white};
-    -webkit-box-shadow: 18px 18px 46px 0px rgba(232, 232, 232, 1);
-    -moz-box-shadow: 18px 18px 46px 0px rgba(232, 232, 232, 1);
-    box-shadow: 18px 18px 46px 0px rgba(232, 232, 232, 1);
-    z-index: 4;
+    -webkit-box-shadow: 16px 19px 14px -7px rgba(207, 205, 207, 0.93);
+    -moz-box-shadow: 16px 19px 14px -7px rgba(207, 205, 207, 0.93);
+    box-shadow: 16px 19px 14px -7px rgba(207, 205, 207, 0.93);
     position: absolute;
     top: ;
     left: 0;
   }
   & li {
+    text-align: center;
+    padding: 0 1rem;
     &:hover {
       background: ${props => props.theme.colors.lightgrey};
     }
