@@ -1,0 +1,218 @@
+[
+  {
+    "id": "b2cc7fe9-0f0c-5ff2-b2a5-44e649d90e19",
+    "slug": "gatsby-with-strapi",
+    "description": {
+      "id": "0d18a7e1-0d5d-5906-bc73-e92ed07f4a2b",
+      "description": "Here we go Gatsby + Strapi. A quick intro or refresher to get you started. This tutorial will assume you are already familar with Strapi\n"
+    }
+  },
+  {
+    "id": "b3705497-de88-5854-bd82-aef03e057c83",
+    "slug": "using-zapier-hooks-to-send-facebook-lead-forms-to-an-email",
+    "description": {
+      "id": "2600f7c1-f376-5008-acf5-f21e985583c2",
+      "description": "In this short article we cover how to link up Facebook Lead Forms with Zapier so that you don't need to download a Facebook CSV file manually to send to your clients or sales team. "
+    }
+  },
+  {
+    "id": "718e45c2-3686-5e08-bc7b-a1102bf284df",
+    "slug": "using-the-react-slick-library-in-gatsby",
+    "description": {
+      "id": "6db6d996-e38a-580c-ac98-0a19ba8a1645",
+      "description": "React-Slick is a popular library for creating carousels. There is some great documentation [here](https://react-slick.neostack.com/ \"here\") regarding React Slick. Make sure to include the css files as well! I will give a quick rundown of the React Slick Library used in Gatsby."
+    }
+  },
+  {
+    "id": "12b441d9-d739-5566-a680-902b84e3c6d0",
+    "slug": "generating-contentful-pages-dynamically-with-gatsby-node-js",
+    "description": {
+      "id": "86642a9b-fa01-59ad-b9ef-a0f37c6c287f",
+      "description": "Generating pages dynamically is one of the best and most powerful features when it Gatsby. Combine this using Contentful in the right way and you have a potential WordPress distruptor. "
+    }
+  },
+  {
+    "id": "7aaa3dc8-3115-5c5c-aff0-49c5c5017f55",
+    "slug": "redirects-on-pop-up-plugin-using-wordpress",
+    "description": {
+      "id": "8a6e023d-cdd4-5b0a-96c5-a08920cf7d12",
+      "description": "A short article on wordpress redirects with popup plugin"
+    }
+  },
+  {
+    "id": "0ffac07c-55af-599a-9c24-959c62ae0997",
+    "slug": "getting-amazing-images-on-the-web-for-little-to-no-cost-for-your-website",
+    "description": {
+      "id": "11dc37f1-b2fe-5713-ac6f-d2c6878221ed",
+      "description": "What I have used to get amazing images on the web with litte to no cost."
+    }
+  },
+  {
+    "id": "1e27c3b2-9a23-579d-8bb6-0b1087b4b9a4",
+    "slug": "building-an-ecommerce-site-with-gatsby-contentful-and-snipcart",
+    "description": {
+      "id": "0cc5987c-b5ae-53dc-a311-b44d1126d819",
+      "description": "Coming from a React background with some experience in Gatsby a static site generator, I wanted to use the JAM stack to create a blazingly fast, free yet powerful ecommerce solution that could work for both small or med size companies and could scale easily. This article shows you how you can get started"
+    }
+  },
+  {
+    "id": "ac3336d6-9871-5dce-9a45-bb3d92951288",
+    "slug": "setting-up-google-analytics-with-gatsby-in-a-jiffy",
+    "description": {
+      "id": "2d0749a1-7426-57f2-a067-2c027e1d1dff",
+      "description": "Setting up Google Anaytics with Gatsby in a Jiffy. Well not quite, but this will be fairly quick and painless I promise."
+    }
+  },
+  {
+    "id": "93d31eaa-4cef-5d56-aa29-40695ca1f194",
+    "slug": "avoiding-duplicate-reviews-per-user",
+    "description": {
+      "id": "1b2a7d8c-b40c-550a-90b3-43a0c86fc297",
+      "description": "How to avoid duplicate reviews in our model"
+    }
+  },
+  {
+    "id": "dd318bea-9fad-5349-9ab3-2c0de67cd5fb",
+    "slug": "updating-a-review-in-a-database",
+    "description": {
+      "id": "4bec3863-1d88-54c8-b62f-d868c2a12db7",
+      "description": "This article shows how to update a review for a given user"
+    }
+  },
+  {
+    "id": "788c3887-8ea1-597a-b7b9-0982938655c3",
+    "slug": "using-virtual-populate-instead-of-child-embedding",
+    "description": {
+      "id": "0b82749a-7bd6-543b-9306-501afb34d319",
+      "description": "Virtual Populate is a good solution to child embedding, especially if the child documents grow indefinitely larger."
+    }
+  },
+  {
+    "id": "46fd227f-c8c1-57e2-9d29-2aa529b0018a",
+    "slug": "query-middleware-in-mongoose",
+    "description": {
+      "id": "397e2cb3-18f3-5e54-98f3-9ae8d62eef98",
+      "description": "A summary of using Query middleware (aka query hooks)"
+    }
+  },
+  {
+    "id": "57c77976-11b9-5c07-a00e-5f935d772837",
+    "slug": "document-middleware-with-mongoose",
+    "description": {
+      "id": "849f5be7-78cc-5746-9446-77a834f605b7",
+      "description": "An overview of document middleware with Mongoose and when and why to use"
+    }
+  },
+  {
+    "id": "7633033f-1d8a-5715-8f2a-8cdae5603033",
+    "slug": "how-to-clone-your-own-repo-in-github",
+    "description": {
+      "id": "db970d3a-c835-5a6a-9556-0ac4aebb94c7",
+      "description": "You want to start a new project, but want to use an existing template project you already have on github. To do this ..."
+    }
+  },
+  {
+    "id": "dedc8f21-f089-52ef-93eb-278cf43a2f9e",
+    "slug": "aggregating-data-using-mongo",
+    "description": {
+      "id": "03bb73dd-a276-577c-bf5e-05cb5dd63367",
+      "description": "For those familiar with querying and aggregating data via sql, doing it in using a nosql database like mongo is very similar. "
+    }
+  },
+  {
+    "id": "2842a394-28c1-5e97-b50f-bd65c4cf1579",
+    "slug": "using-express-with-mongoose",
+    "description": {
+      "id": "56885370-c184-5375-b363-c7caebf3bb8b",
+      "description": "Using Express with Mongoose to find, query, filter, sort and manipulate our data to our liking."
+    }
+  },
+  {
+    "id": "508089c8-0b81-572b-b0eb-b1f8284d17da",
+    "slug": "creating-models-in-mongoose",
+    "description": {
+      "id": "05d0e0f9-e9b3-5360-98d4-d4fe0f477761",
+      "description": "Models are constructors or blueprints for a how we store the data. An instance of a model is a document."
+    }
+  },
+  {
+    "id": "2e8a039f-b8cd-5dcc-addc-f1b707e317fc",
+    "slug": "virtual-attributes-in-mongoose",
+    "description": {
+      "id": "9aec75ab-e466-593f-9531-72b5db346eb7",
+      "description": "Attributes that are convenient to have around but are not persisted to the mongo database."
+    }
+  },
+  {
+    "id": "02b0bc11-2632-59ee-af2a-3f49fd5a81a8",
+    "slug": "pointing-your-name-server-to-netlify",
+    "description": {
+      "id": "185b8d39-47cd-5727-b553-0806835e522b",
+      "description": "How to point your name server to Netflify."
+    }
+  },
+  {
+    "id": "b6336e31-87ae-5a59-a729-1258b81de413",
+    "slug": "grabbing-images-in-a-local-file-in-a-react-app",
+    "description": {
+      "id": "c5b05c1c-34e9-5dda-86ef-a90c38e6f0e1",
+      "description": "Grabbing images in a local file in a React App"
+    }
+  },
+  {
+    "id": "ba4a843c-8429-5ba0-87fc-e9e88df6efb7",
+    "slug": "react-hooks-intro",
+    "description": {
+      "id": "b10500c0-ed91-5e80-8bf1-c9362f8c0ad8",
+      "description": "React Hooks are a new feature of React that let you do things without classes.\nHooks useState and useEffect are covered."
+    }
+  },
+  {
+    "id": "df243abc-42a1-55cb-97a1-292cd3bd5932",
+    "slug": "react-hooks-useredux-hook-set-up",
+    "description": {
+      "id": "3272184e-d64d-5c4f-9386-7dd7df65bc75",
+      "description": "Simple set up for using useRedux hook with React Hooks. Create a counter function"
+    }
+  },
+  {
+    "id": "f092c733-128e-5532-b19f-1118c92fad73",
+    "slug": "google-custom-search-in-a-react-redux-app",
+    "description": {
+      "id": "24433ea7-6c8f-5cdb-8cc9-5b33f7ce1648",
+      "description": "Google Custom Search in a React/Redux app"
+    }
+  },
+  {
+    "id": "9749bb98-d880-5b58-87ad-a077d4777e18",
+    "slug": "logging-in-a-user-using-express",
+    "description": {
+      "id": "9893df96-1a0b-584e-8555-0cf89860ed17",
+      "description": "Logging in a user with Express using jwt and bcrypt in a React app"
+    }
+  },
+  {
+    "id": "9257dcee-b841-5e62-a4f6-3469e771e9ff",
+    "slug": "protecting-routes-with-auth-middleware",
+    "description": {
+      "id": "258b06b6-2261-5712-9fb6-8d6d43a49856",
+      "description": "Express is a #1 most popular framework for developers using node.js. Express is build real world applications and simplify the complexities and amount of code needed to be written in node.js."
+    }
+  },
+  {
+    "id": "3dc89a9f-81bc-5429-b950-d5ae8b7ebd84",
+    "slug": "some-things-to-know-when-starting-with-express",
+    "description": {
+      "id": "06ef8567-29d6-5739-a8ac-3a62c478aeb2",
+      "description": "Express is a #1 most popular framework for developers using node.js. Express is build real world applications and simplify the complexities and amount of code needed to be written in node.js."
+    }
+  },
+  {
+    "id": "ef96a18a-6c91-5a36-872d-00ae34a4783e",
+    "slug": "validation-in-express",
+    "description": {
+      "id": "749169de-8965-5e38-b247-d180b3f5306d",
+      "description": "Validation in express with Express Validator is an easy way to validate your form fields."
+    }
+  }
+]
