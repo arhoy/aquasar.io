@@ -5,7 +5,10 @@ const algoliaQuery = `
       nodes {
        slug
        title
-       description
+       description {
+         id
+         description
+       }
        tags
       }
     }
