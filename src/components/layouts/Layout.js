@@ -22,6 +22,7 @@ const theme = {
     white: '#fff',
     black: '#1a1a1a',
     blackTransparent: 'rgba(41, 43, 46, 0.4)',
+    blackTransparent2: 'rgba(41, 43, 46, 0.7)',
     darkgrey: 'rgb(109, 109, 109)',
     red: 'rgb(218, 18, 31)',
     lightRed: 'rgb(232, 180, 182)',
@@ -101,12 +102,14 @@ const Layout = ({ children, full }) => {
         styles={css`
           * {
             box-sizing: border-box;
+
             margin: 0;
           }
 
           body {
             background: ${white};
             overflow-x: hidden;
+            width: 100%;
             margin: 0;
             font-family: Poppins, Roboto, Helvetica, Arial, sans-serif;
           }

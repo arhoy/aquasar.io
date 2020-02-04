@@ -22,5 +22,5 @@ const queries = [
     transformer: ({ data }) => data.allContentfulAlexQuasarArticles.nodes,
   },
 ];
-console.log('queries', queries);
+
 module.exports = queries;

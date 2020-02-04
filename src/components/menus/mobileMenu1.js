@@ -18,16 +18,19 @@ const ModalBackground = styled.div`
 `;
 
 const MobileMenuContainer = styled.div`
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+
   transition: all 0.4s ease-in;
   z-index: 11;
   background: ${props => props.theme.colors.white};
-
   visibility: ${props => (props.display !== 'false' ? 'block' : 'hidden')};
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   padding: 0;
-  position: absolute;
+  position: fixed;
   font-size: 2.2rem;
   top: 0;
   right: ${props => (props.display !== 'false' ? '0' : '-100%')};
@@ -80,12 +83,10 @@ const StyledLink = styled(NoStyleLink)`
   );
   transition: all 0.25s;
   background-size: 235%;
-
   margin: 1.5rem 0;
   text-align: right;
   &:hover {
     background-position: 100%;
-
     -webkit-transform: translateX(0.5rem);
     transform: translateX(0.5rem);
   }

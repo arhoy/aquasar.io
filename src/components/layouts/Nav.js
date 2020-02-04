@@ -15,7 +15,6 @@ import DropDownMenu1 from '../Links/DropDownMenu1';
 
 const Header = styled.header`
   position: relative;
-
   background: ${props => props.theme.colors.lightgrey};
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -25,7 +24,6 @@ const Header = styled.header`
 
 const HeaderTop = styled.div`
   grid-column: 1/-1;
-
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -66,7 +64,6 @@ const NavContainer = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-
   @media (max-width: ${props => props.theme.screenSize.mobileL}) {
     display: none;
   }
