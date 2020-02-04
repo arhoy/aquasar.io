@@ -21,8 +21,8 @@ export default () => {
   return (
     <Layout>
       <SEO
-        title="Explore Gatsby"
-        description="MERN, Gatsby and other cool stuff"
+        title="Edmonton Gatsby Web Development, SEO and Digital Ads"
+        description="Edmonton Gatsby Web Developer, SEO and Digital Ads. Helping businesses with Gatsby websites, SEO and Digital Ads"
       />
 
       <AboutMe />
