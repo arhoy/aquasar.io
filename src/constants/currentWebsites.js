@@ -59,4 +59,10 @@ export default [
     displayUrl: 'rentalyeg.com',
     description: 'Rental Property Company',
   },
+  {
+    url: 'https://www.newbarber.ca',
+    title: 'New Barber',
+    displayUrl: 'newbarber.ca',
+    description: 'Find Your Barber',
+  },
 ];
