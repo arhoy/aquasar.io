@@ -1,7 +1,7 @@
 export default [
   {
     path: '/about',
-    text: 'Me',
+    text: 'About',
   },
   {
     path: '/articles',

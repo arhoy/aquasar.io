@@ -23,6 +23,7 @@ const theme = {
     black: '#1a1a1a',
     blackTransparent: 'rgba(41, 43, 46, 0.4)',
     blackTransparent2: 'rgba(41, 43, 46, 0.7)',
+    grey: `#CCC1C1`,
     darkgrey: 'rgb(109, 109, 109)',
     red: 'rgb(218, 18, 31)',
     lightRed: 'rgb(232, 180, 182)',
@@ -40,6 +41,7 @@ const theme = {
     eightHundred: '800px',
     nineHundred: '900px',
     oneThousand: '1000px',
+    fourTwentyFive: '425px',
   },
 };
 

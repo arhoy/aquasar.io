@@ -145,8 +145,8 @@ const pricing = ({ data }) => {
   return (
     <Layout full={true}>
       <SEO
-        title="Pricing Page"
-        description="Here is my web development pricing page websites"
+        title="Aquasar Pricing Page"
+        description="Aquasar Pricing Page for Websites and Web Apps"
         image={data.seo.childImageSharp.fluid.src}
       />
 

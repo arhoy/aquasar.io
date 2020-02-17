@@ -33,6 +33,7 @@ import BasicFeatureSection from '../components/features/BasicFeatureSection';
 import FeatureSectionWithFixedImage from '../components/features/FeatureSectionWithFixedImage';
 import FeatureSectionIconLeft from '../components/features/FeatureSectionIconLeft';
 import FeatureSection from '../components/features/FeatureSection';
+import { Services } from '../components/services/Services';
 
 const P = styled.p`
   margin: 1.5rem 0rem;
@@ -154,26 +155,6 @@ const textPorfolio = () => (
   </>
 );
 
-const textAbout = () => (
-  <>
-    <P>
-      My name is Alex Quasar (Aquasar) and
-      <strong> I make websites.</strong> I started this website as a place to
-      document my learning and journey of web development. And what a journey it
-      has been!
-    </P>
-    <P>
-      I am a <strong>full stack web developer</strong> (70% frontend, 30%
-      backend), former data analyst and inspiring blogger!
-    </P>
-    <P>
-      Looking for a career change, my journey into the world of web development
-      has been anything but conventional. I hope to inspire and provide a
-      resource for others from all walks of life and education backgrounds.
-    </P>
-  </>
-);
-
 export const query = graphql`
   query {
     aboutImage1: file(relativePath: { eq: "astronaut.png" }) {
@@ -214,6 +195,17 @@ export const query = graphql`
   }
 `;
 
+const StyledH1 = styled(H1)`
+  text-align: center;
+  font-size: 3rem;
+  & .redbold {
+    color: ${props => props.theme.colors.red};
+  }
+  & .greenbold {
+    color: ${props => props.theme.colors.green};
+  }
+`;
+
 const about = ({ data }) => {
   return (
     <Layout full={true}>
@@ -221,14 +213,24 @@ const about = ({ data }) => {
         title="About Me"
         description="This is the about me section, Alex Quasar is a mere motral develop and Gatsby is a blazzingly fast static site generator"
       />
+
       <StyledHero2 img={data.aboutImage1.childImageSharp.fluid}>
         <Section>
           <Container800>
-            <H1>What is Aquasar.io</H1>
-            <BasicFeatureSection heading="About me" text={textAbout()} />
+            <StyledH1>
+              We would <span className="redbold"> LOVE </span> to help your
+              business expand and <span className="greenbold"> GROW </span>
+              online
+            </StyledH1>
           </Container800>
         </Section>
       </StyledHero2>
+
+      <Section>
+        <Container800>
+          <Services />
+        </Container800>
+      </Section>
 
       <SectionGrey>
         <Container1200>
