@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { FaUserAstronaut, FaFighterJet, FaCode } from 'react-icons/fa';
+import { FaFighterJet, FaCode } from 'react-icons/fa';
 
 import { graphql } from 'gatsby';
 
@@ -13,7 +13,6 @@ import { ListInline } from '../components/reusableStyles/lists/List';
 import { ListVertical as ListWithDescription } from '../components/reusableStyles/lists/ListWithDescription';
 import currentWebsites from '../constants/currentWebsites';
 
-import onlineResources from '../constants/onlineResources';
 import dataVisuals from '../constants/data-visuals';
 import { SimpleNetlifyForm } from '../components/forms/SimpleNetlifyForm';
 
@@ -22,14 +21,15 @@ import {
   Section,
   Container800,
   SectionGrey,
-  Container1200,
 } from '../components/reusableStyles/sections/Sections';
 
-import FeatureSectionIconLeft from '../components/features/FeatureSectionIconLeft';
 import FeatureSection from '../components/features/FeatureSection';
 import { Services } from '../components/services/Services';
 
 import { Experiences } from '../components/aboutPage/Experiences';
+
+import StarterPackage from '../components/aboutPage/StarterPackage';
+import ContactBox from '../components/contactPage/ContactBox';
 
 const P = styled.p`
   margin: 1.5rem 0rem;
@@ -64,9 +64,8 @@ const textPorfolio = () => (
     </Div2>
     <P>
       We would like to partner with you to make an affordable, fast, secure and
-      amazing website. Unlike most agencies I have multiple payment options and
-      will work with you to create a custom built site at a fraction of the
-      cost.
+      amazing website. Unlike most agencies web have multiple payment options
+      and will work with you to create a custom solution within your budget
     </P>
   </>
 );
@@ -170,44 +169,23 @@ const about = ({ data }) => {
 
       <SectionGrey>
         <Container800>
-          <FeatureSectionIconLeft
-            icon={FaUserAstronaut()}
-            rotate="rotate(-15deg)"
+          <FeatureSection
+            icon={FaFighterJet()}
+            rotate="rotate(15deg)"
             iconSize="14rem"
-            heading="Online Developer Resources"
-            subheading="List of my go to learning resources for web development"
-            text={
-              <Ul1>
-                <ListWithDescription items={onlineResources} />
-              </Ul1>
-            }
+            heading="Popular Package Deals"
+            subheading="We Want To Get You OFF to a Flying Start"
+            text={<StarterPackage />}
           />
         </Container800>
       </SectionGrey>
 
       <Section>
         <Container800>
-          <FeatureSection
-            icon={FaFighterJet()}
-            rotate="rotate(15deg)"
-            iconSize="14rem"
-            heading="For Data Visualization"
-            subheading="Tableau and Power Bi are great for most organizations"
-            text={
-              <Ul1>
-                <ListWithDescription items={dataVisuals} />
-              </Ul1>
-            }
-          />
+          <ContactBox text={`Leave Us A Message Below`} />
+          <SimpleNetlifyForm />
         </Container800>
       </Section>
-
-      <SectionGrey>
-        <Container800>
-          <H2>Contact Me</H2>
-          <SimpleNetlifyForm color="rgb(240,240,240)" />
-        </Container800>
-      </SectionGrey>
 
       <Hero />
     </Layout>

@@ -6,9 +6,12 @@ import Accordian from '../reusableStyles/accordian/Accordian';
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 5fr 4fr;
 
   grid-gap: 2rem;
+  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const SubContainer = styled.div``;
