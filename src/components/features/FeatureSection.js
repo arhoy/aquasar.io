@@ -6,7 +6,6 @@ import { H2 } from '../reusableStyles/typography/Typography';
 
 const Container = styled.div`
   margin: 0 auto;
-  width: 80%;
   display: flex;
   padding: 4rem 0;
   @media (max-width: ${props => props.theme.screenSize.mobileL}) {
@@ -43,7 +42,9 @@ const SubHeading = styled.h3`
     text-align: center;
   }
 `;
-const TextContainer = styled.div``;
+const TextContainer = styled.ul`
+  display: inline;
+`;
 
 const FeatureSection = ({
   heading,

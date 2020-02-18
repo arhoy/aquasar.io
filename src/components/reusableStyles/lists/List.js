@@ -7,6 +7,7 @@ const StyledInlineLi = styled(Li)`
   display: inline-block;
   margin: 1rem;
   @media (max-width: ${props => props.theme.screenSize.mobileL}) {
+    text-align: center;
   }
 `;
 
