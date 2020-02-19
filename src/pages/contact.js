@@ -57,20 +57,6 @@ const Div = styled.div`
   }
 `;
 
-const Box1 = styled.div`
-  width: 3rem;
-  height: 3rem;
-  background: ${props => props.theme.colors.white};
-`;
-
-const Box2 = styled.div`
-  width: 3rem;
-  height: 3rem;
-  background: ${props => props.theme.colors.black};
-  display: flex;
-  justify-content: flex-end;
-`;
-
 const CustomButton = styled(ButtonStyle2)``;
 
 const contact = ({ data }) => {

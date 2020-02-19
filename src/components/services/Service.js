@@ -37,7 +37,6 @@ const HR = styled.div`
 `;
 
 const Service = ({ title, items, border }) => {
-  console.log(border);
   return (
     <Container border={border}>
       <Title>{title}</Title>

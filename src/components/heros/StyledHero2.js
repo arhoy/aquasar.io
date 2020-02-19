@@ -15,5 +15,5 @@ export default styled(StyledHero2)`
   justify-content: center;
   align-items: center;
   z-index: -100;
-  background-attachment: fixed !important;
+  background-attachment: fixed;
 `;

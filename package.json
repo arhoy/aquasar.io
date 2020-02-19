@@ -52,8 +52,11 @@
     "react-helmet": "^5.2.1",
     "react-icons": "^3.7.0",
     "react-instantsearch-dom": "^6.3.0",
+    "react-particles-js": "^2.7.1",
+    "react-reveal": "^1.2.2",
     "react-stripe-elements": "^5.0.1",
     "react-syntax-highlighter": "^11.0.2",
+    "react-visibility-sensor": "^5.1.1",
     "theme-ui": "^0.2.43"
   },
   "devDependencies": {

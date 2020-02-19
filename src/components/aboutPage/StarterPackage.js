@@ -4,16 +4,6 @@ import styled from '@emotion/styled';
 
 import Accordian from '../reusableStyles/accordian/Accordian';
 
-const Container = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-
-  grid-gap: 2rem;
-  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
-    grid-template-columns: 1fr;
-  }
-`;
-
 const StyledLink = styled.span`
   position: relative;
   display: inline;
@@ -38,9 +28,18 @@ const StyledLink = styled.span`
     }
   }
 `;
-const SubContainer = styled.div``;
 
-const TitleContainer = styled.div``;
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+
+  grid-gap: 2rem;
+  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const SubContainer = styled.div``;
 
 const Title = styled.h4`
   font-weight: 500;
@@ -51,6 +50,16 @@ const Title = styled.h4`
   }
   & .primary {
     margin-bottom: 2rem;
+  }
+`;
+
+const TitleContainer = styled.div`
+  &:hover {
+    & ${StyledLink} {
+      &:before {
+        width: 100%;
+      }
+    }
   }
 `;
 
@@ -83,7 +92,7 @@ const StarterPackage = () => {
         <TitleContainer>
           <Title>
             <div className="secondary">
-              <StyledLink> Call Today </StyledLink>
+              <StyledLink className="animate"> Call Today </StyledLink>
               to get Started with our Small Business
               <span className="primaryBold"> Starter</span> Package
             </div>
