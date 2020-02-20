@@ -34,4 +34,6 @@ const Bold = styled.span`
 
 const Span = styled.span``;
 
-export { H1, H2, A, Li, Ul, Span, Bold };
+const P = styled.p``;
+
+export { H1, H2, A, Li, Ul, Span, Bold, P };

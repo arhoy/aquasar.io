@@ -28,7 +28,7 @@ const IconDown = styled(FaChevronDown)`
   font-size: 1rem;
 `;
 const SubContainer = styled.div`
-  height: ${props => (props.show ? '200px' : '0')};
+  height: ${props => (props.show ? props.height || '200px' : '0')};
 
   transition: all 1s ease-in-out;
 `;
@@ -43,7 +43,7 @@ const Text = styled.p`
   margin-bottom: 2rem;
 `;
 
-const Accordian = ({ title, text }) => {
+const Accordian = ({ title, text, height }) => {
   const [open, setOpen] = useState(false);
   const buttonClick = () => {
     console.log('I was clicked', open);
@@ -56,7 +56,7 @@ const Accordian = ({ title, text }) => {
         {open ? <IconUp /> : <IconDown />}
       </TitleContainer>
 
-      <SubContainer show={open}>
+      <SubContainer height={height} show={open}>
         <Text show={open}>{text}</Text>
       </SubContainer>
     </Container>
