@@ -61,8 +61,12 @@ export const AboutMe = () => {
           <Title>
             Hello I'm Alex
             <Blurb>
-              I create websites and web apps using modern technologies like
-              React and Gatsby and then write about by learnings along the way.
+              I am modern web developer, data analyst and digital marketing
+              expert in Edmonton, Alberta.
+              <br /> <br />I create websites using the latest modern
+              technologies in React and Gatsby.
+              <br /> <br />I write articles, develop websites, and help
+              companies grow their online business
             </Blurb>
           </Title>
 

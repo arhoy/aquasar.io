@@ -38,7 +38,7 @@ const CustomDivTopTwo = styled.div`
   background: ${props => props.theme.colors.primaryTransparent};
   padding: 2rem;
   display: flex;
-  flex-grow: 1;
+  height: max-content;
   flex-direction: column;
   align-items: center;
   border-bottom-left-radius: 25px;
