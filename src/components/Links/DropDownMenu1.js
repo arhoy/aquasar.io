@@ -4,6 +4,10 @@ import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 import { menuLinks1 } from '../../constants/menuLinks';
 
+const Container = styled.div`
+  z-index: 100;
+`;
+
 const Navlink = styled(Link)`
   color: ${props => props.theme.colors.primary};
 `;
@@ -47,7 +51,7 @@ const DropDownContent = styled.div`
 `;
 const DropDownMenu1 = () => {
   return (
-    <div className={`${styles.dropdown}`}>
+    <Container className={`${styles.dropdown}`}>
       <Button className={styles.dropbtn}>Explore </Button>
       <DropDownContent className={styles.dropdownContent}>
         {menuLinks1.map((link, i) => (
@@ -58,7 +62,7 @@ const DropDownMenu1 = () => {
 
         <NetlifyID data-netlify-identity-button></NetlifyID>
       </DropDownContent>
-    </div>
+    </Container>
   );
 };
 

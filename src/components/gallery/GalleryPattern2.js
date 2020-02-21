@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { H2 } from '../reusableStyles/typography/Typography';
 
 const Container = styled.div`
   display: grid;

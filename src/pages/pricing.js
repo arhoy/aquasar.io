@@ -15,12 +15,14 @@ import {
 import SEO from '../hooks/SEO';
 
 import Pricing from '../components/pricing/Pricing';
+import DigitalAdsPricing from '../components/pricing/DigitalAdsPricing';
 import { H2 } from '../components/reusableStyles/typography/Typography';
 import FeatureSection from '../components/features/FeatureSection';
 import {
   Section,
   SectionGrey,
   Container1200,
+  Container800,
 } from '../components/reusableStyles/sections/Sections';
 
 import {
@@ -30,6 +32,7 @@ import {
 import { SimpleNetlifyForm } from '../components/forms/SimpleNetlifyForm';
 import Hero from '../components/heros/Hero';
 import { DefaultPageContainer } from '../components/layouts/PageContainers';
+import { Companies } from '../components/home/Companies';
 
 export const query = graphql`
   {
@@ -150,14 +153,31 @@ const pricing = ({ data }) => {
         image={data.seo.childImageSharp.fluid.src}
       />
 
-      <StyledH2>My Pricing</StyledH2>
-
-      <Pricing />
-      <MarginBottom6 />
-
-      <StyledH2>The Aquasar Advantage</StyledH2>
+      <Section>
+        <Container1200>
+          <StyledH2>Website Pricing</StyledH2>
+          <Pricing />
+          <MarginBottom6 />
+        </Container1200>
+      </Section>
 
       <SectionGrey>
+        <Container1200>
+          <StyledH2>Digital Ads Pricing</StyledH2>
+          <DigitalAdsPricing />
+          <MarginBottom6 />
+        </Container1200>
+      </SectionGrey>
+
+      <Section>
+        <Container800>
+          <StyledH2>Portfolio</StyledH2>
+          <Companies />
+        </Container800>
+      </Section>
+
+      <SectionGrey>
+        <StyledH2>The Aquasar Advantage</StyledH2>
         <Container1200>
           <FeatureSection
             heading="SEO Optimized"
