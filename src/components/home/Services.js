@@ -1,9 +1,12 @@
 import React from 'react';
+
 import styled from '@emotion/styled';
+import Fade from 'react-reveal/Fade';
 
 import { SectionGrey } from '../reusableStyles/sections/Sections';
 import { Tag, TagContainer } from '../reusableStyles/tags/Tag';
 import { H2 } from '../reusableStyles/typography/Typography';
+import mainServicesList from '../../constants/mainServicesList';
 
 const Container = styled.div`
   display: flex;
@@ -19,7 +22,9 @@ const CustomSection = styled(SectionGrey)`
   border-top-right-radius: 25px;
 `;
 
-const CustomTag = styled(Tag)``;
+const CustomTag = styled(Tag)`
+  float: right;
+`;
 
 const Services = () => {
   return (
@@ -29,15 +34,15 @@ const Services = () => {
         <p>Services Provided: </p>
         <Container>
           <TagContainer>
-            <CustomTag>Web Development</CustomTag>
-            <CustomTag>Digital Marketing</CustomTag>
-            <CustomTag>Analytics</CustomTag>
-            <CustomTag>Ecommerce</CustomTag>
-            <CustomTag>Small Business Brand Growth</CustomTag>
-            <CustomTag>Lead Generation</CustomTag>
-            <CustomTag>Facebook Ads</CustomTag>
-            <CustomTag>Google Ads</CustomTag>
-            <CustomTag>Full Stack Development</CustomTag>
+            <TagContainer>
+              {mainServicesList.map(company => (
+                <CustomTag key={company}>
+                  <Fade right cascade>
+                    {company}
+                  </Fade>
+                </CustomTag>
+              ))}
+            </TagContainer>
           </TagContainer>
         </Container>
       </CustomSection>

@@ -50,7 +50,7 @@ const StyledSearchBox = styled(SearchBox)`
 
 const StyledHits = styled(Hits)`
   position: relative;
-  z-index: 10;
+  z-index: 101;
   & ul {
     list-style: none;
     background: ${props => props.theme.colors.white};

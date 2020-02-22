@@ -12,6 +12,7 @@ import { MobileMenu1 } from '../menus/mobileMenu1';
 import Navlink from '../Links/Navlink';
 import links from '../../constants/navLinks';
 import DropDownMenu1 from '../Links/DropDownMenu1';
+import NoStyleLink from '../Links/NoStyleLink';
 
 const Header = styled.header`
   position: relative;
@@ -87,6 +88,13 @@ const Tagline = styled.div`
   }
 `;
 
+const CustomLink = styled(NoStyleLink)`
+  margin: 0 5px;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 const Nav = () => {
   const [mobileMenuOpen, setMobileMenu] = useState(false);
 
@@ -119,7 +127,11 @@ const Nav = () => {
         </HeaderMid>
 
         <HeaderBottom>
-          <Tagline> WEB DEVELOPMENT | SEO | DIGITAL ADS</Tagline>
+          <Tagline>
+            <CustomLink to="/web-development">WEB DEVELOPMENT</CustomLink> |
+            <CustomLink to="/seo">SEO</CustomLink> |
+            <CustomLink to="/digital-ads">DIGITAL ADS</CustomLink>
+          </Tagline>
 
           <NavContainer>
             {links.map(link => (

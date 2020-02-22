@@ -1,11 +1,17 @@
 import React from 'react';
-import { CustomSectionPortfolio } from './HomeStyles';
+import styled from '@emotion/styled';
 import { Tag } from '../reusableStyles/tags/Tag';
 import { ListInline } from '../reusableStyles/lists/List';
 import currentWebsites from '../../constants/currentWebsites';
 import { NavlinkButton } from '../Links/NavLinkButton';
 import { H2 } from '../reusableStyles/typography/Typography';
 import { Margin2V } from '../reusableStyles/modular/modularStyles';
+import { SectionGrey } from '../reusableStyles/sections/Sections';
+
+const CustomSectionPortfolio = styled(SectionGrey)`
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
+`;
 
 export const Portfolio = () => {
   return (

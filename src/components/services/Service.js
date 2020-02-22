@@ -16,6 +16,7 @@ const Container = styled.div`
 const Title = styled.h4`
   text-transform: uppercase;
   line-height: 1.8rem;
+  margin-right: 4px;
 `;
 
 const SubContainer = styled.ul`

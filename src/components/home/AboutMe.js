@@ -1,120 +1,164 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import {
-  FaTwitterSquare,
-  FaGithub,
-  FaLinkedin,
-  FaFacebookSquare,
-} from 'react-icons/fa';
+import { keyframes } from '@emotion/core';
+
+import Fade from 'react-reveal/Fade';
+
 import profileImage from '../../../images/logo.jpg';
 
-import { ButtonStyle2 } from '../reusableStyles/buttons/Button';
-import {
-  CustomSection,
-  Title,
-  Blurb,
-  Social,
-  CustomDivTopOne,
-  CustomDivTopTwo,
-} from './HomeStyles';
-import { TagContainer, Tag } from '../reusableStyles/tags/Tag';
+import { ButtonStyle2, ButtonStyle1 } from '../reusableStyles/buttons/Button';
 
-const IconLink = styled.a`
-  cursor: pointer;
-  font-size: 4rem;
-  margin-left: 1rem;
+import { Section } from '../reusableStyles/sections/Sections';
+import SocialTagsHome from './SocialTagsHome';
+
+const slideInDown = keyframes`
+0% {
+  -webkit-transform: translate3d(0, -40rem, 0);
+  transform: translate3d(0, -10rem, 0);
+
+  opacity:0;
+}
+90% {
+  -webkit-transform: translate3d(0, 1rem, 0);
+  transform: translate3d(0, 1rem, 0);
+  opacity:1;
+  border-radius:0px;
+}
+100% {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity:1;
+  border-radius: 4px;
+}
+
 `;
 
-const TwitterStyle = styled(FaTwitterSquare)`
-  color: #1da1f2;
-`;
+const Container = styled(Section)`
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-const FBStyle = styled(FaFacebookSquare)`
-  color: rgb(66, 103, 178);
-`;
-
-const FaLinkedinStyled = styled(FaLinkedin)`
-  color: rgb(0, 119, 181);
-`;
-
-const GitHubStyle = styled(FaGithub)`
-  color: ${props => props.theme.colors.black};
-`;
-
-const CustomDiv = styled.div`
-  display: flex;
-  padding: 4rem 0;
   @media (max-width: ${props => props.theme.screenSize.mobileL}) {
-    flex-wrap: wrap;
+    grid-template-columns: 1fr;
   }
 `;
 
-const CustomDivTop = styled(CustomDiv)`
-  margin: 0 auto;
+const Title = styled.h1`
+  font-size: 3.8rem;
+`;
+
+const Blurb = styled.div`
+  max-width: 450px;
+  padding: 1.5rem 0;
+  font-size: 1.6rem;
+  color: ${props => props.theme.colors.black};
+`;
+
+const SubContainerOne = styled.div`
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
+    margin-bottom: 3rem;
+  }
+`;
+
+const SubContainerTwo = styled.div``;
+
+const SubscribeSection = styled.div`
+  background: ${props => props.theme.colors.primaryTransparent};
+  padding: 2rem;
+  display: flex;
+  height: max-content;
+  flex-direction: column;
+  align-items: center;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
+  & img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-size: contain;
+  }
+  h4 {
+    padding: 1rem 0rem;
+  }
+  & p {
+    text-align: center;
+  }
+`;
+
+const BlurbContainer = styled.div`
+  border-left: thick double ${props => props.theme.colors.primaryDark};
+  padding-left: 1rem;
+`;
+
+const CustomButton = styled(ButtonStyle2)`
+  animation: ${slideInDown} 2s cubic-bezier(0.17, 0.67, 0.08, 1.13);
 `;
 
 export const AboutMe = () => {
+  const [blurb, setBlurb] = useState(0);
+
+  const blurbHandler = blurb => {
+    console.log(blurb);
+    if (blurb > 1) {
+      setBlurb(0);
+    } else {
+      setBlurb(prev => prev + 1);
+    }
+  };
   return (
-    <CustomSection>
-      <CustomDivTop>
-        <CustomDivTopOne>
-          <Title>
-            Hello I'm Alex
-            <Blurb>
-              I am modern web developer, data analyst and digital marketing
-              expert in Edmonton, Alberta.
-              <br /> <br />I create websites using the latest modern
-              technologies in React and Gatsby.
-              <br /> <br />I write articles, develop websites, and help
-              companies grow their online business
-            </Blurb>
-          </Title>
+    <Container>
+      <SubContainerOne>
+        <Title>
+          Hello I'm Alex
+          <Blurb>
+            {blurb === 0 && (
+              <Fade left>
+                <BlurbContainer>
+                  I am modern web developer, data analyst and digital marketing
+                  expert in Edmonton, Alberta.
+                </BlurbContainer>
+              </Fade>
+            )}
 
-          <Social>
-            <IconLink
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/arhoy"
-            >
-              <GitHubStyle title="Star Repo" />
-            </IconLink>
+            {blurb === 1 && (
+              <Fade left>
+                <BlurbContainer>
+                  I create websites using the latest modern technologies in
+                  React and Gatsby.
+                </BlurbContainer>
+              </Fade>
+            )}
 
-            <IconLink
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://twitter.com/_aquasar"
-            >
-              <TwitterStyle title="Follow Me" />
-            </IconLink>
-            <IconLink
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.facebook.com/Aquasar-Web-Development-111600506937750/"
-            >
-              <FBStyle title="Like Page" />
-            </IconLink>
-            <IconLink
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/aquasar/"
-            >
-              <FaLinkedinStyled title="Like Page" />
-            </IconLink>
-          </Social>
-          <TagContainer>
-            <Tag>Google Partner</Tag>
-            <Tag>Shopify Parnter</Tag>
-          </TagContainer>
-        </CustomDivTopOne>
-        <CustomDivTopTwo>
+            {blurb === 2 && (
+              <Fade left>
+                <BlurbContainer>
+                  I write articles, develop websites, and help companies grow
+                  their online business
+                </BlurbContainer>
+              </Fade>
+            )}
+            <ButtonStyle1 onClick={() => blurbHandler(blurb)}>
+              Next
+            </ButtonStyle1>
+          </Blurb>
+        </Title>
+        <SocialTagsHome />
+      </SubContainerOne>
+      <SubContainerTwo>
+        <SubscribeSection>
           <img alt="" src={profileImage} />
           <h4>New Content Weekly</h4>
           <p> Developer tutorials and new websites </p>
-          <ButtonStyle2>
+          <CustomButton>
             <a href="https://aquasar.substack.com"> Subscribe Me </a>
-          </ButtonStyle2>
-        </CustomDivTopTwo>
-      </CustomDivTop>
-    </CustomSection>
+          </CustomButton>
+        </SubscribeSection>
+      </SubContainerTwo>
+    </Container>
   );
 };

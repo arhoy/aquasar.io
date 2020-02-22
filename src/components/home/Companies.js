@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import Fade from 'react-reveal/Fade';
 
 import { SectionGrey } from '../reusableStyles/sections/Sections';
 import { Tag, TagContainer } from '../reusableStyles/tags/Tag';
 import { H2 } from '../reusableStyles/typography/Typography';
+import companiesList from '../../constants/companiesList';
 
 const Container = styled.div`
   display: flex;
@@ -37,18 +39,13 @@ export const Companies = () => {
         </p>
         <Container>
           <TagContainer>
-            <CustomTag>Go Auto</CustomTag>
-            <CustomTag>Crystal Glass</CustomTag>
-            <CustomTag>New Image Cosmetic</CustomTag>
-            <CustomTag>Devebyte Marketing</CustomTag>
-            <CustomTag>Royal Dragon Vodka</CustomTag>
-            <CustomTag>Food Invite</CustomTag>
-            <CustomTag>Diamonds Consulting</CustomTag>
-            <CustomTag>A & J Driving School</CustomTag>
-            <CustomTag>Neverland Tea</CustomTag>
-            <CustomTag>Porch Pirate Chest</CustomTag>
-            <CustomTag>Sumo Sumo</CustomTag>
-            <CustomTag>Point Green Gardening</CustomTag>
+            {companiesList.map(company => (
+              <CustomTag key={company}>
+                <Fade left cascade>
+                  {company}
+                </Fade>
+              </CustomTag>
+            ))}
           </TagContainer>
         </Container>
       </CustomSection>

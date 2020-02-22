@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import Fade from 'react-reveal/Fade';
 
 import { Section } from '../reusableStyles/sections/Sections';
 import { Tag, TagContainer } from '../reusableStyles/tags/Tag';
 import { H2 } from '../reusableStyles/typography/Typography';
+import mainTechList from '../../constants/mainTechList';
 
 const Container = styled.div`
   display: flex;
@@ -21,7 +23,7 @@ const CustomSection = styled(Section)`
 `;
 
 const CustomTag = styled(Tag)`
-  float: right;
+  float: left;
   a {
     color: ${props => props.theme.colors.white};
     text-decoration: none;
@@ -39,145 +41,15 @@ const Platforms = () => {
         </p>
         <Container>
           <TagContainer>
-            <CustomTag>
-              <a
-                href={`https://www.gatsbyjs.org/`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Gatsby
-              </a>
-            </CustomTag>
-            <CustomTag>
-              <a
-                href={`https://reactjs.org/`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                React
-              </a>
-            </CustomTag>
-            <CustomTag>
-              <a
-                href={`https://www.netlify.com/`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Netlify
-              </a>
-            </CustomTag>
-
-            <CustomTag>
-              <a
-                href={`https://www.contentful.com/`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Contentful
-              </a>
-            </CustomTag>
-
-            <CustomTag>
-              <a
-                href={`https://www.adobe.com/ca/creativecloud.html`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Adobe Creative Cloud
-              </a>
-            </CustomTag>
-
-            <CustomTag>
-              <a
-                href={`https://snipcart.com/`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                SnipCart
-              </a>
-            </CustomTag>
-            <CustomTag>
-              <a
-                href={`https://expressjs.com/`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                ExpressJS
-              </a>
-            </CustomTag>
-            <CustomTag>
-              <a
-                href={`https://shopify.com/`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Shopify
-              </a>
-            </CustomTag>
-            <CustomTag>
-              <a
-                href={`https://www.mongodb.com/cloud/atlas`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Mongo DB Atlas
-              </a>
-            </CustomTag>
-            <CustomTag>
-              <a
-                href={`https://crisp.chat/en/`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Crisp
-              </a>
-            </CustomTag>
-            <CustomTag>
-              <a
-                href={`https://zapier.com/`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Zapier
-              </a>
-            </CustomTag>
-
-            <CustomTag>
-              <a
-                href={`https://elements.envato.com/`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Envato Elements
-              </a>
-            </CustomTag>
-            <CustomTag>
-              <a
-                href={`https://www.hubspot.com/`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Hubspot
-              </a>
-            </CustomTag>
-            <CustomTag>
-              <a
-                href={`https://www.algolia.com/`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Algolia
-              </a>
-            </CustomTag>
-            <CustomTag>
-              <a
-                href={`https://www.mapbox.com/`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                MapBox
-              </a>
-            </CustomTag>
+            {mainTechList.map(t => (
+              <CustomTag key={t.title}>
+                <Fade left cascade>
+                  <a href={t.url} target="_blank" rel="noopener noreferrer">
+                    {t.title}
+                  </a>
+                </Fade>
+              </CustomTag>
+            ))}
           </TagContainer>
         </Container>
       </CustomSection>

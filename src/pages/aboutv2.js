@@ -35,10 +35,8 @@ import FeatureSectionIconLeft from '../components/features/FeatureSectionIconLef
 import FeatureSection from '../components/features/FeatureSection';
 import { Services } from '../components/services/Services';
 
-
 const P = styled.p`
   margin: 1.5rem 0rem;
-  font-family: Poppins;
   font-size: 1.7rem;
   @media (max-width: ${props => props.theme.screenSize.mobileL}) {
     text-align: center;
