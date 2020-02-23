@@ -22,7 +22,6 @@ import { ContactBoxForm } from '../components/forms/ContactBoxForm';
 
 import { ServicesSEO } from '../components/services/ServicesSEO';
 import SEOPricing from '../components/pricing/SEOPricing';
-import { SeoGraph } from '../components/graphs/seoGraph';
 
 export const query = graphql`
   query {
