@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 
 const Container = styled.div`
   background: ${props => props.theme.colors.lightgrey};
+  font-size: 1.5rem;
+  font-weight: 100;
   display: flex;
   flex-direction: column;
   margin: 1rem;

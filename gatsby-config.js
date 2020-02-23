@@ -91,6 +91,18 @@ module.exports = {
     },
     `gatsby-plugin-twitter`,
     {
+      resolve: 'gatsby-plugin-netlify',
+      options: {
+        headers: {
+          '/*': [
+            "Content-Security-Policy: frame-ancestors 'self' https://*.public.tableau.com/",
+            'X-Frame-Options: ALLOW-FROM https://public.tableau.com/',
+          ],
+        },
+        mergeSecurityHeaders: false,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_ID,

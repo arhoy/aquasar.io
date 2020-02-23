@@ -4,6 +4,7 @@ import socialIcons from '../../constants/socialIcons';
 
 import styled from '@emotion/styled';
 import { FaCanadianMapleLeaf } from 'react-icons/fa';
+import { A } from '../reusableStyles/typography/Typography';
 
 const d = new Date().getFullYear();
 
@@ -69,7 +70,7 @@ const Footer = () => {
         </StyledImage>
         | Alberta
       </Div>
-      tel: 587 772 5536
+      <A href="tel:587-501-7726">587-501-7726</A>
       <FooterBlurb>Aquasar.io {d} &copy; </FooterBlurb>
       <Attribution>Professional | Afforadable | Fast</Attribution>
     </FooterStyle>
