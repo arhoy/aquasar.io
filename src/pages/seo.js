@@ -77,7 +77,6 @@ const SEOPage = ({ data }) => {
         title="SEO Services | Aquasar Inc"
         description="We offer SEO services for small to medium size businesses here in Edmonton Alberta. These include Google My Business Optimization, Technical SEO, Link Building, Content Writing and other online optimizations to ensure your site remains fresh, relevant and up to date for users and for Google indexing "
       />
-
       <StyledHero2 img={data.aboutImage1.childImageSharp.fluid}>
         <Section>
           <Container800>
@@ -88,21 +87,9 @@ const SEOPage = ({ data }) => {
           </Container800>
         </Section>
       </StyledHero2>
-
-      <Section>
-        <Container800>
-          <ServicesSEO />
-        </Container800>
-      </Section>
-
       <SectionGrey>
         <Container800>
-          <StyledH2>GROW YOUR TRAFFIC</StyledH2>
-          <CustomP>
-            Grow Your Traffic organically. Make sense of your data and where
-            your users are coming from
-          </CustomP>
-          <SeoGraph />
+          <ServicesSEO />
         </Container800>
       </SectionGrey>
 
@@ -119,9 +106,7 @@ const SEOPage = ({ data }) => {
           <SEOPricing />
         </Container1200>
       </Section>
-
       <StyledHero2 img={data.seoImage.childImageSharp.fluid}></StyledHero2>
-
       <Section>
         <Container800>
           <ContactBoxForm title={'Leave Us A Message'} />
