@@ -72,7 +72,6 @@ const FeatureSectionIconLeft = ({
 FeatureSectionIconLeft.propTypes = {
   heading: PropTypes.string.isRequired,
   subheading: PropTypes.string.isRequired,
-  text: PropTypes.object.isRequired,
 };
 
 export default FeatureSectionIconLeft;

@@ -64,7 +64,7 @@ const DigitalAdsPricing = () => {
       />
       <PriceCard
         title="Custom Quote"
-        price={`1000`}
+        price={1000}
         features={customFeatures}
         priceText={`+/month`}
       />

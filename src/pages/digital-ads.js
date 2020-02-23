@@ -26,6 +26,7 @@ import FeatureSectionIconLeft from '../components/features/FeatureSectionIconLef
 import { ServicesDigitalAds } from '../components/services/ServicesDigitalAds';
 import DigitalAdsPricing from '../components/pricing/DigitalAdsPricing';
 import { Companies } from '../components/home/Companies';
+import NonStretchImage from '../components/heros/NonStretchImage';
 
 export const query = graphql`
   query {
@@ -36,25 +37,11 @@ export const query = graphql`
         }
       }
     }
-
-    aboutImage2: file(relativePath: { eq: "rocket.png" }) {
+    digitalAds: file(relativePath: { eq: "digital-ads-vector.png" }) {
       childImageSharp {
-        fixed(width: 256, height: 256) {
-          ...GatsbyImageSharpFixed_tracedSVG
-        }
-      }
-    }
-    aboutImage3: file(relativePath: { eq: "satelite.png" }) {
-      childImageSharp {
-        fixed(width: 256, height: 256) {
-          ...GatsbyImageSharpFixed_tracedSVG
-        }
-      }
-    }
-    aboutImage4: file(relativePath: { eq: "telescope.png" }) {
-      childImageSharp {
-        fixed(width: 350, height: 350) {
-          ...GatsbyImageSharpFixed_tracedSVG
+        fluid(quality: 100, maxWidth: 2000) {
+          ...GatsbyImageSharpFluid_tracedSVG
+          presentationWidth
         }
       }
     }
@@ -94,7 +81,10 @@ const DigitalAds = ({ data }) => {
         description="We offer digital ad services for small to medium size businesses here in Edmonton Alberta. We are experts in Facebook Ads, Google Ads, Instagram Ads, Split Testing, Conversion Rate Optimization. We want to help grow and build your online business presence "
       />
 
-      <StyledHero2 img={data.aboutImage1.childImageSharp.fluid}>
+      <StyledHero2
+        alt={'Grow your business through digital Ads in Edmonton AB'}
+        img={data.aboutImage1.childImageSharp.fluid}
+      >
         <Section>
           <Container800>
             <StyledH1>
@@ -111,7 +101,10 @@ const DigitalAds = ({ data }) => {
         </Container800>
       </Section>
 
-      <StyledHero2 img={data.aboutImage1.childImageSharp.fluid}>
+      <StyledHero2
+        alt={`As a digital Agency we let the results speak for themselves`}
+        img={data.aboutImage1.childImageSharp.fluid}
+      >
         <Section>
           <Container800>
             <StyledH1>
@@ -142,7 +135,13 @@ const DigitalAds = ({ data }) => {
         </Container800>
       </Section>
 
-      <SectionGrey>
+      <NonStretchImage
+        height={'40vh'}
+        alt={'Digital Marketing Edmonton Alberta'}
+        fluid={data.digitalAds.childImageSharp.fluid}
+      ></NonStretchImage>
+
+      <Section>
         <Container800>
           <FeatureSectionIconLeft
             icon={FaUserAstronaut()}
@@ -155,7 +154,7 @@ const DigitalAds = ({ data }) => {
             }
           />
         </Container800>
-      </SectionGrey>
+      </Section>
 
       <Section>
         <Container800>

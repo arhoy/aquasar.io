@@ -38,6 +38,7 @@ import {
   textNetlify,
   textReact,
 } from '../content/web-development/content';
+import NonStretchImage from '../components/heros/NonStretchImage';
 
 export const query = graphql`
   query {
@@ -56,17 +57,21 @@ export const query = graphql`
         }
       }
     }
-    aboutImage3: file(relativePath: { eq: "satelite.png" }) {
-      childImageSharp {
-        fixed(width: 256, height: 256) {
-          ...GatsbyImageSharpFixed_tracedSVG
-        }
-      }
-    }
+
     aboutImage4: file(relativePath: { eq: "telescope.png" }) {
       childImageSharp {
         fixed(width: 350, height: 350) {
           ...GatsbyImageSharpFixed_tracedSVG
+        }
+      }
+    }
+
+    webDevelopmentAds: file(
+      relativePath: { eq: "web-development-vector.png" }
+    ) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 2000) {
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
@@ -223,6 +228,12 @@ const WebDevelopment = ({ data }) => {
           />
         </Container800>
       </SectionGrey>
+
+      <NonStretchImage
+        height={'40vh'}
+        alt={'Web Development Edmonton Alberta'}
+        fluid={data.webDevelopmentAds.childImageSharp.fluid}
+      ></NonStretchImage>
 
       <Section>
         <Container800>
