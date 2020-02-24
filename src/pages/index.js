@@ -21,8 +21,8 @@ export default () => {
   return (
     <Layout>
       <SEO
-        title="Edmonton Gatsby Web Development, SEO and Digital Ads"
-        description="Edmonton Gatsby Web Developer, SEO and Digital Ads. Helping businesses with Gatsby websites, SEO and Digital Ads"
+        title="Web Development, SEO and Digital Ads in Edmonton AB | Aquasar Inc"
+        description="Web Development, SEO and Digital Ads. Helping businesses with Gatsby websites, SEO and Digital Ads"
       />
 
       <AboutMe />

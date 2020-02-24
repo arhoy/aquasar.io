@@ -63,7 +63,7 @@ const About = ({ data }) => {
   return (
     <Layout full={true}>
       <SEO
-        title="About Aquasar Inc"
+        title="About Us | Aquasar Inc"
         description="Aquasar Inc is a web development, seo and digital ads company in Edmonton Alberta. View our services and portfolio and learn about what we have to offer you"
       />
 
