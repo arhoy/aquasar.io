@@ -22,7 +22,7 @@ const GalleryPage = () => {
           constrained within the bounds of WP Templates or Bootstrap Grids. These blocks below
           could be a layout or be filled with images on your site
           to greate an image gallery. The possibilities with CSS Grids are endless.`}
-          height={'50px'}
+          height={'25rem'}
         />
       </Blurb>
 

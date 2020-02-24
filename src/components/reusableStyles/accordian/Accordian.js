@@ -28,7 +28,7 @@ const IconDown = styled(FaChevronDown)`
   font-size: 1rem;
 `;
 const SubContainer = styled.div`
-  height: ${props => (props.show ? props.height || '200px' : '0')};
+  height: ${props => (props.show ? props.height || '22rem' : '0')};
 
   transition: all 1s ease-in-out;
 `;
