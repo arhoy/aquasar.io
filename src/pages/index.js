@@ -19,7 +19,7 @@ import Platforms from '../components/home/Platforms';
 
 export default () => {
   return (
-    <Layout>
+    <Layout backgroundLayer={true}>
       <SEO
         title="Web Development, SEO and Digital Ads in Edmonton AB | Aquasar Inc"
         description="Web Development, SEO and Digital Ads. Helping businesses with Gatsby websites, SEO and Digital Ads"

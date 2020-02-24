@@ -38,8 +38,12 @@ const Form = styled.form`
   border-bottom: 1rem solid ${props => props.theme.colors.primaryDark};
 `;
 
-const TextArea = styled.textarea``;
-const Input = styled.input``;
+const TextArea = styled.textarea`
+  background: transparent;
+`;
+const Input = styled.input`
+  background: transparent;
+`;
 
 const SimpleNetlifyForm = ({ color }) => {
   const [name, setName] = useState('');
@@ -100,7 +104,6 @@ const SimpleNetlifyForm = ({ color }) => {
         <Label>
           Your Email:
           <Input
-            style={{ background: `${color}` }}
             onChange={event => setEmail(event.target.value)}
             placeholder="What is your email"
             type="email"
@@ -114,7 +117,6 @@ const SimpleNetlifyForm = ({ color }) => {
         <Label>
           Message:
           <TextArea
-            style={{ background: `${color}` }}
             onChange={event => setMessage(event.target.value)}
             placeholder="Please enter a brief message"
             name="message"
