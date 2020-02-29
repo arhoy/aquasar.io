@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
-import { keyframes } from '@emotion/core';
+import { gsap, Bounce } from 'gsap';
 
 import Fade from 'react-reveal/Fade';
 
@@ -10,28 +10,6 @@ import { ButtonStyle2, ButtonStyle1 } from '../reusableStyles/buttons/Button';
 
 import { Section } from '../reusableStyles/sections/Sections';
 import SocialTagsHome from './SocialTagsHome';
-
-const slideInDown = keyframes`
-0% {
-  -webkit-transform: translate3d(0, -40rem, 0);
-  transform: translate3d(0, -10rem, 0);
-
-  opacity:0;
-}
-90% {
-  -webkit-transform: translate3d(0, 1rem, 0);
-  transform: translate3d(0, 1rem, 0);
-  opacity:1;
-  border-radius:0px;
-}
-100% {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  opacity:1;
-  border-radius: 4px;
-}
-
-`;
 
 const Container = styled(Section)`
   padding-top: 2rem;
@@ -95,11 +73,22 @@ const BlurbContainer = styled.div`
   padding-left: 1rem;
 `;
 
-const CustomButton = styled(ButtonStyle2)`
-  animation: ${slideInDown} 2s cubic-bezier(0.17, 0.67, 0.08, 1.13);
-`;
+const CustomButton = styled(ButtonStyle2)``;
 
 export const AboutMe = () => {
+  useEffect(() => {
+    const master = new gsap.timeline({});
+
+    function logoBounce() {
+      const tl = new gsap.timeline();
+      tl.from('.logo', 3, { y: -600, ease: Bounce.easeOut, opacity: 0 });
+      return tl;
+    }
+
+    // adding timeline functions
+    master.add(logoBounce());
+  }, []);
+
   const [blurb, setBlurb] = useState(0);
 
   const blurbHandler = blurb => {
@@ -151,7 +140,7 @@ export const AboutMe = () => {
       </SubContainerOne>
       <SubContainerTwo>
         <SubscribeSection>
-          <img alt="" src={profileImage} />
+          <img className="logo" alt="Aquasar Logo" src={profileImage} />
           <h4>New Content Weekly</h4>
           <p> Developer tutorials and new websites </p>
           <CustomButton>

@@ -48,6 +48,7 @@
     "gatsby-source-instagram": "^0.5.1",
     "gatsby-source-stripe": "^3.0.4",
     "gatsby-transformer-sharp": "^2.2.19",
+    "gsap": "^3.2.2",
     "netlify-identity-widget": "^1.5.5",
     "nivo": "^0.31.0",
     "node-sass": "^4.12.0",

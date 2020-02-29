@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
+import { gsap } from 'gsap';
 
 import {
   FaTwitterSquare,
@@ -42,10 +43,41 @@ const Social = styled.div`
 `;
 
 const SocialTagsHome = () => {
+  useEffect(() => {
+    const master = new gsap.timeline({ delay: 0.5 });
+
+    function socialIntro() {
+      const tl = new gsap.timeline();
+      tl.from('.circle', {
+        duration: 2,
+        x: '1000',
+        y: 'random(-400,400)',
+        opacity: 0,
+        ease: 'power3.inOut',
+        stagger: '0.25',
+      });
+      tl.to('.circle', {
+        duration: 0.9,
+        borderRadius: '0',
+        margin: 2,
+        rotateY: 360,
+        ease: 'bounce',
+        stagger: '0.15',
+      });
+      return tl;
+    }
+
+    // adding timeline functions
+    master.add(socialIntro());
+
+    console.log(master.duration());
+  }, []);
+
   return (
     <Container>
       <Social>
         <IconLink
+          className="circle"
           target="_blank"
           rel="noopener noreferrer"
           href="https://github.com/arhoy"
@@ -54,6 +86,7 @@ const SocialTagsHome = () => {
         </IconLink>
 
         <IconLink
+          className="circle"
           target="_blank"
           rel="noopener noreferrer"
           href="https://twitter.com/_aquasar"
@@ -61,6 +94,7 @@ const SocialTagsHome = () => {
           <TwitterStyle title="Follow Me" />
         </IconLink>
         <IconLink
+          className="circle"
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.facebook.com/Aquasar-Web-Development-111600506937750/"
@@ -68,6 +102,7 @@ const SocialTagsHome = () => {
           <FBStyle title="Like Page" />
         </IconLink>
         <IconLink
+          className="circle"
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.linkedin.com/in/aquasar/"
