@@ -36,6 +36,8 @@ const Label = styled.label`
   }
 `;
 
+const Container = styled.div``;
+
 const Form = styled.form`
   display: block;
   background: rgb(240, 240, 240);
@@ -116,7 +118,7 @@ const ContactBoxForm = ({ title }) => {
   };
 
   return (
-    <>
+    <Container>
       <Form
         name="contact"
         method="POST"
@@ -176,7 +178,7 @@ const ContactBoxForm = ({ title }) => {
           </SendContainer>
         </SendField>
       </Form>
-    </>
+    </Container>
   );
 };
 

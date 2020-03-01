@@ -1,29 +1,23 @@
 import React from 'react';
 import styles from '../../scss/hover-drop-downs/hoverdropdown1.module.scss';
 import styled from '@emotion/styled';
-import { Link } from 'gatsby';
+
 import { menuLinks1 } from '../../constants/menuLinks';
+import NoStyleLink from './NoStyleLink';
 
 const Container = styled.div`
   z-index: 100;
 `;
 
-const Navlink = styled(Link)`
+const Navlink = styled(NoStyleLink)`
   color: ${props => props.theme.colors.primary};
+  font-size: inherit;
 `;
 
-const NetlifyID = styled.span`
-  .netlify-identity-user,
-  .netlify-identity-button,
-  .netlify-identity-menu {
-    color: ${props => props.theme.colors.primary};
-    text-decoration: none;
-  }
-`;
-
-const Button = styled.button`
+const Button = styled.div`
   color: ${props => props.theme.colors.primary};
-  font-size: 1.8rem;
+  transform: translateY(-1px);
+  font-size: 1.7rem;
   text-decoration: none;
   margin-right: 1rem;
   outline: none;
@@ -52,15 +46,13 @@ const DropDownContent = styled.div`
 const DropDownMenu1 = () => {
   return (
     <Container className={`${styles.dropdown}`}>
-      <Button className={styles.dropbtn}>Explore </Button>
+      <Button>Explore </Button>
       <DropDownContent className={styles.dropdownContent}>
         {menuLinks1.map((link, i) => (
           <Navlink key={i} to={link.path}>
             {link.text}
           </Navlink>
         ))}
-
-        <NetlifyID data-netlify-identity-button></NetlifyID>
       </DropDownContent>
     </Container>
   );

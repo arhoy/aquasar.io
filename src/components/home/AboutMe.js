@@ -4,13 +4,11 @@ import { gsap, Bounce } from 'gsap';
 
 import profileImage from '../../../images/logo.jpg';
 
-import {
-  ButtonStyle2,
-  ButtonSweepToRight,
-} from '../reusableStyles/buttons/Button';
+import { ButtonSweepToRight } from '../reusableStyles/buttons/Button';
 
 import { Section } from '../reusableStyles/sections/Sections';
 import SocialTagsHome from './SocialTagsHome';
+import { A } from '../reusableStyles/typography/Typography';
 
 const Container = styled(Section)`
   padding-top: 2rem;
@@ -50,7 +48,7 @@ const SubContainerTwo = styled.div``;
 
 const SubscribeSection = styled.div`
   background: ${props => props.theme.colors.lightgrey};
-  padding: 2rem;
+  padding: 3rem;
   display: flex;
   height: max-content;
   flex-direction: column;
@@ -76,7 +74,13 @@ const BlurbContainer = styled.div`
   padding-left: 1rem;
 `;
 
-const CustomButton = styled(ButtonStyle2)``;
+const CustomButton = styled(ButtonSweepToRight)`
+  background: ${props => props.theme.colors.primaryLight};
+
+  ${A} {
+    color: ${props => props.theme.colors.white};
+  }
+`;
 
 export const AboutMe = () => {
   useEffect(() => {
@@ -100,11 +104,10 @@ export const AboutMe = () => {
 
     function nextButton() {
       const tl = new gsap.timeline();
-      tl.from('.nextButton', 1, {
-        x: -100,
-        width: 0,
+      tl.from('.nextButton', 2.4, {
+        y: -100,
         opacity: 0,
-        ease: 'back',
+        ease: 'elastic.out(1,0.4)',
       });
       return tl;
     }
@@ -124,7 +127,7 @@ export const AboutMe = () => {
     master.add('logoFall');
     master.add(logoBounce());
     master.add(subscribeMe(), '-=2');
-    master.add(nextButton(), '-=1');
+    master.add(nextButton(), '-=1.4');
   }, []);
 
   const [blurb, setBlurb] = useState(0);
@@ -195,7 +198,7 @@ export const AboutMe = () => {
           <h4>New Content Weekly</h4>
           <p> Developer tutorials and new websites </p>
           <CustomButton className="subscribeMe">
-            <a href="https://aquasar.substack.com"> Subscribe Me </a>
+            <A href="https://aquasar.substack.com"> SIGN UP </A>
           </CustomButton>
         </SubscribeSection>
       </SubContainerTwo>

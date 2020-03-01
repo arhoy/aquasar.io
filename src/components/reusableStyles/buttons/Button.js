@@ -39,6 +39,7 @@ const ButtonSweepToRight = styled.button`
   outline: none;
   padding: 1rem 2rem;
   font-weight: bold;
+  text-align: center;
   background: ${props => props.theme.colors.lightgrey};
   display: inline-block;
   cursor: pointer;

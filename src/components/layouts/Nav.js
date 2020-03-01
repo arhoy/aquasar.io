@@ -16,11 +16,14 @@ import NoStyleLink from '../Links/NoStyleLink';
 
 const Header = styled.header`
   position: relative;
+  padding: 1rem 0;
   background: ${props => props.theme.colors.lightgrey};
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, 1fr);
-  padding: 1rem 0;
+  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
+    padding: 3rem 0;
+  }
 `;
 
 const HeaderTop = styled.div`
@@ -30,7 +33,7 @@ const HeaderTop = styled.div`
   align-items: center;
 `;
 
-const HeaderMid = styled.div`
+const HeaderSearch = styled.div`
   padding: 3px 0;
   grid-column: 1/-1;
   margin: 0 auto;
@@ -40,8 +43,9 @@ const HeaderMid = styled.div`
   }
 `;
 
-const HeaderBottom = styled.div`
+const HeaderNav = styled.div`
   grid-column: 1/-1;
+  margin-bottom: 1rem;
 `;
 const LogoLink = styled(Link)`
   padding: 0;
@@ -122,11 +126,7 @@ const Nav = () => {
           />
         </HeaderTop>
 
-        <HeaderMid>
-          <Search />
-        </HeaderMid>
-
-        <HeaderBottom>
+        <HeaderNav>
           <Tagline>
             <CustomLink to="/web-development">WEB DEVELOPMENT</CustomLink> |
             <CustomLink to="/seo">SEO</CustomLink> |
@@ -145,7 +145,11 @@ const Nav = () => {
             ))}
             <DropDownMenu1 />
           </NavContainer>
-        </HeaderBottom>
+        </HeaderNav>
+
+        <HeaderSearch>
+          <Search />
+        </HeaderSearch>
       </Header>
     </>
   );

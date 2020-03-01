@@ -4,18 +4,16 @@ import Layout from '../components/layouts/Layout';
 import SEO from '../hooks/SEO';
 import Insta from '../components/Insta';
 
-import { SimpleNetlifyForm } from '../components/forms/SimpleNetlifyForm';
-import Hero from '../components/heros/Hero';
-
 import { Section } from '../components/reusableStyles/sections/Sections';
 import { AboutMe } from '../components/home/AboutMe';
 import { Portfolio } from '../components/home/Portfolio';
 import { LatestArticles } from '../components/home/LatestArticles';
 import { LatestBlogs } from '../components/home/LatestBlogs';
-import { H2 } from '../components/reusableStyles/typography/Typography';
+
 import { Companies } from '../components/home/Companies';
 import Services from '../components/home/Services';
 import Platforms from '../components/home/Platforms';
+import { ContactBoxForm } from '../components/forms/ContactBoxForm';
 
 export default () => {
   return (
@@ -40,9 +38,7 @@ export default () => {
       <LatestBlogs />
 
       <Section>
-        <H2>Contact Me</H2>
-        <SimpleNetlifyForm />
-        <Hero />
+        <ContactBoxForm title={'Leave Us A Message'} />
       </Section>
       <Section>
         <Insta />

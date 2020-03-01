@@ -28,6 +28,10 @@ const searchClient = algoliasearch(
 const StyledSearchBox = styled(SearchBox)`
   .ais-SearchBox-form {
     display: flex;
+    @media (min-width: ${props => props.theme.screenSize.mobileL}) {
+      max-width: 50rem;
+      margin: 0 auto;
+    }
   }
 
   & input,

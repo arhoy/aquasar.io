@@ -62,8 +62,8 @@ const SocialTagsHome = () => {
       const tl = new gsap.timeline();
       tl.from('.circle', {
         duration: 3,
-        x: '1000',
-        y: 'random(-400,400)',
+        x: '600',
+        y: 'random(-600,600)',
         opacity: 0,
         ease: 'power3.inOut',
         stagger: '0.25',

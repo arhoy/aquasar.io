@@ -9,18 +9,19 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem 0;
+  padding: 0.7rem 0;
   list-style: none;
 `;
 
 const CustomLink = styled(NoStyleLink)`
   & h4 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    font-weight: 400;
   }
 `;
 
 const ProductSearchPreview = ({ hit }) => {
-  if (hit) {
+  if (hit && hit.__position < 9) {
     return (
       <Container>
         <CustomLink to={`/articles/${hit.slug}`}>
