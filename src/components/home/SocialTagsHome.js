@@ -43,7 +43,15 @@ const Social = styled.div`
 `;
 
 const CustomTagContainer = styled(TagContainer)`
+  display: flex;
+  align-items: center;
+
   overflow: hidden;
+  & .tag {
+    display: inline;
+    padding: 0.8rem 1rem;
+    text-align: center;
+  }
 `;
 
 const SocialTagsHome = () => {

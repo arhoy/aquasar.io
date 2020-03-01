@@ -100,11 +100,11 @@ export const AboutMe = () => {
 
     function nextButton() {
       const tl = new gsap.timeline();
-      tl.to('.nextButton', 2, {
-        background: 'rgb(63, 3, 122)',
-        color: 'white',
-        repeat: 1,
-        ease: 'back.in(1.7)',
+      tl.from('.nextButton', 1, {
+        x: -100,
+        width: 0,
+        opacity: 0,
+        ease: 'back',
       });
       return tl;
     }
@@ -124,7 +124,6 @@ export const AboutMe = () => {
     master.add('logoFall');
     master.add(logoBounce());
     master.add(subscribeMe(), '-=2');
-    master.add('nextButton');
     master.add(nextButton(), '-=1');
   }, []);
 
