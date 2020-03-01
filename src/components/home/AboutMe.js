@@ -22,6 +22,8 @@ const Container = styled(Section)`
   }
 `;
 
+const TitleContainer = styled.div``;
+
 const Title = styled.h1`
   font-size: 3.8rem;
 `;
@@ -84,9 +86,45 @@ export const AboutMe = () => {
       tl.from('.logo', 3, { y: -600, ease: Bounce.easeOut, opacity: 0 });
       return tl;
     }
+    function staggerText() {
+      const tl = new gsap.timeline();
+      tl.staggerFrom(
+        '.textContainer .mainText',
+        1.1,
+        { y: -50, opacity: 0, ease: 'power1.inOut' },
+        0.1,
+      );
+      return tl;
+    }
+
+    function nextButton() {
+      const tl = new gsap.timeline();
+      tl.to('.nextButton', 2, {
+        background: 'rgb(63, 3, 122)',
+        color: 'white',
+        repeat: 1,
+        ease: 'back.in(1.7)',
+      });
+      return tl;
+    }
+
+    function subscribeMe() {
+      const tl = new gsap.timeline();
+      tl.to('.subscribeMe', 1, {
+        duration: 0.1,
+        ease: 'bounce.out',
+        y: 10,
+      });
+      return tl;
+    }
 
     // adding timeline functions
+    master.add(staggerText());
+    master.add('logoFall');
     master.add(logoBounce());
+    master.add(subscribeMe(), '-=2');
+    master.add('nextButton');
+    master.add(nextButton(), '-=1');
   }, []);
 
   const [blurb, setBlurb] = useState(0);
@@ -102,8 +140,25 @@ export const AboutMe = () => {
   return (
     <Container>
       <SubContainerOne>
-        <Title>
-          Hello I'm Alex
+        <TitleContainer>
+          <Title className="textContainer">
+            <span className="mainText">H</span>
+            <span className="mainText">E</span>
+            <span className="mainText">L</span>
+            <span className="mainText">L</span>
+            <span className="mainText">O</span>
+            <br />
+            <span className="mainText">I</span>
+            <span className="mainText">'</span>
+            <span className="mainText">M</span>
+            <span style={{ marginLeft: '8px' }} className="mainText">
+              A
+            </span>
+            <span className="mainText">L</span>
+            <span className="mainText">E</span>
+            <span className="mainText">X</span>
+          </Title>
+
           <Blurb>
             {blurb === 0 && (
               <Fade left>
@@ -131,11 +186,14 @@ export const AboutMe = () => {
                 </BlurbContainer>
               </Fade>
             )}
-            <ButtonStyle1 onClick={() => blurbHandler(blurb)}>
+            <ButtonStyle1
+              className="nextButton"
+              onClick={() => blurbHandler(blurb)}
+            >
               Next
             </ButtonStyle1>
           </Blurb>
-        </Title>
+        </TitleContainer>
         <SocialTagsHome />
       </SubContainerOne>
       <SubContainerTwo>
@@ -143,7 +201,7 @@ export const AboutMe = () => {
           <img className="logo" alt="Aquasar Logo" src={profileImage} />
           <h4>New Content Weekly</h4>
           <p> Developer tutorials and new websites </p>
-          <CustomButton>
+          <CustomButton className="subscribeMe">
             <a href="https://aquasar.substack.com"> Subscribe Me </a>
           </CustomButton>
         </SubscribeSection>
