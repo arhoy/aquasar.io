@@ -99,7 +99,7 @@ const FullFooterLayout = styled.footer`
 const Layout = ({ children, full, backgroundLayer }) => {
   const white = '#fff';
   const primaryColor = 'rgb(92, 52, 145)';
-  console.log('ICON IS', Icon);
+
   return (
     <>
       <Global

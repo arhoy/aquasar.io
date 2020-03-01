@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import { gsap, Bounce } from 'gsap';
 
-import Fade from 'react-reveal/Fade';
-
 import profileImage from '../../../images/logo.jpg';
 
 import { ButtonStyle2, ButtonStyle1 } from '../reusableStyles/buttons/Button';
@@ -48,7 +46,7 @@ const SubContainerOne = styled.div`
 const SubContainerTwo = styled.div``;
 
 const SubscribeSection = styled.div`
-  background: ${props => props.theme.colors.primaryTransparent};
+  background: ${props => props.theme.colors.lightgrey};
   padding: 2rem;
   display: flex;
   height: max-content;
@@ -111,9 +109,9 @@ export const AboutMe = () => {
     function subscribeMe() {
       const tl = new gsap.timeline();
       tl.to('.subscribeMe', 1, {
-        duration: 0.1,
+        duration: 0.2,
         ease: 'bounce.out',
-        y: 10,
+        y: 18,
       });
       return tl;
     }
@@ -130,7 +128,6 @@ export const AboutMe = () => {
   const [blurb, setBlurb] = useState(0);
 
   const blurbHandler = blurb => {
-    console.log(blurb);
     if (blurb > 1) {
       setBlurb(0);
     } else {
@@ -159,40 +156,34 @@ export const AboutMe = () => {
             <span className="mainText">X</span>
           </Title>
 
-          <Blurb>
+          <Blurb className="blurbText">
             {blurb === 0 && (
-              <Fade left>
-                <BlurbContainer>
-                  I am modern web developer, data analyst and digital marketing
-                  expert in Edmonton, Alberta.
-                </BlurbContainer>
-              </Fade>
+              <BlurbContainer>
+                I am modern web developer, data analyst and digital marketing
+                expert in Edmonton, Alberta.
+              </BlurbContainer>
             )}
 
             {blurb === 1 && (
-              <Fade left>
-                <BlurbContainer>
-                  I create websites using the latest modern technologies in
-                  React and Gatsby.
-                </BlurbContainer>
-              </Fade>
+              <BlurbContainer>
+                I create websites using the latest modern technologies in React
+                and Gatsby.
+              </BlurbContainer>
             )}
 
             {blurb === 2 && (
-              <Fade left>
-                <BlurbContainer>
-                  I write articles, develop websites, and help companies grow
-                  their online business
-                </BlurbContainer>
-              </Fade>
+              <BlurbContainer>
+                I write articles, develop websites, and help companies grow
+                their online business
+              </BlurbContainer>
             )}
-            <ButtonStyle1
-              className="nextButton"
-              onClick={() => blurbHandler(blurb)}
-            >
-              Next
-            </ButtonStyle1>
           </Blurb>
+          <ButtonStyle1
+            className="nextButton"
+            onClick={() => blurbHandler(blurb)}
+          >
+            Next
+          </ButtonStyle1>
         </TitleContainer>
         <SocialTagsHome />
       </SubContainerOne>

@@ -42,14 +42,18 @@ const Social = styled.div`
   margin-bottom: -1rem;
 `;
 
+const CustomTagContainer = styled(TagContainer)`
+  overflow: hidden;
+`;
+
 const SocialTagsHome = () => {
   useEffect(() => {
-    const master = new gsap.timeline({ delay: 0.5 });
+    const master = new gsap.timeline({ delay: -1 });
 
     function socialIntro() {
       const tl = new gsap.timeline();
       tl.from('.circle', {
-        duration: 2,
+        duration: 3,
         x: '1000',
         y: 'random(-400,400)',
         opacity: 0,
@@ -67,10 +71,19 @@ const SocialTagsHome = () => {
       return tl;
     }
 
+    function tagAnimation() {
+      const tl = new gsap.timeline();
+      tl.from('.tag', {
+        duration: 3,
+        y: 200,
+        opacity: 0,
+        stagger: '0.4',
+      });
+    }
+
     // adding timeline functions
     master.add(socialIntro());
-
-    console.log(master.duration());
+    master.add(tagAnimation());
   }, []);
 
   return (
@@ -110,10 +123,10 @@ const SocialTagsHome = () => {
           <FaLinkedinStyled title="Like Page" />
         </IconLink>
       </Social>
-      <TagContainer>
-        <Tag>Google Partner</Tag>
-        <Tag>Shopify Parnter</Tag>
-      </TagContainer>
+      <CustomTagContainer>
+        <Tag className="tag">Google Partner</Tag>
+        <Tag className="tag">Shopify Parnter</Tag>
+      </CustomTagContainer>
     </Container>
   );
 };
