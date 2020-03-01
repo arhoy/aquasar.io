@@ -4,7 +4,10 @@ import { gsap, Bounce } from 'gsap';
 
 import profileImage from '../../../images/logo.jpg';
 
-import { ButtonStyle2, ButtonStyle1 } from '../reusableStyles/buttons/Button';
+import {
+  ButtonStyle2,
+  ButtonSweepToRight,
+} from '../reusableStyles/buttons/Button';
 
 import { Section } from '../reusableStyles/sections/Sections';
 import SocialTagsHome from './SocialTagsHome';
@@ -178,12 +181,12 @@ export const AboutMe = () => {
               </BlurbContainer>
             )}
           </Blurb>
-          <ButtonStyle1
+          <ButtonSweepToRight
             className="nextButton"
             onClick={() => blurbHandler(blurb)}
           >
-            Next
-          </ButtonStyle1>
+            NEXT
+          </ButtonSweepToRight>
         </TitleContainer>
         <SocialTagsHome />
       </SubContainerOne>
