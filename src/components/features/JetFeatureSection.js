@@ -66,7 +66,7 @@ const JetFeatureSection = ({
   text,
   icon,
   iconSize,
-  rotate,
+
   color,
   setPosition,
 }) => {

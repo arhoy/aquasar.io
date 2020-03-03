@@ -22,10 +22,12 @@ const A = styled.a`
 
 const Li = styled.li`
   color: ${props => props.theme.colors.black};
+  margin: 2rem 0;
 `;
 
 const Ul = styled.ul`
   margin: 1rem 0;
+  margin-left: 2rem;
 `;
 
 const Bold = styled.span`

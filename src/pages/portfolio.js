@@ -117,9 +117,7 @@ const helpWithExistingSite = () => (
 );
 export const query = graphql`
   {
-    seo: file(
-      relativePath: { eq: "seo/aquasar-web-development-portfolio.PNG" }
-    ) {
+    seo: file(relativePath: { eq: "seo/portfolio.png" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 60) {
           src
@@ -140,8 +138,8 @@ const portfolio = ({ data }) => {
   return (
     <CustomLayout full={true}>
       <SEO
-        title="My Portfolio"
-        description="My Online Portfolio Gatsby and Aquasar lives websites and demos"
+        title="Website portfolio | Aquasar Inc"
+        description="Website portfolio on Aquasar Inc. Get your amazing website today"
         image={data.seo.childImageSharp.fluid.src}
       />
       <StyledHero2 img={data.aboutImage1.childImageSharp.fluid}>

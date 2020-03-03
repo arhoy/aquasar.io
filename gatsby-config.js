@@ -14,8 +14,9 @@ const queries = require('./src/utils/algolia');
 
 module.exports = {
   siteMetadata: {
-    title: 'Aquasar Web Development - Helping Online Businesses Grow',
-    description: 'Web Developer and Website maker in Edmonton',
+    title: 'Aquasar Ind - Helping Businesses Grow Online',
+    description:
+      'Aquasar Inc is a web development, SEO and digital Ads consulting company in Edmonton, AB. We help businesses grow online to reach and exceed their business goals',
     author: 'Alex Quasar',
     twitterUsername: '@_aquasar',
     siteImage: '/default.png',
@@ -55,14 +56,7 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-react-svg',
-    //   options: {
-    //     rule: {
-    //       include: /svg/,
-    //     },
-    //   },
-    // },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {

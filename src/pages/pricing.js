@@ -33,10 +33,11 @@ import { SimpleNetlifyForm } from '../components/forms/SimpleNetlifyForm';
 import Hero from '../components/heros/Hero';
 import { DefaultPageContainer } from '../components/layouts/PageContainers';
 import { Companies } from '../components/home/Companies';
+import SEOPricing from '../components/pricing/SEOPricing';
 
 export const query = graphql`
   {
-    seo: file(relativePath: { eq: "seo/pricing1.JPG" }) {
+    seo: file(relativePath: { eq: "seo/pricing.png" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 60) {
           src
@@ -148,14 +149,14 @@ const pricing = ({ data }) => {
   return (
     <Layout full={true}>
       <SEO
-        title="Aquasar Pricing Page"
-        description="Aquasar Pricing Page for Websites and Web Apps"
+        title="Pricing Page | Aquasar Inc"
+        description="View orur Pricing Page for Websites, SEO and Digital Ads. Our pricing is estimates and not final quotes. Pricing will be determined based on your business requirements and will discuss the best service and pricing for your business requirments"
         image={data.seo.childImageSharp.fluid.src}
       />
 
       <Section>
         <Container1200>
-          <StyledH2>Website Pricing</StyledH2>
+          <StyledH2>WEB DEVELOPMENT</StyledH2>
           <Pricing />
           <MarginBottom6 />
         </Container1200>
@@ -163,11 +164,16 @@ const pricing = ({ data }) => {
 
       <SectionGrey>
         <Container1200>
-          <StyledH2>Digital Ads Pricing</StyledH2>
+          <StyledH2>DIGITAL ADS</StyledH2>
           <DigitalAdsPricing />
           <MarginBottom6 />
         </Container1200>
       </SectionGrey>
+
+      <Section>
+        <StyledH2>SEO</StyledH2>
+        <SEOPricing />
+      </Section>
 
       <Section>
         <Container800>

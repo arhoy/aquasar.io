@@ -7,8 +7,8 @@ const getData = graphql`
     site {
       siteMetadata {
         siteTitle: title
-        siteDesc: description
-        author
+        siteDescription: description
+        siteAuthor: author
         siteUrl
         siteImage
         twitterUsername
@@ -17,18 +17,23 @@ const getData = graphql`
   }
 `;
 
-const SEO = ({ title, description, image, article }) => {
+const SEO = ({ title, description, image, article, author }) => {
   const { site } = useStaticQuery(getData);
+
+  // from config file
   const {
     siteTitle,
     siteDescription,
-    author,
+    siteAuthor,
     siteUrl,
     siteImage,
     twitterUsername,
   } = site.siteMetadata;
 
+  const seoTitle = title || siteTitle;
   const seoImage = image || siteImage;
+  const seoDescription = description || siteDescription;
+  const seoAuthor = author || siteAuthor;
 
   const schemaOrgWebPage = {
     '@context': 'http://schema.org',
@@ -61,17 +66,20 @@ const SEO = ({ title, description, image, article }) => {
     itemListElement,
   };
 
+  console.log(seoTitle, seoImage, seoAuthor, seoDescription);
+
   return (
-    <Helmet title={`${title} | ${siteTitle}`} htmlAttributes={{ lang: 'en' }}>
-      <meta name="description" content={description || siteDescription} />
+    <Helmet title={seoTitle} htmlAttributes={{ lang: 'en' }}>
+      <meta name="description" content={seoDescription} />
       <meta name="image" content={seoImage} />
-      <meta name="author" content={author} />
+      <meta name="author" content={seoAuthor} />
+      <meta name="title" content={seoTitle} />
 
       {/* facebook cards */}
       <meta property="og:url" content={siteUrl} />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content={siteTitle} />
-      <meta property="og:description" content={siteDescription} />
+      <meta property="og:title" content={seoTitle} />
+      <meta property="og:description" content={seoDescription} />
       <meta property="og:image" content={`${siteUrl}${seoImage}`} />
       <meta property="og:image:width" content="400" />
       <meta property="og:image:height" content="300" />
@@ -79,8 +87,8 @@ const SEO = ({ title, description, image, article }) => {
       {/* twitter card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={twitterUsername} />
-      <meta name="twitter:title" content={siteTitle} />
-      <meta name="twitter:description" content={siteDescription} />
+      <meta name="twitter:title" content={seoTitle} />
+      <meta name="twitter:description" content={seoDescription} />
       <meta name="twitter:image" content={`${siteUrl}${seoImage}`} />
 
       {/* Insert schema.org data conditionally (webpage/article) + everytime (breadcrumbs) */}

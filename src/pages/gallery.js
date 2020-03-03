@@ -7,6 +7,7 @@ import Accordian from '../components/reusableStyles/accordian/Accordian';
 import GalleryPattern2 from '../components/gallery/GalleryPattern2';
 import GalleryPattern3 from '../components/gallery/GalleryPattern3';
 import GalleryPattern4 from '../components/gallery/GalleryPatter4';
+import SEO from '../hooks/SEO';
 
 const Blurb = styled.div`
   margin: 2rem;
@@ -15,6 +16,10 @@ const Blurb = styled.div`
 const GalleryPage = () => {
   return (
     <Layout full={true}>
+      <SEO
+        title="Gallery with CSS Grid Patterns | Aquasar Inc"
+        description="Gallery with CSS Grid Patterns. With CSS Grids you have the power to make creative grid patterns and website layouts "
+      />
       <Blurb>
         <Accordian
           title={`CSS GRIDS`}

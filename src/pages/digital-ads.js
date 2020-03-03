@@ -32,7 +32,7 @@ export const query = graphql`
   query {
     aboutImage1: file(relativePath: { eq: "astronaut.png" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 100) {
+        fluid(quality: 100, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
@@ -40,6 +40,14 @@ export const query = graphql`
     digitalAds: file(relativePath: { eq: "digital-ads-vector.png" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 2000) {
+          ...GatsbyImageSharpFluid_tracedSVG
+          presentationWidth
+        }
+      }
+    }
+    seoImage: file(relativePath: { eq: "seo/digital-ads.png" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_tracedSVG
           presentationWidth
         }
@@ -77,8 +85,9 @@ const DigitalAds = ({ data }) => {
   return (
     <Layout full={true}>
       <SEO
-        title="Aquasar Inc | Digital Ad Services"
+        title="Digital Ad Services | Aquasar Inc"
         description="We offer digital ad services for small to medium size businesses here in Edmonton Alberta. We are experts in Facebook Ads, Google Ads, Instagram Ads, Split Testing, Conversion Rate Optimization. We want to help grow and build your online business presence "
+        image={data.seoImage.childImageSharp.fluid.src}
       />
 
       <StyledHero2

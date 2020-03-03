@@ -20,7 +20,7 @@ export default () => {
     <Layout backgroundLayer={true}>
       <SEO
         title="Web Development, SEO and Digital Ads in Edmonton AB | Aquasar Inc"
-        description="Web Development, SEO and Digital Ads. Helping businesses with Gatsby websites, SEO and Digital Ads"
+        description="Aquasar Inc specializes in Web Development, SEO and Digital Ads. Helping customers with their online business, ecommerce websites, SEO and Digital Ads. Delivering exceptional work and affordable prices. Check out our latest portfolios, services, articles and blogs. We want to help you succeed and grow your website and business online"
       />
 
       <AboutMe />

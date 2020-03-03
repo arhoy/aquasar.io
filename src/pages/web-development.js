@@ -119,8 +119,8 @@ const WebDevelopment = ({ data }) => {
   return (
     <Layout full={true}>
       <SEO
-        title="Aquasar Web Development"
-        description="We do custom web development using React, Gatsby and other modern web technologies like Contentful and Shopify. We are a web development company in Edmonton Alberta specializing in website development for small businesses. "
+        title="Custom Professional Web Development | Aquasar Inc"
+        description="Custom and professional web development using React, Gatsby and other modern web technologies like Contentful and Shopify. We are a web development company in Edmonton Alberta specializing in websites for small businesses"
       />
 
       <StyledHero2 img={data.aboutImage1.childImageSharp.fluid}>
