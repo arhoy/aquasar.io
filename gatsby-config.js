@@ -22,6 +22,7 @@ module.exports = {
     twitterUsername: '@_aquasar',
     image: '/default.png',
     url: URL,
+    siteUrl: URL,
   },
   plugins: [
     `gatsby-plugin-sass`,
