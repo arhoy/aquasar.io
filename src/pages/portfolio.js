@@ -119,14 +119,14 @@ export const query = graphql`
   {
     seo: file(relativePath: { eq: "seo/portfolio.png" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 60) {
+        fluid(quality: 100, maxWidth: 1000) {
           src
         }
       }
     }
     aboutImage1: file(relativePath: { eq: "astronaut.png" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 60) {
+        fluid(quality: 100, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }

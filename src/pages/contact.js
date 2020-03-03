@@ -21,7 +21,7 @@ export const query = graphql`
   {
     seo: file(relativePath: { eq: "seo/contact.png" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 60) {
+        fluid(quality: 100, maxWidth: 1000) {
           src
         }
       }
