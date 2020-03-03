@@ -5,6 +5,7 @@ import socialIcons from '../../constants/socialIcons';
 import styled from '@emotion/styled';
 import { FaCanadianMapleLeaf } from 'react-icons/fa';
 import { A } from '../reusableStyles/typography/Typography';
+import NoStyleLink from '../Links/NoStyleLink';
 
 const d = new Date().getFullYear();
 
@@ -48,6 +49,14 @@ const FooterBlurb = styled.p`
   font-weight: bold;
 `;
 
+const LegalLinksContainer = styled.div`
+  display: flex;
+  font-size: 1.2rem;
+  ${NoStyleLink} {
+    margin: 0 4px;
+  }
+`;
+
 const Footer = () => {
   return (
     <FooterStyle>
@@ -72,7 +81,11 @@ const Footer = () => {
       </Div>
       <A href="tel:587-772-5536">587-772-5536</A>
       <FooterBlurb>Aquasar.io {d} &copy; </FooterBlurb>
-      <Attribution>Professional | Afforadable | Fast</Attribution>
+      <Attribution>Professional | Affordable | Fast</Attribution>
+      <LegalLinksContainer>
+        <NoStyleLink to="privacy-policy">Privacy Policy</NoStyleLink>
+        <NoStyleLink to="terms-and-conditions">Terms & Conditions</NoStyleLink>
+      </LegalLinksContainer>
     </FooterStyle>
   );
 };
