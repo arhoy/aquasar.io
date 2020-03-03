@@ -57,6 +57,8 @@ const SEO = ({ title, description, image, pathname, article }) => (
               property="og:description"
               content={seo.description && seo.description}
             />
+            <meta property="fb:app_id" content="885734701886688" />
+
             <meta property="og:image" content={seo.image && seo.image} />
 
             <meta property="og:image:width" content="400" />
