@@ -144,28 +144,24 @@ export const AboutMe = () => {
       <SubContainerOne>
         <TitleContainer>
           <Title className="textContainer">
-            <span className="mainText">H</span>
-            <span className="mainText">E</span>
-            <span className="mainText">L</span>
-            <span className="mainText">L</span>
-            <span className="mainText">O</span>
-            <br />
+            <span className="mainText">A</span>
+            <span className="mainText">Q</span>
+            <span className="mainText">U</span>
+            <span className="mainText">A</span>
+            <span className="mainText">S</span>
+            <span className="mainText">A</span>
+            <span className="mainText">R</span>
+            <span style={{ marginLeft: '8px' }} className="mainText" />
             <span className="mainText">I</span>
-            <span className="mainText">'</span>
-            <span className="mainText">M</span>
-            <span style={{ marginLeft: '8px' }} className="mainText">
-              A
-            </span>
-            <span className="mainText">L</span>
-            <span className="mainText">E</span>
-            <span className="mainText">X</span>
+            <span className="mainText">N</span>
+            <span className="mainText">C</span>
           </Title>
 
           <Blurb className="blurbText">
             {blurb === 0 && (
               <BlurbContainer>
-                I am modern web developer, data analyst and digital marketing
-                expert in Edmonton, Alberta.
+                Custom web development, digital marketing and SEO in Edmonton,
+                Alberta.
               </BlurbContainer>
             )}
 
@@ -178,7 +174,7 @@ export const AboutMe = () => {
 
             {blurb === 2 && (
               <BlurbContainer>
-                I write articles, develop websites, and help companies grow
+                Through digital ads and SEO we strive to help companies grow
                 their online business
               </BlurbContainer>
             )}
