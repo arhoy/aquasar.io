@@ -28,6 +28,7 @@ const SEO = ({ title, description, image, pathname, article }) => (
       return (
         <>
           <Helmet title={seo.title} titleTemplate={titleTemplate}>
+            <meta property="fb:app_id" content="885734701886688" />
             <meta name="description" content={seo.description} />
             <meta name="image" content={seo.image} />
             {seo.url && <meta property="og:url" content={seo.url} />}
@@ -50,7 +51,7 @@ const SEO = ({ title, description, image, pathname, article }) => (
             {seo.image && <meta name="twitter:image" content={seo.image} />}
 
             {/* facebook cards */}
-            <meta property="og:url" content={seo.url && seo.url} />
+            {/* <meta property="og:url" content={seo.url && seo.url} />
             <meta property="og:type" content="website" />
             <meta property="og:title" content={seo.title && seo.title} />
             <meta
@@ -59,10 +60,8 @@ const SEO = ({ title, description, image, pathname, article }) => (
             />
             <meta property="fb:app_id" content="885734701886688" />
 
-            <meta property="og:image" content={seo.image && seo.image} />
-
             <meta property="og:image:width" content="400" />
-            <meta property="og:image:height" content="300" />
+            <meta property="og:image:height" content="300" /> */}
           </Helmet>
         </>
       );
