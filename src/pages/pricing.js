@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layouts/Layout';
 import styled from '@emotion/styled';
@@ -22,18 +22,15 @@ import {
   Section,
   SectionGrey,
   Container1200,
-  Container800,
 } from '../components/reusableStyles/sections/Sections';
 
-import {
-  MarginBottom6,
-  Margin1V,
-} from '../components/reusableStyles/modular/modularStyles';
+import { Margin1V } from '../components/reusableStyles/modular/modularStyles';
 import { SimpleNetlifyForm } from '../components/forms/SimpleNetlifyForm';
 import Hero from '../components/heros/Hero';
 import { DefaultPageContainer } from '../components/layouts/PageContainers';
-import { Companies } from '../components/home/Companies';
+
 import SEOPricing from '../components/pricing/SEOPricing';
+import PricingMenu from '../components/pricing/PricingMenu';
 
 export const query = graphql`
   {
@@ -145,41 +142,39 @@ const textSupport = () => (
   </>
 );
 
-const pricing = ({ data }) => {
+const PricingPage = ({ data }) => {
+  const [menu, setMenu] = useState('web-development');
+  console.log(menu);
   return (
     <Layout full={true}>
       <SEO
         title="Pricing Page | Aquasar Inc"
-        description="View orur Pricing Page for Websites, SEO and Digital Ads. Our pricing is estimates and not final quotes. Pricing will be determined based on your business requirements and will discuss the best service and pricing for your business requirments"
+        description="View our Pricing Page for Websites, SEO and Digital Ads. Our pricing is estimates and not final quotes. Pricing will be determined based on your business requirements and will discuss the best service and pricing for your business requirments"
         image={data.seo.childImageSharp.fluid.src}
       />
 
-      <Section>
+      <Section style={{ paddingTop: '4rem' }}>
         <Container1200>
-          <StyledH2>WEB DEVELOPMENT</StyledH2>
-          <Pricing />
-          <MarginBottom6 />
+          <PricingMenu menu={menu} setMenu={setMenu} />
+          {menu === 'web-development' && (
+            <>
+              <StyledH2>WEB DEVELOPMENT</StyledH2>
+              <Pricing />
+            </>
+          )}
+          {menu === 'digital-ads' && (
+            <>
+              <StyledH2>DIGITAL ADS</StyledH2>
+              <DigitalAdsPricing />
+            </>
+          )}
+          {menu === 'seo' && (
+            <>
+              <StyledH2>SEO</StyledH2>
+              <SEOPricing />
+            </>
+          )}
         </Container1200>
-      </Section>
-
-      <SectionGrey>
-        <Container1200>
-          <StyledH2>DIGITAL ADS</StyledH2>
-          <DigitalAdsPricing />
-          <MarginBottom6 />
-        </Container1200>
-      </SectionGrey>
-
-      <Section>
-        <StyledH2>SEO</StyledH2>
-        <SEOPricing />
-      </Section>
-
-      <Section>
-        <Container800>
-          <StyledH2>Portfolio</StyledH2>
-          <Companies />
-        </Container800>
       </Section>
 
       <SectionGrey>
@@ -287,4 +282,4 @@ const pricing = ({ data }) => {
   );
 };
 
-export default pricing;
+export default PricingPage;

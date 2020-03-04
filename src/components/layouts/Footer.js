@@ -83,8 +83,8 @@ const Footer = () => {
       <FooterBlurb>Aquasar.io {d} &copy; </FooterBlurb>
       <Attribution>Professional | Affordable | Fast</Attribution>
       <LegalLinksContainer>
-        <NoStyleLink to="privacy-policy">Privacy Policy</NoStyleLink>
-        <NoStyleLink to="terms-and-conditions">Terms & Conditions</NoStyleLink>
+        <NoStyleLink to="/privacy-policy">Privacy Policy</NoStyleLink>
+        <NoStyleLink to="/terms-and-conditions">Terms & Conditions</NoStyleLink>
       </LegalLinksContainer>
     </FooterStyle>
   );

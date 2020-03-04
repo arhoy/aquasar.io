@@ -1,6 +1,21 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import PriceCard from '../reusableStyles/cards/PriceCard';
+import { P } from '../reusableStyles/typography/Typography';
+
+const CustomP = styled(P)`
+  margin-top: 4rem;
+  padding: 1rem 8px;
+  text-align: center;
+  color: ${props => props.theme.colors.white};
+  border-radius: 10px;
+
+  background-image: linear-gradient(
+    0deg,
+    ${props => props.theme.colors.primary} 100%,
+    transparent 0%
+  );
+`;
 
 const Container = styled.div`
   display: flex;
@@ -37,13 +52,13 @@ const Pricing = () => {
     <Container>
       <PriceCard
         title="Starter"
-        price={300}
+        price={`3,000`}
         features={starterFeatures}
         priceText={`+`}
       />
       <PriceCard
         title="Advanced"
-        price={500}
+        price={`5,000`}
         features={advancedFeatures}
         backgroundColor="rgba(92, 52, 145,0.2)"
         topBarBackgroundColor="rgb(73, 35, 122)"
@@ -52,10 +67,14 @@ const Pricing = () => {
       />
       <PriceCard
         title="Custom Quote"
-        price={1000}
+        price={`10,000`}
         features={customFeatures}
         priceText={`+`}
       />
+      <CustomP>
+        We create custom websites from scratch using React and Gatsby. No cookie
+        cutter WP templates or WIX sites
+      </CustomP>
     </Container>
   );
 };

@@ -71,14 +71,10 @@ const ButtonSweepToRight = styled.button`
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
   }
-  &:hover,
-  :focus,
-  :active {
+  &:hover {
     color: ${props => props.theme.colors.white};
   }
-  &:hover:before,
-  &:focus:before,
-  &:active:before {
+  &:hover:before {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
   }

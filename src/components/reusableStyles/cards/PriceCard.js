@@ -12,8 +12,15 @@ const Container = styled.div`
   width: 30rem;
   box-shadow: 0 0 20px ${props => props.theme.colors.primaryTransparent};
   text-align: center;
+  transition: all 0.2s ease-in;
   @media (max-width: ${props => props.theme.screenSize.mobileL}) {
     width: 90%;
+  }
+  &:hover {
+    transform: translateY(-4px);
+    -webkit-box-shadow: 0px 15px 35px -3px rgba(0, 0, 0, 0.26);
+    -moz-box-shadow: 0px 15px 35px -3px rgba(0, 0, 0, 0.26);
+    box-shadow: 0px 15px 35px -3px rgba(0, 0, 0, 0.26);
   }
 `;
 
@@ -80,7 +87,6 @@ const Card = ({
 
 Card.propTypes = {
   title: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
   features: PropTypes.array.isRequired,
   backgroundColor: PropTypes.string,
 };
