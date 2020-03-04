@@ -65,6 +65,7 @@ const contact = ({ data }) => {
       <SEO
         title="Contact Us for your Website Development needs in Edmonton"
         description="Contact your Edmonton Professional Gatsby Web Developer, SEO and Facebook Ads"
+        pathname="contact"
         image={data.seo.childImageSharp.fluid.src}
       />
       <Section>

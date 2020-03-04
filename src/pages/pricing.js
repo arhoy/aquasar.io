@@ -144,12 +144,13 @@ const textSupport = () => (
 
 const PricingPage = ({ data }) => {
   const [menu, setMenu] = useState('web-development');
-  console.log(menu);
+
   return (
     <Layout full={true}>
       <SEO
         title="Pricing Page | Aquasar Inc"
         description="View our Pricing Page for Websites, SEO and Digital Ads. Our pricing is estimates and not final quotes. Pricing will be determined based on your business requirements and will discuss the best service and pricing for your business requirments"
+        pathname="pricing"
         image={data.seo.childImageSharp.fluid.src}
       />
 

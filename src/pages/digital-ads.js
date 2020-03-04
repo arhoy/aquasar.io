@@ -87,6 +87,7 @@ const DigitalAds = ({ data }) => {
       <SEO
         title="Digital Ad Services | Aquasar Inc"
         description="We offer digital ad services for small to medium size businesses here in Edmonton Alberta. We are experts in Facebook Ads, Google Ads, Instagram Ads, Split Testing, Conversion Rate Optimization. We want to help grow and build your online business presence "
+        pathname="digital-ads"
         image={data.seoImage.childImageSharp.fluid.src}
       />
 

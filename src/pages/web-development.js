@@ -128,6 +128,7 @@ const WebDevelopment = ({ data }) => {
       <SEO
         title="Custom Professional Web Development | Aquasar Inc"
         description="Custom and professional web development using React, Gatsby and other modern web technologies like Contentful and Shopify. We are a web development company in Edmonton Alberta specializing in websites for small businesses"
+        pathname="web-development"
       />
 
       <StyledHero2 img={data.aboutImage1.childImageSharp.fluid}>

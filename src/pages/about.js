@@ -65,6 +65,7 @@ const About = ({ data }) => {
       <SEO
         title="About Us | Aquasar Inc"
         description="Aquasar Inc is a web development, seo and digital ads company in Edmonton Alberta. View our services and portfolio and learn about what we have to offer you"
+        pathname="about"
       />
 
       <StyledHero2 img={data.aboutImage1.childImageSharp.fluid}>

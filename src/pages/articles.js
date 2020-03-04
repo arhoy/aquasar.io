@@ -57,6 +57,7 @@ const articles = ({ data }) => {
       <SEO
         title="Aquasar Articles"
         description="Articles on Gatsby and Web Development for the freelance web developer"
+        pathname="articles"
         image={data.seo.childImageSharp.fluid.src}
       />
       <CustomTopSection>

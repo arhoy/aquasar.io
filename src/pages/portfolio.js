@@ -140,6 +140,7 @@ const portfolio = ({ data }) => {
       <SEO
         title="Website portfolio | Aquasar Inc"
         description="Website portfolio on Aquasar Inc. Get your amazing website today"
+        pathname="porfolio"
         image={data.seo.childImageSharp.fluid.src}
       />
       <StyledHero2 img={data.aboutImage1.childImageSharp.fluid}>
