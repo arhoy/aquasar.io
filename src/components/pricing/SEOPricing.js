@@ -11,40 +11,42 @@ const Container = styled.div`
 const starterFeatures = [
   'Website Audit',
   'Keyword Research',
-  '1 Article',
-  '5 Social Posts',
-  '10 Directory Submissions',
+  'Weekly Blog Articles',
+  'Weekly Facebook Posting',
+  'High Quality Backlinks',
   '5 Classifieds',
-  'Google My Business Optimization',
-  '3 pages Technical SEO',
+  'Local SEO via Google My Business',
+  'Monthly Reports',
 ];
 
 const advancedFeatures = [
   'Website Audit',
   'Keyword Research',
-  '2 Articles',
-  '10 Social Posts',
-  '10 Directory Submissions',
-  '10 Classifieds',
-  'Google My Business Optimization',
-  '10 pages Technical SEO',
-  '5 Google My Business Posts',
+  'Weekly Blog Articles',
+  'Additional Content',
+  'Weekly Facebook Posting',
+  'High Quality Backlinks',
+  'Kijiji / LinkedIn Posting',
+  'Local SEO via Google My Business',
   'Internal Link Building',
+  'Directory Submissions',
+  '24/7 Support',
 ];
 
 const customFeatures = [
   'Website Audit',
   'Keyword Research',
-  '3 Articles',
-  '20 Social Posts',
-  '15 Directory Submissions',
-  '15 Classifieds',
-  'Google My Business Optimization',
-  '20 pages Technical SEO',
-  '10 Google My Business Posts',
+  'Weekly Blog Articles',
+  'Additional Content',
+  'Weekly Facebook Posting',
+  'High Quality Backlinks',
+  'Kijiji / LinkedIn Posting',
+  'Local SEO via Google My Business',
   'Internal Link Building',
-  '3 Business Profiles',
-  '1 Infographic',
+  'Directory Submissions',
+  'Business Profiles',
+  'Custom Reports',
+  '24/7 Support',
 ];
 
 const SEOPricing = () => {
@@ -52,13 +54,13 @@ const SEOPricing = () => {
     <Container>
       <PriceCard
         title="Tier I"
-        price={150}
+        price={300}
         features={starterFeatures}
         priceText={`+`}
       />
       <PriceCard
         title="Tier II"
-        price={300}
+        price={500}
         features={advancedFeatures}
         backgroundColor="rgba(92, 52, 145,0.2)"
         topBarBackgroundColor="rgb(73, 35, 122)"
@@ -67,7 +69,7 @@ const SEOPricing = () => {
       />
       <PriceCard
         title="Tier III"
-        price={600}
+        price={800}
         features={customFeatures}
         priceText={`+`}
       />
