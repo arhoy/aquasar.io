@@ -1,5 +1,11 @@
 export default [
   {
+    url: 'https://zeitlify.netlify.com/',
+    displayUrl: 'Zeitlify.com',
+    title: 'Zeitlify ',
+    description: 'Automation Services for the Web',
+  },
+  {
     url: 'https://ripplejs.com',
     displayUrl: 'ripplejs.com',
     title: 'RippleJS Themes',
@@ -9,12 +15,12 @@ export default [
   {
     url: 'https://www.cravejs.com',
     displayUrl: 'CraveJS.com',
-    title: 'Crave JS',
+    title: 'FullStack React',
   },
   {
-    url: 'https://aquasarcafe.netlify.com/',
-    displayUrl: 'aquasarcafe.com',
-    title: 'Aquasar Cafe',
+    url: 'https://ripplejs.com/demos/fashion-six',
+    displayUrl: 'fastfashion5.com',
+    title: 'Fast Fashion Ecommerce',
     description: 'Sample Simple Coffee Site',
   },
   {
@@ -24,20 +30,20 @@ export default [
     description: 'Data Analytics Site',
   },
   {
-    url: 'https://ventura-gatsby-site-101.netlify.com',
-    displayUrl: 'VenturaGatsby.com',
-    title: 'Ventura',
-    description: 'Adventure Tour Site',
+    url: 'https://dresscodeafrica.com/shop',
+    title: 'Gatsby and Shopify',
+    displayUrl: 'dresscodeafrica.com',
+    description: 'The Amazon for Africa',
   },
   {
     url: 'https://dash-intel.com/',
     displayUrl: 'dash-intel.com',
-    title: 'Dash-Intel',
+    title: 'Dash Intel',
     description: 'Data Analytics Site',
   },
   {
     url: 'https://butchbarber.netlify.com',
-    title: 'Butch Barber',
+    title: 'Simple Barber',
     displayUrl: 'butchbarber.netlify.com',
     description: 'Barber Shop',
   },
@@ -48,10 +54,10 @@ export default [
     description: 'Catering Business',
   },
   {
-    url: 'https://www.dresscodeafrica.netlify.com/',
-    title: 'Dress Code',
+    url: 'https://www.dresscodeafrica.com/',
+    title: 'Dress Code Africa',
     displayUrl: 'dresscodeafrica.com',
-    description: 'Ecommerce Store',
+    description: 'The Amazon for Africa',
   },
   {
     url: 'https://www.rentalyeg.com',
@@ -60,8 +66,14 @@ export default [
     description: 'Rental Property Company',
   },
   {
+    url: 'https://newbarber.ca/book-appointment',
+    title: 'Barber Booking App',
+    displayUrl: 'newbarber.ca/book',
+    description: 'Book Your Barber',
+  },
+  {
     url: 'https://www.newbarber.ca',
-    title: 'New Barber',
+    title: 'Barber Finder',
     displayUrl: 'newbarber.ca',
     description: 'Find Your Barber',
   },
