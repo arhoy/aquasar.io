@@ -16,6 +16,7 @@ const starterFeatures = [
   'High Quality Backlinks',
   '5 Classifieds',
   'Local SEO via Google My Business',
+  'Weekly Calls/ Updates',
   'Monthly Reports',
 ];
 
