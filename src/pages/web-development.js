@@ -165,7 +165,7 @@ const WebDevelopment = ({ data }) => {
       <SectionGrey>
         <Container1200>
           <H2Box>
-            <StyledH2>Website Pricing</StyledH2>
+            <StyledH2>Custom Websites</StyledH2>
             <CustomP>*Prices Will Vary and Subject To Change*</CustomP>
           </H2Box>
 

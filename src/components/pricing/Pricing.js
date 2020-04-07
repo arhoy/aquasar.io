@@ -24,40 +24,43 @@ const Container = styled.div`
 `;
 
 const starterFeatures = [
-  'Fast turn around',
-  'Provide Own Content',
-  'Mostly unchanging content',
+  'Marketing Websites',
+  'Branding Experience',
+  'Wireframe Mockups',
   'Contact Form',
   'Google Analytics',
+  '1 Year Full Developer Support',
 ];
 
 const advancedFeatures = [
-  'Basic Ecommerce',
-  'Constantly updating content',
-  'Starter SEO',
+  'Ecommerce Websites',
+  'Branding Experience',
+  'Wireframe Mockups',
   'Contact Form',
-  'Content Management System',
+  'Google Analytics',
+  '1 Year Full Developer Support',
 ];
 
 const customFeatures = [
-  'Ecommerce (large inventory)',
-  'Shopify CMS Integration',
-  'Intermediate SEO',
-  'Custom requirements',
-  '1 Year Premium Support',
+  'FullStack Websites',
+  'Branding Experience',
+  'Wireframe Mockups',
+  'Contact Form',
+  'Google Analytics',
+  '1 Year Full Developer Support',
 ];
 
 const Pricing = () => {
   return (
     <Container>
       <PriceCard
-        title="Starter"
+        title="FROM"
         price={`3,000`}
         features={starterFeatures}
         priceText={`+`}
       />
       <PriceCard
-        title="Advanced"
+        title="STARTING AT"
         price={`5,000`}
         features={advancedFeatures}
         backgroundColor="rgba(92, 52, 145,0.2)"
@@ -66,15 +69,11 @@ const Pricing = () => {
         priceText={`+`}
       />
       <PriceCard
-        title="Custom Quote"
+        title="FROM"
         price={`10,000`}
         features={customFeatures}
         priceText={`+`}
       />
-      <CustomP>
-        We create custom websites from scratch using React and Gatsby. No cookie
-        cutter WP templates or WIX sites
-      </CustomP>
     </Container>
   );
 };
