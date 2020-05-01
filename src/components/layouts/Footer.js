@@ -17,6 +17,11 @@ const FooterStyle = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  & .codepaper {
+    font-size: 1.4rem;
+    text-align: center;
+  }
 `;
 
 const SocialIcon = styled.a`
@@ -81,7 +86,11 @@ const Footer = () => {
       </Div>
       <A href="tel:587-501-7726">587-501-7726</A>
       <FooterBlurb>Aquasar.io {d} &copy; </FooterBlurb>
+      <A className="codepaper" href="https://codepaper.dev">
+        CODEPAPER
+      </A>
       <Attribution>Professional | Affordable | Fast</Attribution>
+
       <LegalLinksContainer>
         <NoStyleLink to="/privacy-policy">Privacy Policy</NoStyleLink>
         <NoStyleLink to="/terms-and-conditions">Terms & Conditions</NoStyleLink>
