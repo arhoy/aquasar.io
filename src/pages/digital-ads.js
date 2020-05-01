@@ -157,8 +157,8 @@ const DigitalAds = ({ data }) => {
             icon={FaUserAstronaut()}
             rotate="rotate(-15deg)"
             iconSize="14rem"
-            heading="Google Partner"
-            subheading="Google Ads Certified through the Google Partner Program"
+            heading="Google Ad Certified"
+            subheading="Google Ads Certified through the Google Ad Certified Program"
             text={
               'We have managed several million dollars in ad spend over the years for various companies. We want to help you manage ad spend effectively and efficiently through our data driven and customized approach'
             }

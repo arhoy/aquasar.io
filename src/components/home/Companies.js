@@ -32,12 +32,16 @@ export const Companies = () => {
   return (
     <>
       <CustomSection>
-        <H2>Worked with</H2>
+        <H2>Hello I'm Alex</H2>
         <p>
-          Companies I have done online digital adversting, web development or
-          consulting for:
+          I'm freelance web developer and ads consultant in Edmonton, Alberta. I
+          specialize in providing online solutions to Realtors and Ecommerce
+          sites.
+          <br /> <br />I have worked with companies large & small, digital
+          agencies and clients to provide them affordable, reliable and high
+          quality online solutions for their business needs
         </p>
-        <Container>
+        {/* <Container>
           <TagContainer>
             {companiesList.map(company => (
               <CustomTag key={company}>
@@ -47,7 +51,7 @@ export const Companies = () => {
               </CustomTag>
             ))}
           </TagContainer>
-        </Container>
+        </Container> */}
       </CustomSection>
       <CustomSection2>
         <H2>Worked For</H2>

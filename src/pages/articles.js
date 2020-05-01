@@ -51,7 +51,6 @@ export const getArticles = graphql`
 `;
 
 const articles = ({ data }) => {
-  console.log(data);
   return (
     <Layout full={true}>
       <SEO

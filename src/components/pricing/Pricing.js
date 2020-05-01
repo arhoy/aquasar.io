@@ -21,6 +21,11 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  & p {
+    margin-top: 1rem;
+    max-width: 70rem;
+    text-align: center;
+  }
 `;
 
 const starterFeatures = [
@@ -55,13 +60,13 @@ const Pricing = () => {
     <Container>
       <PriceCard
         title="FROM"
-        price={`3,000`}
+        price={`1,000`}
         features={starterFeatures}
         priceText={`+`}
       />
       <PriceCard
         title="STARTING AT"
-        price={`5,000`}
+        price={`2,000`}
         features={advancedFeatures}
         backgroundColor="rgba(92, 52, 145,0.2)"
         topBarBackgroundColor="rgb(73, 35, 122)"
@@ -70,10 +75,14 @@ const Pricing = () => {
       />
       <PriceCard
         title="FROM"
-        price={`10,000`}
+        price={`5,000`}
         features={customFeatures}
         priceText={`+`}
       />
+      <p>
+        These are rough price guides. We custom tailor our prices for each
+        client according to their online needs and business
+      </p>
     </Container>
   );
 };

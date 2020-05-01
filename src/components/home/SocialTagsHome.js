@@ -132,7 +132,7 @@ const SocialTagsHome = () => {
         </IconLink>
       </Social>
       <CustomTagContainer>
-        <Tag className="tag">Google Partner</Tag>
+        <Tag className="tag">Google Ad Certified</Tag>
         <Tag className="tag">Shopify Parnter</Tag>
       </CustomTagContainer>
     </Container>

@@ -6,6 +6,12 @@ export default [
     description: 'Automation Services for the Web',
   },
   {
+    url: 'https://realtoryeg.netlify.app/',
+    displayUrl: 'realtoryeg',
+    title: 'Realtor YEG',
+    description: 'Automation Services for the Web',
+  },
+  {
     url: 'https://ripplejs.com',
     displayUrl: 'ripplejs.com',
     title: 'RippleJS Themes',

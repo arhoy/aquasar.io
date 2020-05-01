@@ -2,6 +2,8 @@ import React from 'react';
 
 import styled from '@emotion/styled';
 
+import Helmet from 'react-helmet';
+
 import { graphql } from 'gatsby';
 import { FaUserAstronaut } from 'react-icons/fa';
 
@@ -39,6 +41,7 @@ import {
   textReact,
 } from '../content/web-development/content';
 import NonStretchImage from '../components/heros/NonStretchImage';
+import { OrderingApp } from '../components/orderingApp/OrderingApp';
 
 export const query = graphql`
   query {
@@ -125,6 +128,13 @@ const StyledH2 = styled(H2)`
 const WebDevelopment = ({ data }) => {
   return (
     <Layout full={true}>
+      <Helmet>
+        <script
+          src="https://www.fbgcdn.com/embedder/js/ewm2.js"
+          defer
+          async
+        ></script>
+      </Helmet>
       <SEO
         title="Custom Professional Web Development | Aquasar Inc"
         description="Custom and professional web development using React, Gatsby and other modern web technologies like Contentful and Shopify. We are a web development company in Edmonton Alberta specializing in websites for small businesses"
@@ -172,6 +182,17 @@ const WebDevelopment = ({ data }) => {
           <Pricing />
         </Container1200>
       </SectionGrey>
+      <Section>
+        <Container1200>
+          <H2Box>
+            <StyledH2>Restaurant Ordering System</StyledH2>
+            <CustomP>
+              *Pick up and Delivery in Real Time No Commission Fees*
+            </CustomP>
+          </H2Box>
+          <OrderingApp />
+        </Container1200>
+      </Section>
 
       <Section>
         <Container800>

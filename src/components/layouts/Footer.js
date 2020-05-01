@@ -79,7 +79,7 @@ const Footer = () => {
         </StyledImage>
         | Alberta
       </Div>
-      <A href="tel:587-772-5536">587-772-5536</A>
+      <A href="tel:587-501-7726">587-501-7726</A>
       <FooterBlurb>Aquasar.io {d} &copy; </FooterBlurb>
       <Attribution>Professional | Affordable | Fast</Attribution>
       <LegalLinksContainer>
