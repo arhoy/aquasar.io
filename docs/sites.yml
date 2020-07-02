@@ -1,0 +1,25 @@
+- title: Aquasar Inc
+
+  # this is the URL that is linked from the showcase
+  main_url: https://aquasar.io
+
+  # this URL is used to generate a screenshot
+  url: https://aquasar.io
+
+  # optional: short paragraph describing the content and/or purpose of the site that will appear in the modal detail view and permalink views for your site
+  description: >
+    Aquasar Inc is my personal freelancer site. I build website using Gatsby and Wordpress and help small businesses with online advertising and SEO
+
+  # You can list as many categories as you want here. Check list of Categories below in this doc!
+  # If you'd like to create a new category, simply list it here.
+  categories:
+    - Gatsby Freelancer
+    - Digital Marketer
+    - Personal AWebsite
+
+  # Add the name (developer or company) and URL (e.g. Twitter, GitHub, portfolio) to be used for attribution
+  built_by: Alex Quasar
+  built_by_url: https://theorderguys.com
+
+  # leave as false, the Gatsby site review board will choose featured sites quarterly
+  featured: false
