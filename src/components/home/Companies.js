@@ -35,8 +35,7 @@ export const Companies = () => {
         <H2>Hello I'm Alex</H2>
         <p>
           I'm freelance web developer and ads consultant in Edmonton, Alberta. I
-          specialize in providing online solutions to Realtors and Ecommerce
-          sites.
+          specialize in providing online ordering for restaurants and ecommerce.
           <br /> <br />I have worked with companies large & small, digital
           agencies and clients to provide them affordable, reliable and high
           quality online solutions for their business needs

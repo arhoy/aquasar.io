@@ -15,6 +15,8 @@ const Container = styled(Section)`
   padding-bottom: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  background: ${props => props.theme.colors.white};
+  margin: 2rem 0;
 
   @media (max-width: ${props => props.theme.screenSize.mobileL}) {
     grid-template-columns: 1fr;
@@ -47,7 +49,7 @@ const SubContainerOne = styled.div`
 const SubContainerTwo = styled.div``;
 
 const SubscribeSection = styled.div`
-  background: ${props => props.theme.colors.lightgrey};
+  background: ${props => props.theme.colors.white};
   padding: 3rem;
   display: flex;
   height: max-content;
