@@ -34,7 +34,7 @@ import NoStyleLink from '../components/Links/NoStyleLink';
 
 const P = styled.p`
   margin: 1.5rem 0rem;
-  font-family: Poppins;
+  font-family: Montserrat;
   font-size: 1.7rem;
   @media (max-width: ${props => props.theme.screenSize.mobileL}) {
     text-align: center;

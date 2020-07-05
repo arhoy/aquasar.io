@@ -117,12 +117,12 @@ const Layout = ({ children, full, backgroundLayer }) => {
             overflow-x: hidden;
             width: 100%;
             margin: 0;
-            font-family: Poppins, Roboto, Helvetica, Arial, sans-serif;
+            font-family: Montserrat, Roboto, Helvetica, Arial, sans-serif;
           }
 
           h1 {
             color: ${primaryColor};
-            font-family: Poppins;
+            font-family: Montserrat;
           }
         `}
       />
