@@ -40,9 +40,6 @@ export default () => {
       <Section>
         <ContactBoxForm title={'Leave Us A Message'} />
       </Section>
-      <Section>
-        <Insta />
-      </Section>
     </Layout>
   );
 };
