@@ -35,8 +35,8 @@ export const OrderingApp = () => {
       </span>
       <p>
         No Commission and unlimted orders. Greatly reduce your online pickup
-        fees from Skip the Dishes and start taking orders from your website and
-        facebook businesss page
+        fees from third party platforms and start taking orders from your
+        website and facebook businesss page
       </p>
     </Container>
   );

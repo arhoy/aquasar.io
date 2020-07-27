@@ -145,12 +145,6 @@ const textPorfolio = () => (
     <Div2>
       <ListInline urls={currentWebsites} />
     </Div2>
-    <P>
-      We would like to partner with you to make an affordable, fast, secure and
-      amazing website. Unlike most agencies I have multiple payment options and
-      will work with you to create a custom built site at a fraction of the
-      cost.
-    </P>
   </>
 );
 
@@ -217,11 +211,7 @@ const about = ({ data }) => {
       <StyledHero2 img={data.aboutImage1.childImageSharp.fluid}>
         <Section>
           <Container800>
-            <StyledH1>
-              We would <span className="redbold"> LOVE </span> to help your
-              business expand and <span className="greenbold"> GROW </span>
-              online
-            </StyledH1>
+            <StyledH1>What can we do for your online business today?</StyledH1>
           </Container800>
         </Section>
       </StyledHero2>
@@ -238,13 +228,13 @@ const about = ({ data }) => {
             icon={FaCode()}
             rotate="rotate(8deg)"
             iconSize="14rem"
-            heading="Websites"
-            subheading="View some of our sample sites"
+            heading="Clients"
+            subheading="Clients i have worked with"
             text={textPorfolio()}
           />
         </Container800>
       </SectionGrey>
-
+      {/* 
       <Section>
         <Container800>
           <FeatureSectionWithFixedImage
@@ -258,9 +248,9 @@ const about = ({ data }) => {
             fixed={data.aboutImage2.childImageSharp.fixed}
           />
         </Container800>
-      </Section>
+      </Section> */}
 
-      <SectionGrey>
+      {/* <SectionGrey>
         <Container1200>
           <FeatureSectionWithFixedImage
             heading="Why Gatsby"
@@ -284,13 +274,13 @@ const about = ({ data }) => {
         <Container800>
           <BasicFeatureSection heading="Why Netlify" text={textNetlify()} />
         </Container800>
-      </SectionGrey>
+      </SectionGrey> */}
 
-      <Section>
+      {/* <Section>
         <Container800>
           <BasicFeatureSection heading="Why React" text={textReact()} />
         </Container800>
-      </Section>
+      </Section> */}
 
       <SectionGrey>
         <Container800>

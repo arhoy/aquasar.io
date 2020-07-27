@@ -98,9 +98,10 @@ const DigitalAds = ({ data }) => {
         <Section>
           <Container800>
             <StyledH1>
-              Through <span className="primaryDark"> Digital Ads </span> we will
-              help you grow your online presence
+              <span className="primaryDark"> Digital Ads </span> That Bring In
+              Results
             </StyledH1>
+            <StyledH1>Not Wasted Ad Spend</StyledH1>
           </Container800>
         </Section>
       </StyledHero2>
@@ -117,10 +118,8 @@ const DigitalAds = ({ data }) => {
       >
         <Section>
           <Container800>
-            <StyledH1>
-              We let the results speak for themselves. Reduce your wasted ad
-              spend, and increase your marketing effectiveness.
-            </StyledH1>
+            <StyledH1>Digital Advertising</StyledH1>
+            <StyledH1>The Data Driven Way</StyledH1>
           </Container800>
         </Section>
       </StyledHero2>
@@ -139,12 +138,6 @@ const DigitalAds = ({ data }) => {
         </Container1200>
       </SectionGrey>
 
-      <Section>
-        <Container800>
-          <Companies />
-        </Container800>
-      </Section>
-
       <NonStretchImage
         height={'40vh'}
         alt={'Digital Marketing Edmonton Alberta'}
@@ -160,7 +153,7 @@ const DigitalAds = ({ data }) => {
             heading="Google Ad Certified"
             subheading="Google Ads Certified through the Google Ad Certified Program"
             text={
-              'We have managed several million dollars in ad spend over the years for various companies. We want to help you manage ad spend effectively and efficiently through our data driven and customized approach'
+              'I have personally managed several million dollars in ad spend over the years for various companies. We want to help you manage ad spend effectively and efficiently through our data driven and customized approach'
             }
           />
         </Container800>

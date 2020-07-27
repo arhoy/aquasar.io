@@ -28,11 +28,6 @@ const textPorfolio = () => (
     <Div2>
       <ListInline urls={currentWebsites} />
     </Div2>
-    <P>
-      We would like to partner with you to make an affordable, fast, secure and
-      amazing website. Unlike most agencies web have multiple payment options
-      and will work with you to create a custom solution within your budget
-    </P>
   </>
 );
 
@@ -45,8 +40,8 @@ const Websites = () => {
           animate={true}
           rotate="rotate(8deg)"
           iconSize="14rem"
-          heading="Websites"
-          subheading="View some of our sample sites"
+          heading="Clients"
+          subheading="Some clients I have worked with"
           text={textPorfolio()}
         />
       </Container800>

@@ -17,6 +17,73 @@ export default [
     title: 'Tacofinity',
     description: 'Mexican Tacqueria',
   },
+  {
+    url: 'https://vonssteakhouse.com/menu/',
+    displayUrl: 'vonssteakhouse.com',
+    title: 'Vons Steak House',
+    description: 'Vons Steak House',
+  },
+  {
+    url: 'https://neweverest.ca',
+    displayUrl: 'neweverest.ca',
+    title: 'New Everest Restaurant',
+    description: 'New Everest',
+  },
+  {
+    url: 'https://crystalglass.ca',
+    displayUrl: 'crystalglass.ca',
+    title: 'Crystal Glass',
+    description: 'Crystal Glass',
+  },
+  {
+    url: 'https://nursenextdooredm.com',
+    displayUrl: 'https://nursenextdooredm.com',
+    title: 'Nurse Next Door Edmonton',
+    description: 'Nurse Next Door',
+  },
+  {
+    url: 'https://www.contactinstruments.com',
+    displayUrl: 'contactinstruments.com',
+    title: 'Contact Instruments',
+    description: 'Contact Instruments',
+  },
+  {
+    url: 'https://www.soul2sole.com',
+    displayUrl: 'soul2sole.com',
+    title: 'Soul 2 Sole Massage',
+    description: 'Soul2Sole',
+  },
+  {
+    url:
+      'https://www.amazon.ca/Porch-Pirate-Chest-Collapsible-Permanently/dp/B07KQJ2GXN',
+    displayUrl: 'porchpiratechest',
+    title: 'Porch Pirate Chest',
+    description: 'Porch Pirate',
+  },
+  {
+    url: 'http://www.aj-drivingschool.com/',
+    displayUrl: 'aj-drivingschool.com',
+    title: 'A & J Driving School',
+    description: 'A & Driving School',
+  },
+  {
+    url: 'https://www.newimagecosmetic.com',
+    displayUrl: 'newimagecosmetic',
+    title: 'New Image Cosmetic',
+    description: 'New Image Cosmetic',
+  },
+  {
+    url: 'https://www.goauto.ca',
+    displayUrl: 'GoAuto.ca',
+    title: 'Go Auto',
+    description: 'Go Auto',
+  },
+  {
+    url: 'https://ricebowldeluxe.com/',
+    displayUrl: 'ricebowldelux.com',
+    title: 'Rice Bowl Deluxe',
+    description: 'Rice Bowl Deluxe',
+  },
 
   {
     url: 'https://www.tempuraqueen.com',

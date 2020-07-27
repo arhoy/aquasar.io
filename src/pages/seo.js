@@ -89,10 +89,8 @@ const SEOPage = ({ data }) => {
       <StyledHero2 img={data.aboutImage1.childImageSharp.fluid}>
         <Section>
           <Container800>
-            <StyledH1>
-              We want to help you <span className="primaryGreen"> Grow </span>{' '}
-              your site organically
-            </StyledH1>
+            <StyledH1>Get More Quality Traffic</StyledH1>
+            <StyledH1>To Your Website</StyledH1>
           </Container800>
         </Section>
       </StyledHero2>

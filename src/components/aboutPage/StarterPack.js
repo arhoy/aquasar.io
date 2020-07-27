@@ -15,8 +15,8 @@ const StarterPack = ({ positionJet }) => {
           icon={FaFighterJet()}
           rotate="rotate(15deg)"
           iconSize="14rem"
-          heading="Popular Package Deals"
-          subheading="We Want To Get You OFF to a Flying Start"
+          heading="Online Ordering"
+          subheading="Reduce your commission costs with online ordering for your restaurant. "
           text={<StarterPackage />}
         />
       </Container800>

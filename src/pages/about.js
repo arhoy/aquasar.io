@@ -71,11 +71,8 @@ const About = ({ data }) => {
       <StyledHero2 img={data.aboutImage1.childImageSharp.fluid}>
         <Section>
           <Container800>
-            <StyledH1>
-              We would <span className="redbold"> LOVE </span> to help your
-              business expand and <span className="greenbold"> GROW </span>
-              online
-            </StyledH1>
+            <StyledH1>What Can I Do </StyledH1>
+            <StyledH1>For Your Online Business Today?</StyledH1>
           </Container800>
         </Section>
       </StyledHero2>

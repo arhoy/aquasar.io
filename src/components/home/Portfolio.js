@@ -16,22 +16,21 @@ const CustomSectionPortfolio = styled(SectionGrey)`
 export const Portfolio = () => {
   return (
     <CustomSectionPortfolio>
-      <H2>Web Porfolio</H2>
-      <p>Select Samples</p>
+      <H2>What Can I Help?</H2>
+      <p>Worked with clients below on one or more of the following:</p>
+      <p>Websites | SEO | Online Ads | Online Ordering</p>
       <ListInline
         target="_blank"
         rel="no opener no referrer"
         urls={currentWebsites}
       />
       <Margin2V>
-        <Tag>Blazingly Fast</Tag>
-        <Tag>Modern</Tag>
-        <Tag>SEO Optimized</Tag>
-        <Tag>Completely Customized</Tag>
-        <p>Professional web development at fraction of the cost. </p>
-        <p>
-          Will price match <i>any</i> local web development or design agency{' '}
-        </p>
+        <Tag>Digital Ads</Tag>
+        <Tag>Web Development</Tag>
+        <Tag>SEO</Tag>
+        <Tag>Online Ordering</Tag>
+        <Tag>Marketing Analytics</Tag>
+        <Tag>Restaurant Consulting</Tag>
       </Margin2V>
 
       <NavlinkButton to="/about">Learn More</NavlinkButton>

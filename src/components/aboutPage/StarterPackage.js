@@ -68,33 +68,35 @@ const StarterPackage = () => {
     <Container>
       <SubContainer>
         <Accordian
-          title={`Website`}
-          text={`We will create a custom made, secure, fast, and easily maintainable website that is scalable for any business. Google Analytics and SSL Certificates included`}
+          title={`Low Commission Rates`}
+          text={`7% per order and no setup fees or monthly fees. In addition, get local SEO and Facebook Ads for free. Qualified restaurants only. Reduce the 30% fees from other third party platforms by offering pickup order discounts and in-house delivery `}
         />
         <Accordian
-          title={`Google My Business`}
-          text={`We will set up a Google My Business Account for you so people in your area can find you. In addition, we can also set up your very first ad account in Google and help you manage this for the first month for free`}
+          title={`Real Time Notifications`}
+          text={`No more missed orders via email, get instant alerts to your phone (landline or cell), text messages and see all orders come into your tablet.`}
         />
         <Accordian
-          title={`G Suite`}
-          text={`We can set up G Suite for you. Get professional with a business gmail account! Google G Suite fees apply`}
+          title={`Thermal Printing`}
+          text={`Easily print out all your orders automatically. If you need printers, we have can help you get them through our local resellers quickly.`}
         />
         <Accordian
-          title={`Facebook Business Manager`}
-          text={` We can help you setup your Facebook Business Manager Account and create your Facebook Business Page. We can run ads and boost posts for you for the first month free`}
+          title={`Facebook Ads`}
+          text={` Get FB ad management for FREE, including weekly social posts and professionally written ad copy to increase more visits and orders from your website`}
         />
         <Accordian
           title={`Domain Name and Hosting`}
-          text={` We host your website for you with SSL for as little as $10/month. We can help you find and select your domain name that is suitable for your brand and business goals`}
+          text={`No website? No problem. You can use your domain to take all orders from your restaurant.`}
         />
       </SubContainer>
       <SubContainer>
         <TitleContainer>
           <Title>
             <div className="secondary">
-              <StyledLink className="animate"> Call Today </StyledLink>
-              to get Started with our Small Business
-              <span className="primaryBold"> Starter</span> Package
+              <StyledLink className="animate">
+                <a href="tel:587-501-7726">Call Today </a>
+              </StyledLink>
+              to get Started with our premium online ordering deal for
+              restaurants.
             </div>
           </Title>
         </TitleContainer>

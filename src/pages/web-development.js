@@ -144,11 +144,8 @@ const WebDevelopment = ({ data }) => {
       <StyledHero2 img={data.aboutImage1.childImageSharp.fluid}>
         <Section>
           <Container800>
-            <StyledH1>
-              We offer <span className="redbold"> CUSTOM </span> mobile
-              optimized websites for your{' '}
-              <span className="greenbold"> GROWING </span> online business
-            </StyledH1>
+            <StyledH1>Customized websites</StyledH1>
+            <StyledH1> for your business needs</StyledH1>
           </Container800>
         </Section>
       </StyledHero2>
@@ -164,10 +161,8 @@ const WebDevelopment = ({ data }) => {
       <StyledHero2 img={data.aboutImage1.childImageSharp.fluid}>
         <Section>
           <Container800>
-            <StyledH1>
-              Blazingly Fast. We will build you a site that is faster than any
-              other agency using WordPress
-            </StyledH1>
+            <StyledH1>Find a Solution that Fits</StyledH1>
+            <StyledH1>Your Budget and Requirments</StyledH1>
           </Container800>
         </Section>
       </StyledHero2>
@@ -193,7 +188,7 @@ const WebDevelopment = ({ data }) => {
           <OrderingApp />
         </Container1200>
       </Section>
-
+      {/* 
       <Section>
         <Container800>
           <FeatureSectionWithFixedImage
@@ -227,9 +222,9 @@ const WebDevelopment = ({ data }) => {
             text={textContentful()}
           />
         </Container800>
-      </Section>
+      </Section> */}
 
-      <SectionGrey>
+      {/* <SectionGrey>
         <Container800>
           <BasicFeatureSection heading="Why Netlify" text={textNetlify()} />
         </Container800>
@@ -239,8 +234,8 @@ const WebDevelopment = ({ data }) => {
         <Container800>
           <BasicFeatureSection heading="Why React" text={textReact()} />
         </Container800>
-      </Section>
-
+      </Section> */}
+      {/* 
       <SectionGrey>
         <Container800>
           <FeatureSectionIconLeft
@@ -256,7 +251,7 @@ const WebDevelopment = ({ data }) => {
             }
           />
         </Container800>
-      </SectionGrey>
+      </SectionGrey> */}
 
       <NonStretchImage
         height={'40vh'}
