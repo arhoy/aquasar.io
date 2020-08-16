@@ -38,7 +38,7 @@ export const Companies = () => {
           specialize in providing a complete online ordering solution for
           restaurants including all online marketing and web development
           aspects.
-          <br /> <br />I work with small restaurants, large companies, digital
+          <br /> <br />I work with all restaurants, large companies, digital
           agencies and individual clients. My goal is to provide affordable,
           effective and reliable solutions for everyone I work with.
         </p>
