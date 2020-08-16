@@ -34,11 +34,13 @@ export const Companies = () => {
       <CustomSection>
         <H2>Hello I'm Alex</H2>
         <p>
-          I'm freelance web developer and ads consultant in Edmonton, Alberta. I
-          specialize in providing online ordering for restaurants and ecommerce.
-          <br /> <br />I have worked with companies large & small, digital
-          agencies and clients to provide them affordable, reliable and high
-          quality online solutions for their business needs
+          I'm online ordering and website consultant in Edmonton, Alberta. I
+          specialize in providing a complete online ordering solution for
+          restaurants including all online marketing and web development
+          aspects.
+          <br /> <br />I work with small restaurants, large companies, digital
+          agencies and individual clients. My goal is to provide affordable,
+          effective and reliable solutions for everyone I work with.
         </p>
         {/* <Container>
           <TagContainer>
@@ -53,13 +55,29 @@ export const Companies = () => {
         </Container> */}
       </CustomSection>
       <CustomSection2>
-        <H2>Worked For</H2>
-        <p>Companies I have worked for in full-time salaried positions:</p>
+        <H2>Worked For and With</H2>
+        <p>
+          Local companies I have worked for directly or indirectly include:{' '}
+        </p>
         <Container>
           <TagContainer>
             <CustomTag>Finning Canada</CustomTag>
             <CustomTag>Mindable</CustomTag>
             <CustomTag>Go Auto</CustomTag>
+            <CustomTag>Devebyte</CustomTag>
+            <CustomTag>The Order Guys</CustomTag>
+            <CustomTag>Crystal Glass</CustomTag>
+            <CustomTag>New Image Cosmetic</CustomTag>
+            <CustomTag>Khrome Beauty Lounge</CustomTag>
+            <CustomTag>Nurse Next Door</CustomTag>
+            <CustomTag>Von's Steak House</CustomTag>
+            <CustomTag>Rice Bowl Deluxe</CustomTag>
+            <CustomTag>New Everest Mulit Bar and Kitchen</CustomTag>
+            <CustomTag>Sumo Sumo Sushi</CustomTag>
+            <CustomTag>Neverland Tea</CustomTag>
+            <CustomTag>Contact Instruments</CustomTag>
+            <CustomTag>Northlink Supply</CustomTag>
+            <CustomTag>Soul 2 Sole</CustomTag>
           </TagContainer>
         </Container>
       </CustomSection2>

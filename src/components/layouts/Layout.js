@@ -12,9 +12,9 @@ import Icon from '../../../images/prism.svg';
 
 const theme = {
   colors: {
-    primary: 'rgb(92, 52, 145)',
-    primaryDark: 'rgb(63, 3, 122)',
-    primaryLight: 'rgb(148, 103, 206)',
+    primary: '#020202',
+    primaryDark: '#020202',
+    primaryLight: '#303030',
     primaryVeryLight: 'rgb(232, 213, 250)',
     primaryTransparent: 'rgba(92, 52, 145,0.2)',
     secondary: 'rgb(24, 163, 201)',
@@ -98,7 +98,7 @@ const FullFooterLayout = styled.footer`
 
 const Layout = ({ children, full, backgroundLayer }) => {
   const white = '#fff';
-  const primaryColor = 'rgb(92, 52, 145)';
+  const primaryColor = '#020202';
 
   return (
     <>

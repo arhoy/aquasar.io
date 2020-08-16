@@ -1,13 +1,12 @@
 const mainServicesList = [
   'Web Development',
-  'Digital Marketing',
-  'Ecommerce',
-  'Analytics',
+  'Wordpress Development',
+  'Online Ordering for Restaurants',
   'Lead Generation',
   'Facebook Ads',
   'Google Ads',
   'SEO',
-  'Full Stack Development',
+  'Website Hosting',
 ];
 
 export default mainServicesList;

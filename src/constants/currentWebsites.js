@@ -61,6 +61,12 @@ export default [
     description: 'Porch Pirate',
   },
   {
+    url: 'https://sizzleplatter.com',
+    displayUrl: 'SizzlePlatter',
+    title: 'SizzlePlatter',
+    description: 'SizzlePlatter',
+  },
+  {
     url: 'http://www.aj-drivingschool.com/',
     displayUrl: 'aj-drivingschool.com',
     title: 'A & J Driving School',
@@ -133,6 +139,12 @@ export default [
     description: 'The Amazon for Africa',
   },
   {
+    url: 'https://khromenailbar.com',
+    title: 'Nail Salon',
+    displayUrl: 'khromenailbar.com',
+    description: 'Nail Bar',
+  },
+  {
     url: 'https://www.livetreo.ca',
     title: 'LiveTreo',
     displayUrl: 'LiveTreo.ca',
@@ -157,6 +169,12 @@ export default [
     description: 'Neverland Tea Salon in the heart of Kits',
   },
   {
+    url: 'https://dept9studios.com/',
+    title: 'Dept 9 Studios',
+    displayUrl: 'https://dept9studios.com/',
+    description: 'Music Studio',
+  },
+  {
     url: 'https://www.hsodoor.com',
     title: 'No Handle Doors',
     displayUrl: 'hsodoor.com',
@@ -167,5 +185,17 @@ export default [
     title: 'The Flying Wedge Pizza',
     displayUrl: 'theflyingwedge.com',
     description: 'The Flying Wedge Pizza',
+  },
+  {
+    url: 'https://northlinksupply.ca/',
+    title: 'Northlink Supply',
+    displayUrl: 'northlinksupply.ca',
+    description: 'Construction Company',
+  },
+  {
+    url: 'https://khromebeautylounge.ca/',
+    title: 'Khrome Beauty Lounge',
+    displayUrl: 'khromebeautylounge.ca',
+    description: 'Beauty Salon',
   },
 ];
