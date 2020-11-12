@@ -78,6 +78,9 @@ export const Companies = () => {
             <CustomTag>Contact Instruments</CustomTag>
             <CustomTag>Northlink Supply</CustomTag>
             <CustomTag>Soul 2 Sole</CustomTag>
+            <CustomTag>Basha Donair</CustomTag>
+            <CustomTag>Chemesis</CustomTag>
+            <CustomTag>The Little Masterminds</CustomTag>
           </TagContainer>
         </Container>
       </CustomSection2>

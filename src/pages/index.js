@@ -33,9 +33,9 @@ export default () => {
 
       <Portfolio />
 
-      <LatestArticles />
+      {/* <LatestArticles />
 
-      <LatestBlogs />
+      <LatestBlogs /> */}
 
       <Section>
         <ContactBoxForm title={'Leave Us A Message'} />
