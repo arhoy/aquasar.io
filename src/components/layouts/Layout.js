@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 // real global scss styles
 import '../../scss/main.scss';
 import Footer from './Footer';
-import Icon from '../../../images/prism.svg';
+import BackgroundLayer from '../../../images/prism.jpg';
 
 const theme = {
   colors: {
@@ -96,8 +96,8 @@ const FullFooterLayout = styled.footer`
   grid-column: full-start/full-end;
 `;
 
-const Layout = ({ children, full, backgroundLayer }) => {
-  const white = '#fff';
+const Layout = ({ children, full }) => {
+
   const primaryColor = '#020202';
 
   return (
@@ -111,11 +111,11 @@ const Layout = ({ children, full, backgroundLayer }) => {
           }
 
           body {
-            background: ${white};
-            background-image: ${backgroundLayer && `url(${Icon})`};
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-
+            background: url(${BackgroundLayer}) no-repeat fixed;
+            -moz-background-size: cover;
+            -webkit-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
             overflow-x: hidden;
             width: 100%;
             margin: 0;
