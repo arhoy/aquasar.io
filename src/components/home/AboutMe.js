@@ -16,7 +16,7 @@ const Container = styled(Section)`
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: ${props => props.theme.colors.white};
-  margin: 2rem 0;
+  margin-bottom:4rem;
 
   @media (max-width: ${props => props.theme.screenSize.mobileL}) {
     grid-template-columns: 1fr;
