@@ -8,6 +8,15 @@ const ThankyouStyled = styled.div`
   p {
     margin-top: 1rem;
   }
+  h3 {
+    margin: 4rem 0;
+    margin-left: 1rem;
+  }
+  .container {
+    border-left: 2px solid red;
+
+  }
+
 `;
 
 const Thankyou = () => {
@@ -15,7 +24,12 @@ const Thankyou = () => {
     <Layout>
       <ThankyouStyled>
         <SEO title="Thank you form" description="This is the thank you page." />
-        <h1>Your form submission was recieved. Thank you!</h1>
+        <div className = "container">
+        <h3>
+        Thank you for your inquiry a representative will follow up with your shortly
+        </h3>
+        </div>
+     
 
         <Hero />
       </ThankyouStyled>

@@ -10,28 +10,13 @@ const ImageBackground = styled(BackgroundImage)`
   positiion: relative;
 `;
 
-const TextBox = styled.div`
-  text-transform: uppercase;
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: ${props => props.theme.colors.white};
-`;
 
-const TextBox2 = styled.div`
-  text-transform: uppercase;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: ${props => props.theme.colors.white};
-`;
+
 
 const Hero = () => {
   const { image } = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "hero.jpeg" }) {
+      image: file(relativePath: { eq: "hero.jpg" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 3000) {
             ...GatsbyImageSharpFluid_withWebp
@@ -43,7 +28,7 @@ const Hero = () => {
 
   return (
     <ImageBackground fluid={image.sharp.fluid} fadeIn="soft">
-      <TextBox>Built By Aquasar Inc</TextBox>
+    
     </ImageBackground>
   );
 };

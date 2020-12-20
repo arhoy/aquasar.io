@@ -3,13 +3,12 @@ import styled from '@emotion/styled';
 import { gsap } from 'gsap';
 
 import {
-  FaTwitterSquare,
-  FaGithub,
-  FaLinkedin,
+
+
   FaFacebookSquare,
 } from 'react-icons/fa';
-
 import { TagContainer, Tag } from '../reusableStyles/tags/Tag';
+
 
 const Container = styled.div``;
 
@@ -19,21 +18,12 @@ const IconLink = styled.a`
   margin-left: 1rem;
 `;
 
-const GitHubStyle = styled(FaGithub)`
-  color: ${props => props.theme.colors.black};
-`;
 
-const TwitterStyle = styled(FaTwitterSquare)`
-  color: #1da1f2;
-`;
 
 const FBStyle = styled(FaFacebookSquare)`
   color: rgb(66, 103, 178);
 `;
 
-const FaLinkedinStyled = styled(FaLinkedin)`
-  color: rgb(0, 119, 181);
-`;
 
 const Social = styled.div`
   display: flex;
@@ -42,17 +32,6 @@ const Social = styled.div`
   margin-bottom: -1rem;
 `;
 
-const CustomTagContainer = styled(TagContainer)`
-  display: flex;
-  align-items: center;
-
-  overflow: hidden;
-  & .tag {
-    display: inline;
-    padding: 0.8rem 1rem;
-    text-align: center;
-  }
-`;
 
 const SocialTagsHome = () => {
   useEffect(() => {
@@ -101,40 +80,13 @@ const SocialTagsHome = () => {
           className="circle"
           target="_blank"
           rel="noopener noreferrer"
-          href="https://github.com/arhoy"
-        >
-          <GitHubStyle title="Star Repo" />
-        </IconLink>
-
-        <IconLink
-          className="circle"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://twitter.com/_aquasar"
-        >
-          <TwitterStyle title="Follow Me" />
-        </IconLink>
-        <IconLink
-          className="circle"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.facebook.com/Aquasar-Web-Development-111600506937750/"
+          href="https://www.facebook.com/theorderguys/?ref=aquasar"
         >
           <FBStyle title="Like Page" />
         </IconLink>
-        <IconLink
-          className="circle"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.linkedin.com/in/aquasar/"
-        >
-          <FaLinkedinStyled title="Like Page" />
-        </IconLink>
+  
       </Social>
-      <CustomTagContainer>
-        <Tag className="tag">Google Ad Certified</Tag>
-        <Tag className="tag">Shopify Parnter</Tag>
-      </CustomTagContainer>
+  
     </Container>
   );
 };

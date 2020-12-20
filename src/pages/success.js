@@ -14,7 +14,7 @@ const Success = () => {
   return (
     <Layout>
       <Container>
-        <h1>Thank you for your order!</h1>
+        <h1>A rep will follow up shortly</h1>
       </Container>
     </Layout>
   );

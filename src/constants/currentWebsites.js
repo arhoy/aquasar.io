@@ -229,7 +229,7 @@ export default [
     description: 'Restaurant',
   },
   {
-    url: 'https://pizzaparadise.theorderguys.com',
+    url: 'https://order.pizzaparadisereddeer.com/',
     title: 'Pizza Paradise and Donair',
     displayUrl: 'pizzaparadise.com',
     description: 'Restaurant',
@@ -250,6 +250,18 @@ export default [
     url: 'http://zuhuredmonton.com/',
     title: 'Zuhur Edmonton',
     displayUrl: 'zuhuredmonton.com/',
+    description: 'Restaurant',
+  },
+  {
+    url: 'approvedbc.com',
+    title: 'Approved BC',
+    displayUrl: 'approvedbc.com',
+    description: 'Restaurant',
+  },
+  {
+    url: 'goldenricebowl.ca',
+    title: 'Golden Rice Bowl',
+    displayUrl: 'goldenricebowl.ca',
     description: 'Restaurant',
   },
 ];

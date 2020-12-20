@@ -92,6 +92,7 @@ const SendButton = styled(ButtonStyle1)`
 const ContactBoxForm = ({ title }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
 
   const handleSubmit = e => {
@@ -99,6 +100,7 @@ const ContactBoxForm = ({ title }) => {
     const userData = {
       name,
       email,
+      phone,
       message,
     };
 
@@ -110,6 +112,7 @@ const ContactBoxForm = ({ title }) => {
         'form-name': form.getAttribute('name'),
         name: userData.name,
         email: userData.email,
+        phone: userData.phone,
         message: userData.message,
       }),
     })
@@ -160,10 +163,23 @@ const ContactBoxForm = ({ title }) => {
 
         <Field>
           <Label>
+            Your Phone:
+            <Input
+              onChange={event => setPhone(event.target.value)}
+              placeholder="Your Phone"
+              type="number"
+              name="number"
+              required
+            />
+          </Label>
+        </Field>
+
+        <Field>
+          <Label>
             Message:
             <TextArea
               onChange={event => setMessage(event.target.value)}
-              placeholder="Brief Note"
+              placeholder="Leave a brief note with your restaurant/company name"
               name="message"
               required
               minLength="10"

@@ -109,49 +109,7 @@ const Nav = () => {
 
   return (
     <>
-      <Header>
-        <HeaderTop>
-          <Logo>
-            <LogoLink to="/">
-              <i>
-                <LogoSpan2>Aquasar</LogoSpan2>
-              </i>
-            </LogoLink>
-          </Logo>
-
-          <BurgerIcon onClick={mobileMenuHandler} />
-
-          <MobileMenu1
-            display={mobileMenuOpen.toString()}
-            mobileMenuHandler={mobileMenuHandler}
-          />
-        </HeaderTop>
-
-        <HeaderNav>
-          <Tagline>
-            <CustomLink to="/web-development">WEB DEVELOPMENT</CustomLink> |
-            <CustomLink to="/seo">SEO</CustomLink> |
-            <CustomLink to="/digital-ads">DIGITAL ADS</CustomLink>
-          </Tagline>
-
-          <NavContainer>
-            {links.map(link => (
-              <Navlink
-                key={link.path}
-                activeClassName="currentPage"
-                to={link.path}
-              >
-                {link.text}
-              </Navlink>
-            ))}
-            <DropDownMenu1 />
-          </NavContainer>
-        </HeaderNav>
-
-        <HeaderSearch>
-          <Search />
-        </HeaderSearch>
-      </Header>
+   
     </>
   );
 };

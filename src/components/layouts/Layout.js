@@ -113,6 +113,8 @@ const Layout = ({ children, full, backgroundLayer }) => {
           body {
             background: ${white};
             background-image: ${backgroundLayer && `url(${Icon})`};
+            background-repeat: no-repeat;
+            background-attachment: fixed;
 
             overflow-x: hidden;
             width: 100%;

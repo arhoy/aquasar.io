@@ -2,17 +2,14 @@ import React from 'react';
 
 import Layout from '../components/layouts/Layout';
 import SEO from '../hooks/SEO';
-import Insta from '../components/Insta';
 
 import { Section } from '../components/reusableStyles/sections/Sections';
 import { AboutMe } from '../components/home/AboutMe';
-import { Portfolio } from '../components/home/Portfolio';
-import { LatestArticles } from '../components/home/LatestArticles';
-import { LatestBlogs } from '../components/home/LatestBlogs';
+
 
 import { Companies } from '../components/home/Companies';
 import Services from '../components/home/Services';
-import Platforms from '../components/home/Platforms';
+
 import { ContactBoxForm } from '../components/forms/ContactBoxForm';
 
 export default () => {
@@ -29,16 +26,9 @@ export default () => {
 
       <Services />
 
-      <Platforms />
-
-      <Portfolio />
-
-      {/* <LatestArticles />
-
-      <LatestBlogs /> */}
 
       <Section>
-        <ContactBoxForm title={'Leave Us A Message'} />
+        <ContactBoxForm title={'More Orders, Phone Calls and Leads'} />
       </Section>
     </Layout>
   );

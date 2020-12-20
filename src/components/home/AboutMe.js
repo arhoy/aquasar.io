@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import { gsap, Bounce } from 'gsap';
 
-import profileImage from '../../../images/logo.jpg';
+import profileImage from '../../../images/logo.png';
 
 import { ButtonSweepToRight } from '../reusableStyles/buttons/Button';
 
@@ -32,6 +32,7 @@ const Title = styled.h1`
 const Blurb = styled.div`
   max-width: 450px;
   padding: 1.5rem 0;
+
   font-size: 1.6rem;
   color: ${props => props.theme.colors.black};
 `;
@@ -58,16 +59,14 @@ const SubscribeSection = styled.div`
   border-bottom-left-radius: 25px;
   border-top-right-radius: 25px;
   & img {
-    width: 8rem;
-    height: 8rem;
-    border-radius: 50%;
-    background-size: contain;
+  
   }
   h4 {
     padding: 1rem 0rem;
   }
   & p {
     text-align: center;
+    font-size: 1.5rem;
   }
 `;
 
@@ -135,7 +134,7 @@ export const AboutMe = () => {
   const [blurb, setBlurb] = useState(0);
 
   const blurbHandler = blurb => {
-    if (blurb > 1) {
+    if (blurb > 2) {
       setBlurb(0);
     } else {
       setBlurb(prev => prev + 1);
@@ -147,56 +146,57 @@ export const AboutMe = () => {
         <TitleContainer>
           <Title className="textContainer">
             <span className="mainText">A</span>
-            <span className="mainText">Q</span>
-            <span className="mainText">U</span>
-            <span className="mainText">A</span>
-            <span className="mainText">S</span>
-            <span className="mainText">A</span>
-            <span className="mainText">R</span>
+            <span className="mainText">L</span>
+            <span className="mainText">E</span>
+            <span className="mainText">X</span>
+ 
             <span style={{ marginLeft: '8px' }} className="mainText" />
-            <span className="mainText">I</span>
-            <span className="mainText">N</span>
-            <span className="mainText">C</span>
+            <span className="mainText">H</span>
+            <span className="mainText">O</span>
+            <span className="mainText">Y</span>
           </Title>
 
           <Blurb className="blurbText">
             {blurb === 0 && (
               <BlurbContainer>
-                Custom web development, digital marketing and SEO in Edmonton,
-                Alberta.
+               I set up online ordering and restuarant websites using modern tech from the big third party apps but for no commmission fees
               </BlurbContainer>
             )}
 
             {blurb === 1 && (
               <BlurbContainer>
-                I create websites using the latest modern technologies in React
-                and Gatsby.
+                I create beautiful modern looking websites for a fraction of agency prices and cost.
               </BlurbContainer>
             )}
 
             {blurb === 2 && (
               <BlurbContainer>
-                Through digital ads and SEO we strive to help companies grow
-                their online business
+               I provide bluetooth thermal receipt printing and full support for restaurants with all their online needs
+              </BlurbContainer>
+            )}
+             {blurb === 3 && (
+              <BlurbContainer>
+               Data driven marketing and online advertising to track the effectiveness of each ad impression
               </BlurbContainer>
             )}
           </Blurb>
-          <ButtonSweepToRight
+     
+        </TitleContainer>
+        <ButtonSweepToRight
             className="nextButton"
             onClick={() => blurbHandler(blurb)}
           >
             NEXT
           </ButtonSweepToRight>
-        </TitleContainer>
         <SocialTagsHome />
       </SubContainerOne>
       <SubContainerTwo>
         <SubscribeSection>
-          <img className="logo" alt="Aquasar Logo" src={profileImage} />
-          <h4>New Content Weekly</h4>
-          <p> Developer tutorials and new websites </p>
+          <img className="logo" alt="The Order Guys Logo" src={profileImage} />
+          <h4>Sign Up Your Restaurant</h4>
+          <p> 0% Commission Online Ordering With The Order Guys  </p>
           <CustomButton className="subscribeMe">
-            <A href="https://aquasar.substack.com"> SIGN UP </A>
+            <A href="https://admin.theorderguys.com/register"> SIGN UP  </A>
           </CustomButton>
         </SubscribeSection>
       </SubContainerTwo>

@@ -50,9 +50,7 @@ const Attribution = styled.p`
   font-size: 1.2rem;
 `;
 
-const FooterBlurb = styled.p`
-  font-weight: bold;
-`;
+
 
 const LegalLinksContainer = styled.div`
   display: flex;
@@ -84,11 +82,8 @@ const Footer = () => {
         </StyledImage>
         | Alberta
       </Div>
-      <A href="tel:587-501-7726">587-501-7726</A>
-      <FooterBlurb>Aquasar.io {d} &copy; </FooterBlurb>
-      <A className="codepaper" href="https://codepaper.dev">
-        CODEPAPER
-      </A>
+    
+
       <Attribution>Professional | Affordable | Fast</Attribution>
 
       <LegalLinksContainer>

@@ -14,10 +14,10 @@ const queries = require('./src/utils/algolia');
 
 module.exports = {
   siteMetadata: {
-    title: 'Aquasar Inc - Helping Businesses Grow Online',
+    title: 'Aquasar  - Helping Businesses Grow Online',
     titleTemplate: 'Web Development SEO and Digital Ads in Edmonton Alberta',
     description:
-      'Aquasar Inc is a web development, SEO and digital Ads consulting company in Edmonton, AB. We help businesses grow online to reach and exceed their business goals',
+      'Aquasar does web development, SEO, online advertising, restaurant online ordering and website hosting in Edmonton, AB.',
     author: 'Alex Quasar',
     twitterUsername: '@_aquasar',
     image: '/default.png',
