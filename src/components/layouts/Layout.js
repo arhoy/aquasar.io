@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 // real global scss styles
 import '../../scss/main.scss';
 import Footer from './Footer';
-import BackgroundLayer from '../../../images/prism.jpg';
+import BackgroundLayer from '../../../images/tic-tac-toe.png';
 
 const theme = {
   colors: {
@@ -111,11 +111,7 @@ const Layout = ({ children, full }) => {
           }
 
           body {
-            background: url(${BackgroundLayer}) no-repeat fixed;
-            -moz-background-size: cover;
-            -webkit-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
+            background: url(${BackgroundLayer}) repeat fixed;
             overflow-x: hidden;
             width: 100%;
             margin: 0;
