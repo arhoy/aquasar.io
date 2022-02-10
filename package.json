@@ -51,7 +51,7 @@
     "gsap": "^3.2.2",
     "netlify-identity-widget": "^1.5.5",
     "nivo": "^0.31.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "react": "^16.10.1",
     "react-dom": "^16.8.6",
     "react-github-button": "^0.1.11",
